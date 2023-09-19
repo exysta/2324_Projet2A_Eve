@@ -1,2 +1,31 @@
-# 2324_Projet2A_Robourt
-Amélioration d'un bras robot pour aider les personnes handicapées dans la vie quotidienne
+# Projet 2e année Robourt - ENSEA
+
+## Table des matières
+
+1. [Introduction](#introduction)
+2. [Partie Software](#partie-software)
+4. [Partie Hardware et intégration](#partie-hardware-et-intégration)
+5. [Guide d'utilisation](#guide-dutilisation)
+6. [Conclusion](#conclusion)
+
+## Introduction
+
+Ecrire introduction
+
+## Partie-Software
+
+WIP
+
+## Partie Hardware et intégration
+
+WIP
+
+## Guide d'utilisation
+
+WIP
+
+
+## Conclusion
+
+WIP 
+
