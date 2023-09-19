@@ -10,13 +10,15 @@
 
 ## Introduction
 
-Ecrire introduction
+- [ ] Ecrire introduction
 
 ## Partie-Software
 
+Qu'est ce qui est utilisé
 WIP
 
 ## Partie Hardware et intégration
+
 
 WIP
 
