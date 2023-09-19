@@ -6,4 +6,8 @@
 
 ## Séance 1 (19/09/23)
 
-* Mise en 
+* Mise en place du dépot GitHub
+* Mise en place de ROS sur certains ordinateurs
+* Début de compréhension pour le fonctionnement de Github (e de Git)
+* Début de compréhension pour le fonctionnement de ROS
+* 
