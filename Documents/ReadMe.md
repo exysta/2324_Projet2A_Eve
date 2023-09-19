@@ -1,5 +1,5 @@
 # Dossier pour la documentation
 
-## Lien utiles 
+## Liens utiles 
 
-[Cliquez ici](Lien_utiles.md)
+[Cliquez ici](Liens_utiles.md)
