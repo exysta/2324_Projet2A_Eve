@@ -25,3 +25,18 @@ Journal de bord du projet Robourt - 2023.
 * Continuer de comprendre ROS & Github
 * Commencer à réfléchir sur le cahier des charges (en collaboration avec les autres étudiants)
 * Contacter les MSC & EVE
+
+## Séance 2 (26/09/23)
+
+### Contenu 
+
+* Comprendre le fonctionnement Git
+* Préparation de ROS sur certains PC & tests
+* Contact avec les MCS pour avoir une idée des servomoteurs & idée générale du robot (Servomoteurs : AX12 & XL-320)
+* Moteurs pas à pas : TMC2225 => Compréhension de fonctionnement
+* Tests pour démarrer le TMC2225 avec l'UART ou STEP/DIR (STEP/DIR actuellement)
+* Début Gantt
+
+### A faire
+
+* S
