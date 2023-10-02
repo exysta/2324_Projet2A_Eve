@@ -32,7 +32,7 @@ Journal de bord du projet Robourt - 2023.
 
 * Comprendre le fonctionnement Git
 * Préparation de ROS sur certains PC & tests
-* Contact avec les MCS pour avoir une idée des servomoteurs & idée générale du robot (Servomoteurs : AX12 & XL-320)
+* Contact avec les MSC pour avoir une idée des servomoteurs & idée générale du robot (Servomoteurs : AX12 & XL-320)
 * Moteurs pas à pas : TMC2225 => Compréhension de fonctionnement
 * Tests pour démarrer le TMC2225 avec l'UART ou STEP/DIR (STEP/DIR actuellement) non fonctionnel
 * Début diagramme de Gantt
