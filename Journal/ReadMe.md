@@ -3,6 +3,7 @@
 1. [Introduction](#introduction)
 2. [Séance 1](#seance1)
 3. [Séance 2](#seance2)
+4. [Séance 3](#seance3)
 
 
 
@@ -43,3 +44,19 @@ Journal de bord du projet Robourt - 2023.
 * Commencer réflexion PCB
 * Etre au point ROS
 * Réflechir cahier des charges
+
+
+## Séance 3 (03/10/2023)
+
+### Contenu 
+
+* Continuation sur l'apprentissage de ROS
+* Communication avec le stepper par l'intermédiaire du TMC2225 avec STEP/DIR
+* Diagramme d'architecture ( == Schéma synoptique) et cahier des charges/matériel
+* Début du schematic pour le PCB
+
+### A faire
+
+* Continuer ROS (notions serveur/action, créer son propre topic ?)
+* Diagramme d'architecture
+* Cahier des charges
