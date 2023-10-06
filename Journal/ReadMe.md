@@ -1,9 +1,9 @@
 # Journal de bord
 
 1. [Introduction](#introduction)
-2. [Séance 1](#seance1)
-3. [Séance 2](#seance2)
-4. [Séance 3](#seance3)
+2. [Séance 1](#Séance_1)
+3. [Séance 2](#seance 2)
+4. [Séance 3](#seance 3)
 
 
 
