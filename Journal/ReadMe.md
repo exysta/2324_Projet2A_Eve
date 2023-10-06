@@ -1,12 +1,5 @@
 # Journal de bord
 
-1. [Introduction](#introduction)
-2. [Séance 1](#Séance_1)
-3. [Séance 2](#seance 2)
-4. [Séance 3](#seance 3)
-
-
-
 ## Introduction
 
 Journal de bord du projet Robourt - 2023.
