@@ -5,7 +5,6 @@
 3. [Séance 2](#séance-2)
 4. [Séance 3](#séance-3)
 5. [Séance 4](#séance-4)
-6. 
 
 
 ## Introduction
