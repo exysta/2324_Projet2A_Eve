@@ -11,9 +11,9 @@
 
 Journal de bord du projet Robourt - 2023.
 
-## Séance 1 (19/09/23)
+## Séance 1
 
-### Contenu
+### Contenu (19/09/23)
 
 * Démonter le robot pour explorer ses entrailles
 * Mise en place du dépot GitHub
@@ -27,9 +27,9 @@ Journal de bord du projet Robourt - 2023.
 * Commencer à réfléchir sur le cahier des charges (en collaboration avec les autres étudiants)
 * Contacter les MSC & EVE
 
-## Séance 2 (26/09/23)
+## Séance 2
 
-### Contenu 
+### Contenu (26/09/23)
 
 * Comprendre le fonctionnement Git
 * Préparation de ROS sur certains PC & tests
@@ -46,9 +46,9 @@ Journal de bord du projet Robourt - 2023.
 * Réflechir cahier des charges
 
 
-## Séance 3 (03/10/2023)
+## Séance 3
 
-### Contenu 
+### Contenu (03/10/2023)
 
 * Continuation sur l'apprentissage de ROS
 * Communication avec le stepper par l'intermédiaire du TMC2225 avec STEP/DIR
