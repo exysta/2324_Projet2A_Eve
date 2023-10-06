@@ -2,6 +2,10 @@
 
 1. [Introduction](#introduction)
 2. [Séance 1](#séance-1)
+3. [Séance 2](#séance-2)
+4. [Séance 3](#séance-3)
+5. [Séance 4](#séance-4)
+6. 
 
 
 ## Introduction
@@ -57,3 +61,10 @@ Journal de bord du projet Robourt - 2023.
 * Continuer ROS (notions serveur/action, créer son propre topic ?)
 * Diagramme d'architecture
 * Cahier des charges
+
+## Séance 4 
+
+### Contenu (10/10/2023)
+
+* Présentation N°1
+* Appliquer les changements
