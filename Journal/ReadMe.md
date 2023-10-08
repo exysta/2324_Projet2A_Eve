@@ -1,18 +1,19 @@
 # Journal de bord
 
 1. [Introduction](#introduction)
-2. [Séance 1](#seance1)
-3. [Séance 2](#seance2)
-
+2. [Séance 1](#séance-1)
+3. [Séance 2](#séance-2)
+4. [Séance 3](#séance-3)
+5. [Séance 4](#séance-4)
 
 
 ## Introduction
 
 Journal de bord du projet Robourt - 2023.
 
-## Séance 1 (19/09/23)
+## Séance 1
 
-### Contenu
+### Contenu (19/09/23)
 
 * Démonter le robot pour explorer ses entrailles
 * Mise en place du dépot GitHub
@@ -26,9 +27,9 @@ Journal de bord du projet Robourt - 2023.
 * Commencer à réfléchir sur le cahier des charges (en collaboration avec les autres étudiants)
 * Contacter les MSC & EVE
 
-## Séance 2 (26/09/23)
+## Séance 2
 
-### Contenu 
+### Contenu (26/09/23)
 
 * Comprendre le fonctionnement Git
 * Préparation de ROS sur certains PC & tests
@@ -43,3 +44,26 @@ Journal de bord du projet Robourt - 2023.
 * Commencer réflexion PCB
 * Etre au point ROS
 * Réflechir cahier des charges
+
+
+## Séance 3
+
+### Contenu (03/10/2023)
+
+* Continuation sur l'apprentissage de ROS
+* Communication avec le stepper par l'intermédiaire du TMC2225 avec STEP/DIR
+* Diagramme d'architecture ( == Schéma synoptique) et cahier des charges/matériel
+* Début du schematic pour le PCB
+
+### A faire
+
+* Continuer ROS (notions serveur/action, créer son propre topic ?)
+* Diagramme d'architecture
+* Cahier des charges
+
+## Séance 4 
+
+### Contenu (10/10/2023)
+
+* Présentation N°1
+* Appliquer les changements

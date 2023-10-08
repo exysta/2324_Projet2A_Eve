@@ -13,3 +13,7 @@
 ## Lien github ancien projet
 
 - ancien projet 2A : [Lien](https://github.com/GuillaumePtj/BOB)
+
+## Lien présentations & schéma synoptique
+
+- Dossier : https://enseafr-my.sharepoint.com/:f:/r/personal/arthur_laumy_ensea_fr/Documents/2e%20ann%C3%A9e/Projet?csf=1&web=1&e=Ms5v6V 
