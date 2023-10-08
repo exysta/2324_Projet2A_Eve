@@ -12,4 +12,3 @@
 * 23HS8430
 * 23hS2442B Nema 23
 
-* L6470 driver 3A
