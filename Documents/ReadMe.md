@@ -13,4 +13,6 @@
 * AX12 (x2)
 * 23HS8430
 * 23hS2442B Nema 23
+* Quel µC ?
+* Quel convertisseur ?
 
