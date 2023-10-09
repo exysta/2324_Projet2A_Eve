@@ -4,8 +4,10 @@
 
 [Cliquez ici](Liens_utiles.md)
 
-## Cahier des charges
+## Cahier des charges - Matériel
 
+
+* TMC2590
 * 17hs19-2004s
 * XL320
 * AX12 (x2)
