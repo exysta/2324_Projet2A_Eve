@@ -2,8 +2,8 @@
 
 <div align="center">
 
-![The real goal of the project](PP.jpeg)
 
+<img src="PP.jpeg"  width=300><br>
 
 [Code](Code/) 
 | [Documentation](Documents/) 
