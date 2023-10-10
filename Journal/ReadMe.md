@@ -66,4 +66,17 @@ Journal de bord du projet Robourt - 2023.
 ### Contenu (10/10/2023)
 
 * Présentation N°1
-* Appliquer les changements
+* Commande de matériel
+* Mise en page Github
+* Bilan de puissance (presque finie)
+* Recherche sur SPI
+* Choix des MOSFET
+* Correction diagramme d'architecture
+* Révision KiCad
+
+### A faire
+
+* ROS2 : continuation service/client
+* Continuer schematic
+* Continuer SPI
+* Continuer bilan Prés n°1
