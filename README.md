@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[
+![The real goal of the project](PP.jpeg)
 
 
 [Code](Code/) 
