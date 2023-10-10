@@ -5,6 +5,7 @@
 3. [Séance 2](#séance-2)
 4. [Séance 3](#séance-3)
 5. [Séance 4](#séance-4)
+6. [Séance 5](#séance-5)
 
 
 ## Introduction
@@ -81,3 +82,13 @@ Journal de bord du projet Robourt - 2023.
 * Continuer SPI
 * Continuer bilan Présentation n°1
 * Continuer Mise en page Github
+
+## Séance 5
+
+### Contenu (17/10/2023)
+
+
+
+### A faire
+
+
