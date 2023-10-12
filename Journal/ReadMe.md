@@ -82,6 +82,7 @@ Journal de bord du projet Robourt - 2023.
 * Continuer SPI
 * Continuer bilan Présentation n°1
 * Continuer Mise en page Github
+* Se renseigner sur le protocole DYNAMIXEL, protocol 2.0
 
 ## Séance 5
 
