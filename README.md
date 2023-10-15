@@ -36,6 +36,18 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 ## Partie-Software
 
+### Cahier des charges - Matériel
+
+
+* TMC2590
+* 17hs19-2004s
+* XL320 (x2)
+* XL430 w250 (x2)
+* 23HS8430
+* 23hS2442B Nema 23
+* Quel µC ?
+* Quel convertisseur ?
+
 
 WIP
 
