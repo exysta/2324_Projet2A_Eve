@@ -63,7 +63,7 @@ WIP
 * XL430 w250 (x2)
 * 23HS8430
 * 23hS2442B Nema 23
-* STM32 L3L4 ?
+* STM32 L412
 * Quel régulateur ?
 
 
