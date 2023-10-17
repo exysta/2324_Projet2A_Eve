@@ -59,8 +59,8 @@ WIP
 * XL430 w250 (x2)
 * 23HS8430
 * 23hS2442B Nema 23
-* Quel µC ?
-* Quel convertisseur ?
+* STM32 L3L4 ?
+* Quel régulateur ?
 
 
 <div align="center">
