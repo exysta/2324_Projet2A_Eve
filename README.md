@@ -36,6 +36,11 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 ## Partie-Software
 
+
+WIP
+
+## Partie Hardware et intégration
+
 ### Cahier des charges - Matériel
 
 
@@ -52,10 +57,6 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 <div align="center">
 <img src="/Présentation/Diagramme d'architecture.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
 </div>
-WIP
-
-## Partie Hardware et intégration
-
 
 WIP
 
