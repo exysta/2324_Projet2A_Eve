@@ -87,9 +87,24 @@ Journal de bord du projet Robourt - 2023.
 ## Séance 5
 
 ### Contenu (17/10/2023)
-
+* ROS2 : Recherche sur la fameuse boite noire et des alternatives
+* Avancées sur le Kicad
+* Fin du bilan de présentation n°1
+* Avancées Github
+* Avancées contrôle SPI
+* Recherche sur le protocole DYNAMIXEL 2.0
 
 
 ### A faire
 
+
+
+
+## Séance 6
+
+### Contenu (17/10/2023)
+
+
+
+### A faire
 
