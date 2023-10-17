@@ -1,5 +1,10 @@
 # Liens utiles
 
+
+* [Datasheet XL320](https://emanual.robotis.com/docs/en/dxl/x/xl320/)
+* [Datasheet XL430 w250 T](https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/)
+
+
 ## Documentation pour Github
 
 - Mise en page des pages .md : [Lien](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
