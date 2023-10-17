@@ -37,6 +37,15 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 ## Partie-Software
 
 
+### ROS 2
+
+Il y a deux manières de faire avec ROS2 :
+* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs (Méthode 1)
+* ROS2 ne fait presque rien : Il transmet simplement les données d'un point A à un point B (Méthode 2)
+
+Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'utilise pas la STM32 et donc notre projet d'électronique n'a plus de sens. Donc il faudrait plutôt opter pour la méthode 2 qui demande très peu côté ROS/Raspberry mais par contre demande faire tous les calculs et l'asservissement par la STM32. On doit donc faire notre propre "boite noire" => Trouver des solutions alternatives
+
+
 WIP
 
 ## Partie Hardware et intégration
@@ -66,5 +75,4 @@ WIP
 
 ## Annexes
 
-WIPI
-
+WIP
