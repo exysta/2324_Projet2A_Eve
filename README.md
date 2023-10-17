@@ -48,7 +48,7 @@ Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'u
 Pour la méthode 1 : 
 <div align="center">
 <br>
-<img src="components_architecture.png" width="600">
+<img src="components_architecture.png" width="400">
 </div>
 WIP
 
