@@ -49,6 +49,9 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 * Quel convertisseur ?
 
 
+<div align="center">
+<img src="/Présentation/Diagramme d'architecture.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
+</div>
 WIP
 
 ## Partie Hardware et intégration
