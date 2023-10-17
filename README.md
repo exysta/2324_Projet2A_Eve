@@ -46,8 +46,10 @@ Il y a deux manières de faire avec ROS2 :
 Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'utilise pas la STM32 et donc notre projet d'électronique n'a plus de sens. Donc il faudrait plutôt opter pour la méthode 2 qui demande très peu côté ROS/Raspberry mais par contre demande faire tous les calculs et l'asservissement par la STM32. On doit donc faire notre propre "boite noire" => Trouver des solutions alternatives
 
 Pour la méthode 1 : 
+<div align="center">
+<br>
 <img src="components_architecture.png" width="600">
-
+</div>
 WIP
 
 ## Partie Hardware et intégration
