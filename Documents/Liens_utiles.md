@@ -9,6 +9,7 @@
 
 -  Documentation officielle de ROS2 : [Lien](https://docs.ros.org/en/iron/index.html)
 -  Tutoriel Youtube : [Lien](https://www.youtube.com/watch?v=0aPbWsyENA8&list=PLLSegLrePWgJudpPUof4-nVFHGkB62Izy)
+-  Documentation ROS2 Control : [Lien](https://control.ros.org/humble/index.html)
 
 ## Lien github ancien projet
 
