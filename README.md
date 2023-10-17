@@ -55,7 +55,7 @@ WIP
 
 
 <div align="center">
-<img src="/Présentation/Diagramme d'architecture.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
+<img src="/Présentation/Diag archi.drawio.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
 </div>
 
 WIP
