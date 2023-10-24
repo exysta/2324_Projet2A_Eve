@@ -37,6 +37,12 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 ## Partie-Software
 
 
+### Contrôle TMC2590
+
+#### Connexion SPI
+
+On doit configurer SPI1 avec 3 ports MISO/MOSI & CLK (configurable dans IOC) et un Chip Select Not.
+
 ### ROS 2
 
 Il y a deux manières de faire avec ROS2 :
