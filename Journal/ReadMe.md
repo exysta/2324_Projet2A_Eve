@@ -104,6 +104,11 @@ Journal de bord du projet Robourt - 2023.
 
 ### Contenu (17/10/2023)
 
+Rédiger le journal
+Rédiger documentation SPI/STM32
+Ecrire ce qu'on a essayé avec les calculs de sin/theta
+Reflexion sur le Mp avec le nb de ports
+Continuer PCB
 
 
 ### A faire
