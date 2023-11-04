@@ -6,6 +6,8 @@
 4. [Séance 3](#séance-3)
 5. [Séance 4](#séance-4)
 6. [Séance 5](#séance-5)
+7. [Séance 6](#séance-6)
+8. [Séance 7](#séance-7)
 
 
 ## Introduction
@@ -94,22 +96,31 @@ Journal de bord du projet Robourt - 2023.
 * Avancées contrôle SPI
 * Recherche sur le protocole DYNAMIXEL 2.0
 
-
 ### A faire
 
-
-
+* Continuer le PCB
 
 ## Séance 6
 
 ### Contenu (17/10/2023)
 
-Rédiger le journal
-Rédiger documentation SPI/STM32
-Ecrire ce qu'on a essayé avec les calculs de sin/theta
-Reflexion sur le Mp avec le nb de ports
-Continuer PCB
+* Réflexion sur le Microprocesseur avec les fonctionnalités désirées
+* Avancées sur la connexion SPI avec les steppers (Tableau de sin & code)
+* Continuer le PCB
+
+### A faire
+
+* Rédiger les avancées
+* Commencer la documentation sur la connexion SPI
+* Finir schematic pour le PCB
+* Réflexion sur le ROS et penser au schéma
+* Préparer la présentation n°2
+
+## Séance 7
+
+### Contenu (07/11/2023)
 
 
 ### A faire
+
 
