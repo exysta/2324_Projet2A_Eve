@@ -52,10 +52,11 @@ Il y a deux manières de faire avec ROS2 :
 
 <div align="center">
 <br>
-<img src="components_architecture.png" width="400">
-Schéma de la méthode 1
-  
+<img src="components_architecture.png" width="400"> </br>
+Schéma de la méthode 1 </br>
+</br> 
 </div>
+
 Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'utilise pas la STM32 et donc notre projet d'électronique n'a plus de sens. Autre problème de la méthode 1, c'est l'utilisation de C++ pour faire le code qui est un langage POO assez complexe à prendre en main alors que tous les packages étaient actuellement fait sous python.
 
 
