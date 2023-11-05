@@ -46,17 +46,23 @@ On doit configurer SPI1 avec 3 ports MISO/MOSI & CLK (configurable dans IOC) et 
 ### ROS 2
 
 Il y a deux manières de faire avec ROS2 :
-* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs (Méthode 1)
+* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs => Utilisation de ROS_Control (Méthode 1)
 * ROS2 ne fait presque rien : Il transmet simplement les données d'un point A à un point B (Méthode 2)
 
-Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'utilise pas la STM32 et donc notre projet d'électronique n'a plus de sens. Donc il faudrait plutôt opter pour la méthode 2 qui demande très peu côté ROS/Raspberry mais par contre demande faire tous les calculs et l'asservissement par la STM32. On doit donc faire notre propre "boite noire" => Trouver des solutions alternatives
 
-Pour la méthode 1 : 
 <div align="center">
 <br>
 <img src="components_architecture.png" width="400">
+Schéma de la méthode 1
+  
 </div>
-WIP
+Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'utilise pas la STM32 et donc notre projet d'électronique n'a plus de sens. Autre problème de la méthode 1, c'est l'utilisation de C++ pour faire le code qui est un langage POO assez complexe à prendre en main alors que tous les packages étaient actuellement fait sous python.
+
+
+La 2e méthode revient à créer une entrée où l'on mettra les ordres (des angles pour différents moteurs) puis tout est envoyé par UART à la STM32 qui effectue l'asservissement de chacun des moteurs. 
+
+C'est plutôt la 2e méthode qui est envisagée étant donnée que le groupe de 3e année ont réalisé une simulation qui permet de passer de coordonnées x,y & z en données d'angles pour chaque moteur. On aurait juste alors à transmettre ces données à la carte STM32 qui s'occuperait de la prtie commande des moteurs.
+
 
 ## Partie Hardware et intégration
 
