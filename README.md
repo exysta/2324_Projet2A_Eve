@@ -83,7 +83,7 @@ C'est le registre qui configure le driver.
 
 <div align="center">
 <br>
-<img src="4" width="400"> </br>
+<img src="4.png" width="400"> </br>
 Formats du registre DRVCONF </br>
 </br> 
 </div>
