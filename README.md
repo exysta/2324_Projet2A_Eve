@@ -41,12 +41,36 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 #### Connexion SPI
 
-On doit configurer SPI1 avec 3 ports MISO/MOSI & CLK (configurable dans IOC) et un Chip Select Not.
+On doit configurer SPI1 avec 3 ports MISO/MOSI & CLK (configurable dans IOC) et un Chip Select Not. Le but est de transmettre un mot en bits contenant l'ordre (angles en degré) et la configuration du TMC2590. 
+
+Pour cela nous avons la possibilité d'écrire dans 5 registres différents
+
+<div align="center">
+<br>
+<img src="" width="400"> </br>
+Registres </br>
+</br> 
+</div>
+
+<div align="center">
+<br>
+<img src="" width="400"> </br>
+Formats des registres </br>
+</br> 
+</div>
+
+On remarque alors que ce sont les 2 bits de poids fort qui détermine dans quels resgitres nous écrivons. 
+
+##### Registre DRVCTRL
+
+
+
+
 
 ### ROS 2
 
 Il y a deux manières de faire avec ROS2 :
-* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs => Utilisation de ROS_Control (Méthode 1)
+* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs => Utilisation de [ROS_Control](https://github.com/ros-controls/control.ros.org) (Méthode 1)
 * ROS2 ne fait presque rien : Il transmet simplement les données d'un point A à un point B (Méthode 2)
 
 
