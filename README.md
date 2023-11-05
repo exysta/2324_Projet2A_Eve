@@ -48,14 +48,14 @@ Pour cela nous avons la possibilité d'écrire dans 5 registres différents
 
 <div align="center">
 <br>
-<img src="" width="400"> </br>
+<img src="1.png" width="400"> </br>
 Registres </br>
 </br> 
 </div>
 
 <div align="center">
 <br>
-<img src="" width="400"> </br>
+<img src="2.png" width="400"> </br>
 Formats des registres </br>
 </br> 
 </div>
@@ -68,7 +68,7 @@ C'est le registre qui fait décide du courant à envoyer dans le stepper.
 
 <div align="center">
 <br>
-<img src="" width="400"> </br>
+<img src="3.png" width="400"> </br>
 Formats du registre DRVCTRL en mode SPI </br>
 </br> 
 </div>
@@ -83,7 +83,7 @@ C'est le registre qui configure le driver.
 
 <div align="center">
 <br>
-<img src="" width="400"> </br>
+<img src="4" width="400"> </br>
 Formats du registre DRVCONF </br>
 </br> 
 </div>
@@ -95,6 +95,13 @@ Il faudra aussi configurer les bits 4&5 pour pouvoir lire en réponse la positio
 ##### Les registres pour la réponse
 
 Nous devons aussi récupérer des informations à l'aide d'autres registres uniquement en lecture.
+
+<div align="center">
+<br>
+<img src="5.png" width="400"> </br>
+Formats des registres de réponse </br>
+</br> 
+</div>
 
 __A continuer__
 
