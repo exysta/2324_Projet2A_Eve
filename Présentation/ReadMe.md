@@ -2,7 +2,7 @@
 
 Le but de ce document est de synthétiser chaque mise au point au cours du projet.
 
-## Mise au point n°1
+## Etat du projet n°1
 
 ### Problèmes mis en avant
 
@@ -25,3 +25,9 @@ Deux types de régulateur à utiliser dans notre circuit :
 * Avoir un schéma fonctionnel pour révision
 * Avoir un schéma pour le ROS2
 * Choisir MOSFET et commandes
+
+## Etat du projet n°2
+
+### Problèmes/Constats
+
+### Tâches pour la prochaines fois (dans 3 semaines)
