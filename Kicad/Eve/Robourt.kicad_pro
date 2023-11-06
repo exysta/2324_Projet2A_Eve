@@ -338,6 +338,22 @@
     [
       "807609e6-6522-4206-8069-5cb73bf05af8",
       "driver_stepper2"
+    ],
+    [
+      "45a40ff7-b6ec-4165-9635-bd80258dd043",
+      "Régulateur 3.3V"
+    ],
+    [
+      "9b84e365-6524-43b0-9106-e6e67f034906",
+      "Régulateur 5.1V"
+    ],
+    [
+      "c08e9c7d-1604-43bb-a00c-546e3bb44d34",
+      "Régulateur 11.1V"
+    ],
+    [
+      "b0f3c6bf-43ee-43a7-9a34-92e1e933f121",
+      "Régulateur 7.4V"
     ]
   ],
   "text_variables": {}
