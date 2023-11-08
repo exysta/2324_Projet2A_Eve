@@ -3,7 +3,7 @@
 <div align="center">
 
 
-<img src="PP.jpeg"  width=300><br>
+<img src="Images/PP.jpeg"  width=300><br>
 
 [Code](Code/) 
 | [Documentation](Documents/) 
@@ -48,14 +48,14 @@ Pour cela nous avons la possibilité d'écrire dans 5 registres différents
 
 <div align="center">
 <br>
-<img src="1.png" width="400"> </br>
+<img src="Images/1.png" width="400"> </br>
 Registres </br>
 </br> 
 </div>
 
 <div align="center">
 <br>
-<img src="2.png" width="400"> </br>
+<img src="Images/2.png" width="400"> </br>
 Formats des registres </br>
 </br> 
 </div>
@@ -68,7 +68,7 @@ C'est le registre qui fait décide du courant à envoyer dans le stepper.
 
 <div align="center">
 <br>
-<img src="3.png" width="400"> </br>
+<img src="Images/3.png" width="400"> </br>
 Formats du registre DRVCTRL en mode SPI </br>
 </br> 
 </div>
@@ -83,7 +83,7 @@ C'est le registre qui configure le driver.
 
 <div align="center">
 <br>
-<img src="4.png" width="400"> </br>
+<img src="Images/4.png" width="400"> </br>
 Formats du registre DRVCONF </br>
 </br> 
 </div>
@@ -98,7 +98,7 @@ Nous devons aussi récupérer des informations à l'aide d'autres registres uniq
 
 <div align="center">
 <br>
-<img src="5.png" width="400"> </br>
+<img src="Images/5.png" width="400"> </br>
 Formats des registres de réponse </br>
 </br> 
 </div>
@@ -115,7 +115,7 @@ Il y a deux manières de faire avec ROS2 :
 
 <div align="center">
 <br>
-<img src="components_architecture.png" width="350"> </br>
+<img src="Images/components_architecture.png" width="350"> </br>
 Schéma de la méthode 1 </br>
 </br> 
 </div>
