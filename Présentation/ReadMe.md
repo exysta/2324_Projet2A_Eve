@@ -30,4 +30,13 @@ Deux types de régulateur à utiliser dans notre circuit :
 
 ### Problèmes/Constats
 
+A faire cf Charlotte
+
 ### Tâches pour la prochaines fois (dans 3 semaines)
+
+* SPI : le plus vite possible !!!
+* Bien avancer sur le Dynamixel
+* PCB fini ?
+* Protocole de communication entre MP et Raspberry à bien définir
+
+
