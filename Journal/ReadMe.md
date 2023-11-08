@@ -120,7 +120,12 @@ Journal de bord du projet Robourt - 2023.
 
 ### Contenu (07/11/2023)
 
+* Mise au point n°2
+* Continuation sur le SPI : le problème vient du code
 
 ### A faire
 
+* Faire tourner le moteur à l'aide du SPI
+* Commencer routage
+* Appliquer les modifications
 
