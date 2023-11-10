@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ECS-320-6-47B2-CTN-TR
+D Crystals 32.000 MHz 10 pF ECX-1247B2 +/-10/20ppm -40 - +85C +/-2 ppm Aging 1612 4-SMD RoHS
+K
+F https://ecsxtal.com/store/pdf/ECX-1247B2.pdf
+$ENDCMP
+#
+#End Doc Library

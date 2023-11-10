@@ -3,4 +3,5 @@
   (lib (name "TMC2590")(type "KiCad")(uri "C:/Users/charl/OneDrive - ensea (1)/2A/Projet Eve/Symbol_kicad/KiCADv6/2023-10-10_15-06-32.kicad_sym")(options "")(descr ""))
   (lib (name "SQJ504EP-T1_GE3")(type "KiCad")(uri "C:/Users/charl/OneDrive - ensea (1)/2A/Projet Eve/MOSFET/SQJ504EP-T1_GE3.kicad_sym")(options "")(descr ""))
   (lib (name "STM32U535RET6")(type "KiCad")(uri "C:/Users/charl/OneDrive - ensea (1)/2A/Projet Eve/STM32U535RET6/KiCad/STM32U535RET6.kicad_sym")(options "")(descr ""))
+  (lib (name "ECS-320-6-47B2-CTN")(type "KiCad")(uri "C:/Users/Lucas/Desktop/ENSEA/2324_Projet2A_Eve/Kicad/lib/Quartz/ECS-320-6-47B2-CTN-TR.kicad_sym")(options "")(descr ""))
 )
