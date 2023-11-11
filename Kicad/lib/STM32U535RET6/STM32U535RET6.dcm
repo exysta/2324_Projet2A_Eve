@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32U535RET6
+D ARM Microcontrollers - MCU Ultra-low-power FPU Arm Cortex-M33 MCU TrustZone, 160 MHz 512 Kbytes of Flash
+K
+F https://www.st.com/resource/en/datasheet/stm32u535cb.pdf
+$ENDCMP
+#
+#End Doc Library

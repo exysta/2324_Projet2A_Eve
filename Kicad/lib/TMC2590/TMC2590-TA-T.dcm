@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TMC2590-TA-T
+D Bipolar Motor Driver Power MOSFET SPI, Step/Direction 32-TQFP-EP (5x5)
+K
+F https://www.trinamic.com/products/integrated-circuits/details/tmc2590-ta/
+$ENDCMP
+#
+#End Doc Library

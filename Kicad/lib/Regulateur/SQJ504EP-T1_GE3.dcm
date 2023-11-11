@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SQJ504EP-T1_GE3
+D SQJ504EP-T1_GE3 Dual N-Channel MOSFET, 30 (N Channel) A, 30 (P Channel) A, 40 V TrenchFET, 8-Pin SO-8 Vishay Siliconix
+K
+F https://www.vishay.com/docs/76029/sqj504ep.pdf
+$ENDCMP
+#
+#End Doc Library
