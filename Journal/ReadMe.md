@@ -8,6 +8,7 @@
 6. [Séance 5](#séance-5)
 7. [Séance 6](#séance-6)
 8. [Séance 7](#séance-7)
+9. [Séance 8](#séance-8)
 
 
 ## Introduction
@@ -128,4 +129,18 @@ Journal de bord du projet Robourt - 2023.
 * Faire tourner le moteur à l'aide du SPI
 * Commencer routage
 * Appliquer les modifications
+
+## Séance 8
+
+### Contenu (14/11/2023)
+
+* Continuation sur le SPI : le problème vient du code
+* Configuration des empreintes du PCB
+* Progression sur Dynamixel 2.0 pour communication avec servos
+### A faire
+
+* Faire tourner le moteur à l'aide du SPI
+* Commencer routage
+* Commander composants
+* Faire tourner XL430 avec dynamixel 2.0
 
