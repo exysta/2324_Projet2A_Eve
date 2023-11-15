@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "TMC2590-BOB40")(type "KiCad")(uri "${KIPRJMOD}/TMC2590-BOB40.pretty")(options "")(descr ""))
+)
