@@ -1,0 +1,6 @@
+../Core/Src/tmc2590.c:17:6:tmc2590_Init	1
+../Core/Src/tmc2590.c:28:6:tmc2590_SetnCS	1
+../Core/Src/tmc2590.c:32:6:tmc2590_SetPowerEnable	1
+../Core/Src/tmc2590.c:37:19:tmc2590_TransmitReceive	2
+../Core/Src/tmc2590.c:54:19:tmc2590_SetTxBuffer	1
+../Core/Src/tmc2590.c:58:19:tmc2590_PrintReport	2
