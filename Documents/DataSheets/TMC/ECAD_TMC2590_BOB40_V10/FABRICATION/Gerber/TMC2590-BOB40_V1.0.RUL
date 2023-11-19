@@ -1,0 +1,13 @@
+DRC Rules Export File for PCB: C:\Users\Kasutaja\AppData\Local\TempReleases\Snapshot\1\TMC2590_BOB40_V1_0.PcbDoc
+RuleKind=Clearance|RuleName=VM_ST_ALONE_Clearance|Scope=Board|Minimum=6.00
+RuleKind=Width|RuleName=VIN_Width|Scope=Board|Minimum=200.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=6.00
+RuleKind=Width|RuleName=Other_Width|Scope=Board|Minimum=8.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Mounting Hole Clearance|Scope=Board|Minimum=30.00
+RuleKind=Clearance|RuleName=Fiducial Clearance|Scope=Board|Minimum=26.00
+RuleKind=SolderMaskExpansion|RuleName=FiducialSolderMaskExpansion|Scope=Board|Minimum=26.00
+RuleKind=MinimumAnnularRing|RuleName=MinimumViaAnnualRing|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=VM_Clearance|Scope=Board|Minimum=12.70
+RuleKind=Clearance|RuleName=BoardOutlineClearance|Scope=Board|Minimum=15.75

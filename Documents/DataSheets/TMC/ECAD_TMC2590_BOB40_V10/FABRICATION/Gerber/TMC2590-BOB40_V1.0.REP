@@ -1,0 +1,243 @@
+*************************************************************
+FileName = TMC2590-BOB40_V1.0.GBR
+AutoAperture = True
+*************************************************************
+Generating : Bottom
+      File : TMC2590-BOB40_V1.0.GBL
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D49
+    D50
+    D51
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D62
+    D63
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : TMC2590-BOB40_V1.0.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D14
+*************************************************************
+
+*************************************************************
+Generating : GND
+      File : TMC2590-BOB40_V1.0.G1
+
+    Adding Layer      : GND
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D55
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Top
+      File : TMC2590-BOB40_V1.0.GTL
+
+    Adding Layer      : Top
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : TMC2590-BOB40_V1.0.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : TMC2590-BOB40_V1.0.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Dimension
+      File : TMC2590-BOB40_V1.0.GM1
+
+    Adding Layer      : Dimension
+
+
+Used DCodes :
+    D17
+    D49
+*************************************************************
+
+*************************************************************
+Generating : VM
+      File : TMC2590-BOB40_V1.0.G2
+
+    Adding Layer      : VM
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D53
+    D55
+    D57
+    D58
+    D59
+    D60
+    D61
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : TMC2590-BOB40_V1.0.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D12
+    D16
+    D50
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : TMC2590-BOB40_V1.0.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : TMC2590-BOB40_V1.0.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D45
+    D46
+    D47
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : TMC2590-BOB40_V1.0.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+*************************************************************
+

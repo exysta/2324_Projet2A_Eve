@@ -67,7 +67,13 @@ void SystemClock_Config(void);
 int main(void)
 {
 	/* USER CODE BEGIN 1 */
-
+	uint8_t pData[SPI_BUFFER_SIZE] = {0};
+	int index_sin_loop = 0;
+	uint8_t currentCoilA;
+	uint8_t currentCoilB;
+	uint8_t polarityCoilA;
+	uint8_t polarityCoilB;
+	uint32_t drvCtrlCommand;
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -92,24 +98,72 @@ int main(void)
 	MX_TIM1_Init();
 	MX_SPI3_Init();
 	/* USER CODE BEGIN 2 */
-	HAL_UART_Transmit(&hlpuart1, "*********************\r\n", 23, 100);
-	HAL_UART_Transmit(&hlpuart1, "* TMC2590 Test Code *\r\n", 23, 100);
-	HAL_UART_Transmit(&hlpuart1, "*********************\r\n", 23, 100);
+	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
+	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
+	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
 
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
-	tmc2590_PrintReport(&htmc2590);
-	tmc2590_TransmitReceive(&htmc2590, 3);
-	tmc2590_PrintReport(&htmc2590);
+
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1)
 	{
-//		HAL_GPIO_TogglePin(DRV_ENN_GPIO_Port, DRV_ENN_Pin);
-//		HAL_Delay(1000);
-//		HAL_GPIO_TogglePin(nCS_GPIO_Port, nCS_Pin);
-//		HAL_Delay(1000);
+		if(index_sin_loop < 256){
+			currentCoilA = sinTable[index_sin_loop];
+			currentCoilB = sinTable[256-index_sin_loop];
+			polarityCoilA = 0;
+			polarityCoilB = 1;
+		}
+		else if(index_sin_loop < 512){
+			currentCoilA = sinTable[512-index_sin_loop];
+			currentCoilB = sinTable[index_sin_loop-256];
+			polarityCoilA = 0;
+			polarityCoilB = 0;
+		}
+		else if(index_sin_loop < 768){
+			currentCoilA = sinTable[index_sin_loop-512];
+			currentCoilB = sinTable[768-index_sin_loop];
+			polarityCoilA = 1;
+			polarityCoilB = 0;
+		}
+		else{
+			currentCoilA = sinTable[1024-index_sin_loop];
+			currentCoilB = sinTable[index_sin_loop-768];
+			polarityCoilA = 1;
+			polarityCoilB = 1;
+		}
+		index_sin_loop = (index_sin_loop+1)%1024;
+		drvCtrlCommand = (polarityCoilA << 17) | (currentCoilA << 9) | (polarityCoilB << 8) | (currentCoilB << 0);
+		tmc2590_SetTxBufferInt32(&htmc2590, drvCtrlCommand);
+		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+//		HAL_Delay(1);
+
+		//		tmc2590_SetTxBuffer(&htmc2590, pData, TMC2590_CMD_SIZE);
+		//		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+		//		tmc2590_PrintReport(&htmc2590);
+
+		//		tmc2590_dumpRegister(&htmc2590);
+		//		0x3FE00;
+		//		0x001FF;
+		//		0x1FE00;
+		//		0x000FF;
+
+		//		tmc2590_SetTxBufferInt32(&htmc2590, 0x3FE00);
+		//		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+		//		HAL_Delay(1);
+		//		tmc2590_SetTxBufferInt32(&htmc2590, 0x001FF);
+		//		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+		//		HAL_Delay(1);
+		//		tmc2590_SetTxBufferInt32(&htmc2590, 0x1FE00);
+		//		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+		//		HAL_Delay(1);
+		//		tmc2590_SetTxBufferInt32(&htmc2590, 0x000FF);
+		//		tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+		//		HAL_Delay(1);
+
+		//		HAL_Delay(100);
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */

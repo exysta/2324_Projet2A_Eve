@@ -1,0 +1,13 @@
+[DesignatorManager]
+
+[SheetNumberManager]
+SheetNumberOrder=Display Order
+SheetNumberMethod=Increasing
+DocumentName0=ChangeLog.SchDoc
+UniqueIDPath0=
+SheetNumber0=2
+DocumentName1=TMC2590_BOB40_V1_0.SchDoc
+UniqueIDPath1=
+SheetNumber1=1
+
+
