@@ -23,7 +23,9 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 #include "stm32h7xx.h"
+#include "send_dynamixel.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -77,7 +79,6 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -109,7 +110,17 @@ int main(void)
   uint8_t Dynamixel_ToogleLED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 		  /*débutparam, address 65:*/ ,0x41,0x00
 		  /*value in the address*/,0x01
-  	  	  /*CRC*/				,0xCA,0x89};
+  	  	  /*on calcul le CRC après */,0x00,0x00};
+
+  int array_size = sizeof(Dynamixel_ToogleLED_XL430) / sizeof(Dynamixel_ToogleLED_XL430[0]);
+
+  unsigned short crc = update_crc(0, Dynamixel_ToogleLED_XL430, array_size);
+  unsigned char crc_l = (unsigned char)(crc & 0x00FF);
+  unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
+
+  Dynamixel_ToogleLED_XL430[array_size-2]=crc_l;
+  Dynamixel_ToogleLED_XL430[array_size-1]=crc_h;
+
 
   /*change position to 90*/
   uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
@@ -123,35 +134,35 @@ int main(void)
      		  /*value in the address : 1*/,0x01
        	  	  /*CRC*/				,0xCA,0x89};
 
-  huart3.Init.Mode = UART_MODE_TX;
   //huart4.Init.Mode =   UART_MODE_TX;
 
-  char buff[100];
-  char UART_buf[100];
-  int size = sprintf(buff,"led : %X\n\r",Dynamixel_ToogleLED_XL430);
-  HAL_UART_Transmit(&huart3,(const uint8_t *)buff,size,100);
+  //char buff[100];
 
-
-  /*
-  HAL_UART_Transmit(&huart4, Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430), 100);
-  HAL_Delay(2000);
-  HAL_UART_Transmit(&huart4, Dynamixel_ChangePosition_XL430, sizeof(Dynamixel_ChangePosition_XL430), 100);
-  HAL_UART_Transmit(&huart4, Dynamixel_RotateMode_XL430, sizeof(Dynamixel_RotateMode_XL430), 100);
-  */
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  //int size = sprintf(buff,"led : %X\n\r",Dynamixel_ToogleLED_XL430);
-	  //HAL_UART_Transmit(&huart3,(const uint8_t *)buff,size,100);
-	  //HAL_UART_Transmit(&huart3,(const uint8_t *)buff,size,100);
+  while (1){
 
-	  //HAL_Delay(5000);
+	  // Enable the UART transmitter by setting the RE bit in USART_CR1
+	  huart3.Instance->CR1 |= USART_CR1_TE;
+	  // Disable the UART receiver by clearing the RE bit in USART_CR1
+	  huart3.Instance->CR1 &= ~USART_CR1_RE;
+
+	  //HAL_UART_Transmit(&huart3,Dynamixel_ToogleLED_XL430,sizeof(Dynamixel_ToogleLED_XL430),100);
+	  send_dynamixel(Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430));
+	  while (!(huart3.Instance->ISR & USART_ISR_TC));
+
+	  // Enable the UART receiver by setting the RE bit in USART_CR1
+	   huart3.Instance->CR1 |= USART_CR1_RE;
+	   // Disable the UART transmitter by clearing the RE bit in USART_CR1
+	   huart3.Instance->CR1 &= ~USART_CR1_TE;
+
 	  //sprintf(UART_buf,"LAB:STM32H7A3>>");
-	  //HAL_UART_Transmit(&huart3, (unsigned char *)UART_buf, strlen(UART_buf), 1);
-	  //HAL_UART_Transmit(&huart3, Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430), 100);
+
+	  HAL_Delay(1000);
+
+
 
     /* USER CODE END WHILE */
 
@@ -394,7 +405,7 @@ static void MX_USART3_UART_Init(void)
   huart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
   huart3.Init.ClockPrescaler = UART_PRESCALER_DIV1;
   huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_HalfDuplex_Init(&huart3) != HAL_OK)
+  if (HAL_UART_Init(&huart3) != HAL_OK)
   {
     Error_Handler();
   }
