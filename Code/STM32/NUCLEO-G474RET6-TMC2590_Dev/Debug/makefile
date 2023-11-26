@@ -60,8 +60,8 @@ all: main-build
 main-build: NUCLEO-G474RET6-TMC2590_Dev.elf secondary-outputs
 
 # Tool invocations
-NUCLEO-G474RET6-TMC2590_Dev.elf NUCLEO-G474RET6-TMC2590_Dev.map: $(OBJS) $(USER_OBJS) /home/nicolas/git/2324_Projet2A_Eve/Code/STM32/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO-G474RET6-TMC2590_Dev.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/nicolas/git/2324_Projet2A_Eve/Code/STM32/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G474RET6-TMC2590_Dev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NUCLEO-G474RET6-TMC2590_Dev.elf NUCLEO-G474RET6-TMC2590_Dev.map: $(OBJS) $(USER_OBJS) C:\Users\arthu\Documents\GitHub\2324_Projet2A_Eve\Code\STM32\NUCLEO-G474RET6-TMC2590_Dev\STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NUCLEO-G474RET6-TMC2590_Dev.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\arthu\Documents\GitHub\2324_Projet2A_Eve\Code\STM32\NUCLEO-G474RET6-TMC2590_Dev\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G474RET6-TMC2590_Dev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

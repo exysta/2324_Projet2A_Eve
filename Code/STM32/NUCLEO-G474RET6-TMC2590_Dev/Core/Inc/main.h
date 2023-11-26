@@ -41,12 +41,12 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+extern int enable_loop;
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+#define ITM_Port32(n) (*((volatile unsigned long *)(0xE0000000+4*n)))
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -80,6 +80,7 @@ void Error_Handler(void);
 #define T_SWCLK_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
+
 
 /* USER CODE END Private defines */
 

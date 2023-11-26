@@ -9,11 +9,14 @@
 #include "usart.h"
 #include "gpio.h"
 #include "stdio.h"
+#include "tim.h"
 
 TMC2590_HandleTypeDef htmc2590;
 
 const char transmit_ok[] = "Transmission SPI done\r\n";
 const char stringReportHeader[] = "SPI Tx/Rx Buffers\r\n";
+uint8_t perioedElapsed_IT = 0;
+
 const uint8_t sinTable[256] = {
 		1, 	2,	4,	5,	7,	8,	10,	11,	13,	14,	16,	17,	19,	21,	22,	24,	25,	27,	28,	30,	31,	33,	34,	36,	37,	39,	40,	42,	43,	45,	46,	48,
 		49,	51,	52, 54,	55,	57,	58,	60,	61,	62,	64,	65,	67,	68,	70,	71,	73,	74,	76,	77,	79,	80,	81,	83,	84,	86,	87,	89,	90,	91,	93,	94,
@@ -39,7 +42,7 @@ void tmc2590_Init(TMC2590_HandleTypeDef *phtmc2590, SPI_HandleTypeDef *hspi, GPI
 	phtmc2590->chopConfRegister			= 0b10011000000000001111; // 100 10
 	phtmc2590->smartEnRegister 			= 0b10100000000000000000; // 101 0
 	phtmc2590->stallGuardCtrlRegister 	= 0b11000000000000011111;//0xD001F; // 110 1---- 11111
-	phtmc2590->drvConfRegister 			= 0x11100000011110110000;//0xE0480; // 1110 0000 0100 1000 0000
+	phtmc2590->drvConfRegister 			= 0b11100000011110110000;//0xE0480; // 1110 0000 0100 1000 0000
 
 	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->drvCtrlRegister);
 	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
@@ -51,7 +54,9 @@ void tmc2590_Init(TMC2590_HandleTypeDef *phtmc2590, SPI_HandleTypeDef *hspi, GPI
 	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
 	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->drvConfRegister);
 	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
-	}
+
+	HAL_TIM_Base_Start_IT(&htim2);
+}
 
 void tmc2590_SetnCS(TMC2590_HandleTypeDef *phtmc2590, FlagStatus status){
 	HAL_GPIO_WritePin(phtmc2590->gpioPortNCS, phtmc2590->gpioPinNCS, status);
@@ -70,7 +75,7 @@ HAL_StatusTypeDef tmc2590_TransmitReceive(TMC2590_HandleTypeDef *phtmc2590, int 
 	tmc2590_SetnCS(phtmc2590, SET);
 
 	if(status == HAL_OK){
-		HAL_UART_Transmit(&hlpuart1, (uint8_t *)transmit_ok, sizeof(transmit_ok), 100);
+		//HAL_UART_Transmit(&hlpuart1, (uint8_t *)transmit_ok, sizeof(transmit_ok), 100);
 	}
 	else{
 
@@ -100,7 +105,7 @@ void tmc2590_PrintReport(TMC2590_HandleTypeDef *phtmc2590){
 
 	for(i = 0; i < SPI_BUFFER_SIZE; i++){
 		stringLength = snprintf(string, 64, "%2d : 0x%2x | 0x%2x\r\n", i, phtmc2590->spiTxBuffer[i], phtmc2590->spiRxBuffer[i]);
- 		HAL_UART_Transmit(&hlpuart1, string, stringLength, 100);
+		HAL_UART_Transmit(&hlpuart1, string, stringLength, 100);
 	}
 }
 
@@ -127,6 +132,14 @@ void tmc2590_dumpRegister(TMC2590_HandleTypeDef *phtmc2590){
 		tmc2590_PrintReport(&htmc2590);
 	}
 
+}
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance == TIM2){
+		perioedElapsed_IT = 1;
+	}
 }
 
 

@@ -61,6 +61,7 @@ typedef struct __TMC2590_HandleTypeDef{
 
 extern TMC2590_HandleTypeDef htmc2590;
 extern const uint8_t sinTable[256];
+extern uint8_t perioedElapsed_IT;
 
 void tmc2590_Init(TMC2590_HandleTypeDef *phtmc2590, SPI_HandleTypeDef *hspi, GPIO_TypeDef *gpioPortNCS, uint16_t gpioPinNCS, GPIO_TypeDef *gpioPortDrvEnN, uint16_t gpioPinDrvEnN);
 void tmc2590_SetnCS(TMC2590_HandleTypeDef *phtmc2590, FlagStatus status);
