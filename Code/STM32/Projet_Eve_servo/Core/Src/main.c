@@ -21,7 +21,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include "stm32h7xx.h"
+#include "send_dynamixel.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,6 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 UART_HandleTypeDef huart4;
+UART_HandleTypeDef huart5;
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart3;
 
@@ -56,6 +61,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_HS_USB_Init(void);
 static void MX_UART4_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_UART5_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -72,7 +78,6 @@ static void MX_USART1_UART_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
 
   /* USER CODE END 1 */
 
@@ -98,13 +103,24 @@ int main(void)
   MX_USB_OTG_HS_USB_Init();
   MX_UART4_Init();
   MX_USART1_UART_Init();
+  MX_UART5_Init();
   /* USER CODE BEGIN 2 */
 
   /*toogle LED*/
   uint8_t Dynamixel_ToogleLED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 		  /*débutparam, address 65:*/ ,0x41,0x00
 		  /*value in the address*/,0x01
-  	  	  /*CRC*/				,0xCA,0x89};
+  	  	  /*on calcul le CRC après */,0x00,0x00};
+
+  int array_size = sizeof(Dynamixel_ToogleLED_XL430) / sizeof(Dynamixel_ToogleLED_XL430[0]);
+
+  unsigned short crc = update_crc(0, Dynamixel_ToogleLED_XL430, array_size);
+  unsigned char crc_l = (unsigned char)(crc & 0x00FF);
+  unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
+
+  Dynamixel_ToogleLED_XL430[array_size-2]=crc_l;
+  Dynamixel_ToogleLED_XL430[array_size-1]=crc_h;
+
 
   /*change position to 90*/
   uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
@@ -117,19 +133,37 @@ int main(void)
      		  /*débutparam, address 64:*/ ,0x40,0x00
      		  /*value in the address : 1*/,0x01
        	  	  /*CRC*/				,0xCA,0x89};
-  HAL_UART_Transmit(&huart4, Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430), HAL_MAX_DELAY);
-  HAL_Delay(2000);
-  HAL_UART_Transmit(&huart4, Dynamixel_ChangePosition_XL430, sizeof(Dynamixel_ChangePosition_XL430), HAL_MAX_DELAY);
-  HAL_UART_Transmit(&huart4, Dynamixel_RotateMode_XL430, sizeof(Dynamixel_RotateMode_XL430), HAL_MAX_DELAY);
 
+  //huart4.Init.Mode =   UART_MODE_TX;
 
+  //char buff[100];
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1){
+
+	  // Enable the UART transmitter by setting the RE bit in USART_CR1
+	  huart3.Instance->CR1 |= USART_CR1_TE;
+	  // Disable the UART receiver by clearing the RE bit in USART_CR1
+	  huart3.Instance->CR1 &= ~USART_CR1_RE;
+
+	  //HAL_UART_Transmit(&huart3,Dynamixel_ToogleLED_XL430,sizeof(Dynamixel_ToogleLED_XL430),100);
+	  send_dynamixel(Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430));
+	  while (!(huart3.Instance->ISR & USART_ISR_TC));
+
+	  // Enable the UART receiver by setting the RE bit in USART_CR1
+	   huart3.Instance->CR1 |= USART_CR1_RE;
+	   // Disable the UART transmitter by clearing the RE bit in USART_CR1
+	   huart3.Instance->CR1 &= ~USART_CR1_TE;
+
+	  //sprintf(UART_buf,"LAB:STM32H7A3>>");
+
+	  HAL_Delay(1000);
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -215,7 +249,7 @@ static void MX_UART4_Init(void)
 
   /* USER CODE END UART4_Init 1 */
   huart4.Instance = UART4;
-  huart4.Init.BaudRate = 57600;
+  huart4.Init.BaudRate = 115200;
   huart4.Init.WordLength = UART_WORDLENGTH_8B;
   huart4.Init.StopBits = UART_STOPBITS_1;
   huart4.Init.Parity = UART_PARITY_NONE;
@@ -244,6 +278,54 @@ static void MX_UART4_Init(void)
   /* USER CODE BEGIN UART4_Init 2 */
 
   /* USER CODE END UART4_Init 2 */
+
+}
+
+/**
+  * @brief UART5 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_UART5_Init(void)
+{
+
+  /* USER CODE BEGIN UART5_Init 0 */
+
+  /* USER CODE END UART5_Init 0 */
+
+  /* USER CODE BEGIN UART5_Init 1 */
+
+  /* USER CODE END UART5_Init 1 */
+  huart5.Instance = UART5;
+  huart5.Init.BaudRate = 115200;
+  huart5.Init.WordLength = UART_WORDLENGTH_8B;
+  huart5.Init.StopBits = UART_STOPBITS_1;
+  huart5.Init.Parity = UART_PARITY_NONE;
+  huart5.Init.Mode = UART_MODE_TX_RX;
+  huart5.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart5.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart5.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart5.Init.ClockPrescaler = UART_PRESCALER_DIV1;
+  huart5.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart5) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetTxFifoThreshold(&huart5, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetRxFifoThreshold(&huart5, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_DisableFifoMode(&huart5) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN UART5_Init 2 */
+
+  /* USER CODE END UART5_Init 2 */
 
 }
 
