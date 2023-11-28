@@ -9,6 +9,7 @@
 7. [Séance 6](#séance-6)
 8. [Séance 7](#séance-7)
 9. [Séance 8](#séance-8)
+10. [Séance 9](&séance-9)
 
 
 ## Introduction
@@ -143,4 +144,13 @@ Journal de bord du projet Robourt - 2023.
 * Commencer routage
 * Commander composants
 * Faire tourner XL430 avec dynamixel 2.0
+
+
+## Séance 9
+
+### Contenu (28/11/2023)
+
+
+### A faire
+
 
