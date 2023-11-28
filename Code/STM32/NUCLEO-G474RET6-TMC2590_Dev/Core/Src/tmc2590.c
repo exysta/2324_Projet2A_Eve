@@ -17,6 +17,20 @@ const char transmit_ok[] = "Transmission SPI done\r\n";
 const char stringReportHeader[] = "SPI Tx/Rx Buffers\r\n";
 uint8_t perioedElapsed_IT = 0;
 
+// Configuration sendOrderStepper
+int index_sin_loop = 0;
+uint8_t currentCoilA;
+uint8_t currentCoilB;
+uint8_t polarityCoilA;
+uint8_t polarityCoilB;
+uint32_t drvCtrlCommand;
+
+
+
+
+
+
+
 const uint8_t sinTable[256] = {
 		1, 	2,	4,	5,	7,	8,	10,	11,	13,	14,	16,	17,	19,	21,	22,	24,	25,	27,	28,	30,	31,	33,	34,	36,	37,	39,	40,	42,	43,	45,	46,	48,
 		49,	51,	52, 54,	55,	57,	58,	60,	61,	62,	64,	65,	67,	68,	70,	71,	73,	74,	76,	77,	79,	80,	81,	83,	84,	86,	87,	89,	90,	91,	93,	94,
@@ -56,6 +70,7 @@ void tmc2590_Init(TMC2590_HandleTypeDef *phtmc2590, SPI_HandleTypeDef *hspi, GPI
 	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
 
 	HAL_TIM_Base_Start_IT(&htim2);
+
 }
 
 void tmc2590_SetnCS(TMC2590_HandleTypeDef *phtmc2590, FlagStatus status){
@@ -141,5 +156,58 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		perioedElapsed_IT = 1;
 	}
 }
+
+void sendOrderStepper(int numberStepper, int inputOrder){
+
+	/* Tous les 1024 il fait un degré
+	// 90° c'est 90*1024 dans le while autout de ça
+	// On mets le tout dans une fonction tmc2590_sendOrder(int angle, int number_motor)
+	// chooseMotor(int numbermotor){
+	 * if (compris entre 1 & 3){
+	 * motor send order
+	 * else
+	 * tmc2590_sendOrder
+	 *
+	 */
+	int polarity = (inputOrder<0);
+	int order = (int) abs(inputOrder)*142.2; //Facteur pour passer des angles aux microsteps. 12800/90
+	int indice = 0;
+	while (indice != order){
+		if(perioedElapsed_IT){
+				if(index_sin_loop < 256){
+					currentCoilA = sinTable[index_sin_loop];
+					currentCoilB = sinTable[256-index_sin_loop];
+					polarityCoilA = polarity;
+					polarityCoilB = 1;
+				}
+				else if(index_sin_loop < 512){
+					currentCoilA = sinTable[512-index_sin_loop];
+					currentCoilB = sinTable[index_sin_loop-256];
+					polarityCoilA = polarity;
+					polarityCoilB = 0;
+				}
+				else if(index_sin_loop < 768){
+					currentCoilA = sinTable[index_sin_loop-512];
+					currentCoilB = sinTable[768-index_sin_loop];
+					polarityCoilA = 1 - polarity;
+					polarityCoilB = 0;
+				}
+				else{
+					currentCoilA = sinTable[1024-index_sin_loop];
+					currentCoilB = sinTable[index_sin_loop-768];
+					polarityCoilA = 1 - polarity;
+					polarityCoilB = 1;
+				}
+				index_sin_loop = (index_sin_loop+1)%1024;
+				indice++;
+
+				drvCtrlCommand = (polarityCoilA << 17) | (currentCoilA << 9) | (polarityCoilB << 8) | (currentCoilB << 0);
+				tmc2590_SetTxBufferInt32(&htmc2590, drvCtrlCommand);
+				tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+				perioedElapsed_IT = 0;
+			}
+	}
+}
+
 
 

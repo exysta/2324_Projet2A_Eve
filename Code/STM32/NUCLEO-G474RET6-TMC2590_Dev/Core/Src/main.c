@@ -67,13 +67,14 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t pData[SPI_BUFFER_SIZE] = {0};
+/*	uint8_t pData[SPI_BUFFER_SIZE] = {0};
 	int index_sin_loop = 0;
 	uint8_t currentCoilA;
 	uint8_t currentCoilB;
 	uint8_t polarityCoilA;
 	uint8_t polarityCoilB;
 	uint32_t drvCtrlCommand;
+	int ordre = 0; */
 
   /* USER CODE END 1 */
 
@@ -115,46 +116,19 @@ int main(void)
 	{
 
 		// Add code to choose nCS
-		if(perioedElapsed_IT){
-//		ITM_Port32(31)=1;
-			if(index_sin_loop < 256){
-				currentCoilA = sinTable[index_sin_loop];
-				currentCoilB = sinTable[256-index_sin_loop];
-				polarityCoilA = 0;
-				polarityCoilB = 1;
-			}
-			else if(index_sin_loop < 512){
-				currentCoilA = sinTable[512-index_sin_loop];
-				currentCoilB = sinTable[index_sin_loop-256];
-				polarityCoilA = 0;
-				polarityCoilB = 0;
-			}
-			else if(index_sin_loop < 768){
-				currentCoilA = sinTable[index_sin_loop-512];
-				currentCoilB = sinTable[768-index_sin_loop];
-				polarityCoilA = 1;
-				polarityCoilB = 0;
-			}
-			else{
-				currentCoilA = sinTable[1024-index_sin_loop];
-				currentCoilB = sinTable[index_sin_loop-768];
-				polarityCoilA = 1;
-				polarityCoilB = 1;
-			}
 
-			index_sin_loop = (index_sin_loop+1)%1024;
-			drvCtrlCommand = (polarityCoilA << 17) | (currentCoilA << 9) | (polarityCoilB << 8) | (currentCoilB << 0);
-			tmc2590_SetTxBufferInt32(&htmc2590, drvCtrlCommand);
-			ITM_Port32(31)=2;
-			tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
-			ITM_Port32(31)=3;
-			perioedElapsed_IT = 0;
+		// On va définir moteur 1/2/3 pour les steppers
+		// Moteur 4/5/6 pour les autres
+		sendOrderStepper(1, 90);
 
-			__HAL_TIM_SET_COUNTER(&htim2, 100);
-			__HAL_TIM_SET_AUTORELOAD(&htim1, 100)
-		}
-			//tmc2590_PrintReport(&htmc2590);  //Report doesn't work - Fail to turn if ON
-			//HAL_Delay(10);
+		HAL_Delay(1000);
+		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
+
+		sendOrderStepper(1, -90);
+
+		HAL_Delay(1000);
+
+
 
 
 		//tmc_2590_Select(int number_motor);
