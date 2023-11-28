@@ -1158,7 +1158,7 @@
     (property "Value" "22uH" (at 151.13 83.82 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 151.13 85.09 0)
+    (property "Footprint" "Eagle_WE-PD (rev23a):WE-PD_1210" (at 151.13 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 85.09 0)
