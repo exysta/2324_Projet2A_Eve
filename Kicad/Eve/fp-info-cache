@@ -1,4 +1,4 @@
-21458333102799243
+21460033306790773
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53290,6 +53290,125 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+Eagle_WE-PD (rev23a)
+WE-PD_1030P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1030P, SMT, 2pins{return}<br>LxWxH=10x10x3mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1050P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1050P, SMT, 2pins{return}<br>LxWxH=10x10x5mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1210
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1210, SMT, 2pins{return}<br>LxWxH=12x12x10mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1245
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1245, SMT, 2pins{return}<br>LxWxH=12x12x4.5mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1260
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1260, SMT, 2pins{return}<br>LxWxH=12x12x6mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1260P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1260P, SMT, 2pins{return}<br>LxWxH=12x12x6mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1280
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1280, SMT, 2pins{return}<br>LxWxH=12x12x8mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1280P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1280P, SMT, 2pins{return}<br>LxWxH=12x12x8mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_1510
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 1510, SMT, 2pins{return}<br>LxWxH=15x15x10mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_6033R
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 6033R, SMT, 2pins{return}<br>LxWxH=5.9x6.2x3.3mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_6050R
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 6050R, SMT, 2pins{return}<br>LxWxH=5.9x6.2x5mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7332
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7332, SMT, 2pins{return}<br>LxWxH=7.3x7.3x3.2mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7332P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7332P, SMT, 2pins{return}<br>LxWxH=7.3x7.3x3.2mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7332R
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7332R, SMT, 2pins{return}<br>LxWxH=7.3x7.3x3.2mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7345
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7345, SMT, 2pins{return}<br>LxWxH=7.3x7.3x4.5mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7345P
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7345P, SMT, 2pins{return}<br>LxWxH=7.3x7.3x4.5mm
+
+0
+2
+2
+Eagle_WE-PD (rev23a)
+WE-PD_7345R
+<b> WE-PD SMD Power Inductor<br></b>{return}{return}<br>Size: 7345R, SMT, 2pins{return}<br>LxWxH=7.3x7.3x4.5mm
+
+0
+2
+2
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
