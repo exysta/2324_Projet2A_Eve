@@ -36,6 +36,7 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 ## Partie-Software
 
+Nous allons d'abord parler du contrôle des steppers qui se font à l'aide des drivers TMC2590. 
 
 ### Contrôle TMC2590
 
@@ -104,7 +105,11 @@ Formats des registres de réponse </br>
 </div>
 
 __A continuer__
+Nous avons donc configuré les registres avec les paramètres suivants (cf photo code). 
 
+### Explication du code
+
+Expliquer chaque fonction globalement avec images. 
 
 ### ROS 2
 
@@ -127,6 +132,7 @@ La 2e méthode revient à créer une entrée où l'on mettra les ordres (des ang
 
 C'est plutôt la 2e méthode qui est envisagée étant donnée que le groupe de 3e année ont réalisé une simulation qui permet de passer de coordonnées x,y & z en données d'angles pour chaque moteur. On aurait juste alors à transmettre ces données à la carte STM32 (UART) qui s'occuperait de la partie commande des moteurs.
 
+Il faut définir le protocole de communication entre les deux appareils (pourquoi pas s'inspirer du Dynamixel) ?
 
 ## Partie Hardware et intégration
 
@@ -156,3 +162,4 @@ WIP
 ## Annexes
 
 WIP
+Diagramme de Gantt
