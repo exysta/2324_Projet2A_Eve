@@ -9,7 +9,7 @@
 7. [Séance 6](#séance-6)
 8. [Séance 7](#séance-7)
 9. [Séance 8](#séance-8)
-10. [Séance 9](&séance-9)
+10. [Séance 9](#séance-9)
 
 
 ## Introduction
@@ -150,7 +150,11 @@ Journal de bord du projet Robourt - 2023.
 
 ### Contenu (28/11/2023)
 
-
+* Moteur tourne en SPI, dans les deux sens avec un ordre en angle donné
+* Routage en cours
+* Transmission en Dynamixel
 ### A faire
 
-
+* Préparer la présentation
+* Documenter le tout
+* Récupérer la position du stepper & utiliser DMA
