@@ -99,18 +99,10 @@ int main(void)
   uint8_t Dynamixel_ToogleLED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 		  /*débutparam, address 65:*/ ,0x41,0x00
 		  /*value in the address*/,0x01
-  	  	  /*on calcul le CRC après */,0xCC,0xE6};
-/*
-  int array_size = sizeof(Dynamixel_ToogleLED_XL430) / sizeof(Dynamixel_ToogleLED_XL430[0]);
+  	  	  /*on calcul le CRC après */,0x00,0x00};
 
-  unsigned short crc = update_crc(0, Dynamixel_ToogleLED_XL430, array_size);
-  unsigned char crc_l = (unsigned char)(crc & 0x00FF);
-  unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
 
-  Dynamixel_ToogleLED_XL430[array_size-2]=crc_l;
-  Dynamixel_ToogleLED_XL430[array_size-1]=crc_h;
 
-*/
   /*change position to 90*/
   uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
    		  /*débutparam, address 116:*/ ,0x74,0x00
@@ -123,19 +115,13 @@ int main(void)
      		  /*value in the address : 1*/,0x01
        	  	  /*CRC*/				,0xCA,0x89};
 
-char buff[100];
-//huart2.Instance->CR1 |= USART_CR1_TE;
-//huart2.Instance->CR1 &= ~USART_CR1_RE;
-//HAL_HalfDuplex_EnableTransmitter(&huart2);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
-
-	  HAL_UART_Transmit(&huart3, Dynamixel_ToogleLED_XL430, sizeof(Dynamixel_ToogleLED_XL430), 10);
-
+	  send_dynamixel(Dynamixel_ToogleLED_XL430,sizeof(Dynamixel_ToogleLED_XL430));
+	  //HAL_UART_Transmit(&huart3, test_Dynamixel_ToogleLED_XL430, sizeof(test_Dynamixel_ToogleLED_XL430), 10);
 	  HAL_Delay(1000);
 
 

@@ -1,1 +1,1 @@
-../Core/Src/send_dynamixel.c:16:6:send_dynamixel	24	static
+../Core/Src/send_dynamixel.c:16:6:send_dynamixel	56	dynamic
