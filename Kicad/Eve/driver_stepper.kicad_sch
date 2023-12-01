@@ -707,6 +707,9 @@
     (uuid fe120d13-e1ae-4395-800d-23b72dcae627)
   )
 
+  (no_connect (at 152.4 91.44) (uuid 08765bdf-5f07-4a6c-9ccb-234b70af7c05))
+  (no_connect (at 152.4 93.98) (uuid c2e9ce57-1422-4d2c-b8f4-1f89bd34be72))
+
   (wire (pts (xy 236.22 29.21) (xy 233.68 29.21))
     (stroke (width 0) (type default))
     (uuid 0170b20f-6864-4084-8a90-19a93e307e07)
@@ -1242,10 +1245,6 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ac83278a-7c83-4cb2-9cec-8f6872d994da)
   )
-  (hierarchical_label "STANDALONE_MODE" (shape input) (at 152.4 93.98 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid b9d4db93-217d-4b93-818d-fb5b27441efd)
-  )
   (hierarchical_label "SCK" (shape input) (at 101.6 104.14 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid cc3e97e0-66fa-4258-986b-be8da7b95ecf)
@@ -1257,10 +1256,6 @@
   (hierarchical_label "ENN" (shape input) (at 101.6 111.76 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid ea2e35c2-7ca2-4854-8f8f-94c3262d4ed5)
-  )
-  (hierarchical_label "SG_TST" (shape input) (at 152.4 91.44 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid f32d8175-c91e-4326-98c8-331884e455e8)
   )
 
   (symbol (lib_name "SQJ504EP-T1_GE3_1") (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 224.79 124.46 180) (unit 1)

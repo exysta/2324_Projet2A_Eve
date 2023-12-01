@@ -458,6 +458,10 @@
       {
         "netclass": "power",
         "pattern": "*SR*"
+      },
+      {
+        "netclass": "power",
+        "pattern": "24V"
       }
     ]
   },
