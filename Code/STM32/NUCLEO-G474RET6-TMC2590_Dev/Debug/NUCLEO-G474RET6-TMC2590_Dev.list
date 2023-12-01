@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0002697b  00000000  00000000  0003ad2e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00016c85  00000000  00000000  000616a9  2**0
+ 18 .debug_line   00016c88  00000000  00000000  000616a9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000fdca7  00000000  00000000  0007832e  2**0
+ 19 .debug_str    000fdca4  00000000  00000000  00078331  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  20 .debug_frame  00004e24  00000000  00000000  00175fd8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000087  00000000  00000000  0017adfc  2**0
+ 21 .debug_line_str 00000084  00000000  00000000  0017adfc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1124,6 +1124,7 @@ int main(void)
 		HAL_Delay(1000);
  8000cca:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  8000cce:	f000 fdd1 	bl	8001874 <HAL_Delay>
+		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
 
 		sendOrderStepper(1, -90);
  8000cd2:	f06f 0159 	mvn.w	r1, #89	; 0x59

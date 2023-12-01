@@ -95,35 +95,18 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  /*toogle LED*/
-  uint8_t Dynamixel_ToogleLED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-		  /*débutparam, address 65:*/ ,0x41,0x00
-		  /*value in the address*/,0x01
-  	  	  /*on calcul le CRC après */,0x00,0x00};
-
-
-
-  /*change position to 90*/
-  uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
-   		  /*débutparam, address 116:*/ ,0x74,0x00
-   		  /*value in the address : 2048*/,0x00,0x08,0x00,0x00
-     	  	  /*CRC*/				,0xCA,0x89};
-
-  /*autorise le moteur a tourner ( pas de transimission/récpetion possible dans ce mode*/
-    uint8_t Dynamixel_RotateMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-     		  /*débutparam, address 64:*/ ,0x40,0x00
-     		  /*value in the address : 1*/,0x01
-       	  	  /*CRC*/				,0xCA,0x89};
+  RotateToPosition(90);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
-	  send_dynamixel(Dynamixel_ToogleLED_XL430,sizeof(Dynamixel_ToogleLED_XL430));
+	  ToggleLed(1);
 	  //HAL_UART_Transmit(&huart3, test_Dynamixel_ToogleLED_XL430, sizeof(test_Dynamixel_ToogleLED_XL430), 10);
 	  HAL_Delay(1000);
-
+	  ToggleLed(0);
+	  HAL_Delay(1000);
 
 
     /* USER CODE END WHILE */

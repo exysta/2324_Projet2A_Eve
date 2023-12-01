@@ -1,4 +1,3 @@
-"./Core/Src/crc.o"
 "./Core/Src/main.o"
 "./Core/Src/send_dynamixel.o"
 "./Core/Src/stm32h7xx_hal_msp.o"

@@ -10,4 +10,6 @@
 
 void send_dynamixel(uint8_t* instruction, size_t array_size);
 
+void RotateToPosition(float angleInDeg);
+
 #endif /* INC_SEND_DYNAMIXEL_H_ */
