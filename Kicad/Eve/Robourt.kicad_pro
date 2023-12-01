@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 2.88,
+          "width": 2.88
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -80,7 +80,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "ignore",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -462,6 +462,18 @@
       {
         "netclass": "power",
         "pattern": "24V"
+      },
+      {
+        "netclass": "power",
+        "pattern": "/driver_stepper1/LA2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "SPI2_MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
       }
     ]
   },
