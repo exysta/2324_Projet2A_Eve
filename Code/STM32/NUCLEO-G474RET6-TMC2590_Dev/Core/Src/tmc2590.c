@@ -17,19 +17,16 @@ const char transmit_ok[] = "Transmission SPI done\r\n";
 const char stringReportHeader[] = "SPI Tx/Rx Buffers\r\n";
 uint8_t perioedElapsed_IT = 0;
 
-// Configuration sendOrderStepper
+//sendOrderStepper Configuration
 int index_sin_loop = 0;
+int anglesToMicrostep = 142.2; //12800/90
 uint8_t currentCoilA;
 uint8_t currentCoilB;
 uint8_t polarityCoilA;
 uint8_t polarityCoilB;
 uint32_t drvCtrlCommand;
 
-
-
-
-
-
+//Sin Table
 
 const uint8_t sinTable[256] = {
 		1, 	2,	4,	5,	7,	8,	10,	11,	13,	14,	16,	17,	19,	21,	22,	24,	25,	27,	28,	30,	31,	33,	34,	36,	37,	39,	40,	42,	43,	45,	46,	48,
@@ -159,18 +156,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void sendOrderStepper(int numberStepper, int inputOrder){
 
-	/* Tous les 1024 il fait un degré
-	// 90° c'est 90*1024 dans le while autout de ça
-	// On mets le tout dans une fonction tmc2590_sendOrder(int angle, int number_motor)
-	// chooseMotor(int numbermotor){
-	 * if (compris entre 1 & 3){
-	 * motor send order
-	 * else
-	 * tmc2590_sendOrder
+	/*
+	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
+	 * For the moment, we have only one stepper but witch nCS signal, we will be able to change with
+	 * stepper we wwant to communicate
+	 *
+	 *
 	 *
 	 */
 	int polarity = (inputOrder<0);
-	int order = (int) abs(inputOrder)*142.2; //Facteur pour passer des angles aux microsteps. 12800/90
+	int order = (int) abs(inputOrder)*142.2;
 	int indice = 0;
 	while (indice != order){
 		if(perioedElapsed_IT){
