@@ -36,9 +36,8 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 ## Partie-Software
 
-Nous allons d'abord parler du contrôle des steppers qui se font à l'aide des drivers TMC2590. 
 
-### Contrôle TMC2590
+### Contrôle des steppers par la TMC2590
 
 #### Connexion SPI
 
@@ -91,11 +90,11 @@ Formats du registre DRVCONF </br>
 
 C'est ici qu'il faut modfier le bit pour désactiver l'interface STEP/DIR. Pour choisir le mode SPI il faut que le bit SDOFF soit égal à 1. Sinon, l'interface choisie sera STEP/DIR.
 
-Il faudra aussi configurer les bits 4&5 pour pouvoir lire en réponse la position 
+Il faudra aussi modifier les bits 4&5 pour configurer une partie de la réponse (voir image suivante).
 
 ##### Les registres pour la réponse
 
-Nous devons aussi récupérer des informations à l'aide d'autres registres uniquement en lecture.
+Nous pouvons aussi récupérer des informations à l'aide d'autres registres uniquement en lecture.
 
 <div align="center">
 <br>
@@ -104,17 +103,52 @@ Formats des registres de réponse </br>
 </br> 
 </div>
 
-__A continuer__
-Nous avons donc configuré les registres avec les paramètres suivants (cf photo code). 
 
-### Explication du code
+Nous avons donc configuré les registres avec les paramètres suivants :
 
-Expliquer chaque fonction globalement avec images. 
+<div align="center">
+<br>
+<img src="Images/6.png" width="400"> </br>
+Configuration des registres par bit </br>
+</br> 
+</div>
+
+#### Explication du code
+
+Nous sommes passé par une structure
+Le code de commande pour la TMC2590 est séparé en plusieurs parties : 
+
+* tmc2590_Init : Permet d'initialiser les registres du driver et de le mettre prêt au fonctionnement. Pour le moment, l'activation du signal nCS se fait à ce moment mais par la suite, il sera fait dans une autre fonction qui décidera avec quel stepper on communique.
+
+<div align="center">
+<br>
+<img src="Images/7.png" width="400"> </br>
+Code tmc2590_Init </br>
+</br> 
+</div>
+
+Entrées : 
+* Structure TMC2590
+* Pointeur SPI
+* Signal nCS
+* Pin nCS
+* Signal DRVENN
+* Pin DRVENN
+
+
+* sendOrderStepper : 
+
+<div align="center">
+<br>
+<img src="Images/8.png" width="400"> </br>
+Code tmc2590_Init </br>
+</br> 
+</div>
 
 ### ROS 2
 
 Il y a deux manières de faire avec ROS2 :
-* ROS2 fait tout : le contrôle, la gestion des ressources et les calculs => Utilisation de [ROS_Control](https://github.com/ros-controls/control.ros.org) (Méthode 1)
+* ROS2 contrôle tout : le contrôle, la gestion des ressources et les calculs => Utilisation de [ROS_Control](https://github.com/ros-controls/control.ros.org) (Méthode 1)
 * ROS2 ne fait presque rien : Il transmet simplement les données d'un point A à un point B (Méthode 2)
 
 
@@ -130,9 +164,9 @@ Le problème avec la méthode 1, c'est que comme tout est géré par ROS, on n'u
 
 La 2e méthode revient à créer une entrée où l'on mettra les ordres (des angles pour différents moteurs) puis tout est envoyé par UART à la STM32 qui effectue l'envoi des ordre pour chacun des moteurs. 
 
-C'est plutôt la 2e méthode qui est envisagée étant donnée que le groupe de 3e année ont réalisé une simulation qui permet de passer de coordonnées x,y & z en données d'angles pour chaque moteur. On aurait juste alors à transmettre ces données à la carte STM32 (UART) qui s'occuperait de la partie commande des moteurs.
+C'est plutôt la 2e méthode qui est envisagée étant donnée que le groupe de 3e année ont réalisé une simulation qui permet de passer de coordonnées x,y & z en données d'angles pour chaque moteur. On aurait alors à transmettre ces données à la carte STM32 (UART) qui s'occuperait de la partie commande des moteurs.
 
-Il faut définir le protocole de communication entre les deux appareils (pourquoi pas s'inspirer du Dynamixel) ?
+Il faut définir le protocole de communication entre les deux appareils en s'inspirant du Dynamixel.
 
 ## Partie Hardware et intégration
 
