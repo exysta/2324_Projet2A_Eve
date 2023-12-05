@@ -59,7 +59,10 @@ typedef struct __TMC2590_HandleTypeDef{
 	uint32_t drvConfRegister;
 }TMC2590_HandleTypeDef;
 
+
+
 extern TMC2590_HandleTypeDef htmc2590;
+
 extern const uint8_t sinTable[256];
 extern uint8_t perioedElapsed_IT;
 

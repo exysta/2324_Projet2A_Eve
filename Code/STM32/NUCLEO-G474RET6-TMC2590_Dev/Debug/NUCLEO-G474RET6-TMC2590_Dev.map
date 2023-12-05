@@ -439,6 +439,139 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xa6 ./Core/Src/spi.o
  .debug_macro   0x0000000000000000      0x358 ./Core/Src/spi.o
  .debug_macro   0x0000000000000000       0x88 ./Core/Src/spi.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .group         0x0000000000000000        0xc ./Core/Src/stepper.o
+ .text          0x0000000000000000        0x0 ./Core/Src/stepper.o
+ .data          0x0000000000000000        0x0 ./Core/Src/stepper.o
+ .bss           0x0000000000000000        0x0 ./Core/Src/stepper.o
+ .debug_info    0x0000000000000000       0x77 ./Core/Src/stepper.o
+ .debug_abbrev  0x0000000000000000       0x28 ./Core/Src/stepper.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x2f7 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0xaa8 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x161 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x2e ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x28 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x51 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x103 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x6a ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x1df ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0xfb ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000     0x1011 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x11f ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000    0x18b93 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x6d ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000     0x3554 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x174 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x5c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000     0x171f ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x600 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x1b6 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x34a ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x53c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x18b ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x23d ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x211 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x45c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x11c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x122 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x3d1 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x2fe ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0xbef ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x718 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x67e ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0xa6 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x358 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x88 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x76 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x61 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x2a ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x35 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x369 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x58 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x177 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/stepper.o
+ .debug_macro   0x0000000000000000      0x147 ./Core/Src/stepper.o
+ .debug_line    0x0000000000000000      0x8ec ./Core/Src/stepper.o
+ .debug_str     0x0000000000000000    0xf80d5 ./Core/Src/stepper.o
+ .comment       0x0000000000000000       0x44 ./Core/Src/stepper.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Core/Src/stepper.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32g4xx_hal_msp.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32g4xx_hal_msp.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32g4xx_hal_msp.o
@@ -1089,9 +1222,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xa6 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000      0x358 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x88 ./Core/Src/tmc2590.o
+ .debug_macro   0x0000000000000000       0x76 ./Core/Src/tmc2590.o
+ .debug_macro   0x0000000000000000       0x61 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x2a ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x43 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x34 ./Core/Src/tmc2590.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x35 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000      0x369 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x10 ./Core/Src/tmc2590.o
@@ -1103,6 +1239,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x8e ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x1c ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000      0x177 ./Core/Src/tmc2590.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000       0x16 ./Core/Src/tmc2590.o
  .debug_macro   0x0000000000000000      0x147 ./Core/Src/tmc2590.o
  .group         0x0000000000000000        0xc ./Core/Src/usart.o
@@ -4139,6 +4276,7 @@ LOAD ./Core/Src/dma.o
 LOAD ./Core/Src/gpio.o
 LOAD ./Core/Src/main.o
 LOAD ./Core/Src/spi.o
+LOAD ./Core/Src/stepper.o
 LOAD ./Core/Src/stm32g4xx_hal_msp.o
 LOAD ./Core/Src/stm32g4xx_it.o
 LOAD ./Core/Src/syscalls.o
@@ -5057,7 +5195,7 @@ LOAD C:/ST/STM32CubeIDE_1.12.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x0000000000000dcd       0x79 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o
 
-.debug_macro    0x0000000000000000     0x2a57
+.debug_macro    0x0000000000000000     0x2954
  .debug_macro   0x0000000000000000      0x1fc ./Core/Src/gpio.o
  .debug_macro   0x00000000000001fc      0x227 ./Core/Src/main.o
  .debug_macro   0x0000000000000423       0x7c ./Core/Src/main.o
@@ -5067,22 +5205,18 @@ LOAD C:/ST/STM32CubeIDE_1.12.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000000000000a89      0x1e3 ./Core/Src/system_stm32g4xx.o
  .debug_macro   0x0000000000000c6c      0x1fc ./Core/Src/tim.o
  .debug_macro   0x0000000000000e68      0x2f7 ./Core/Src/tmc2590.o
- .debug_macro   0x000000000000115f       0x76 ./Core/Src/tmc2590.o
- .debug_macro   0x00000000000011d5       0x61 ./Core/Src/tmc2590.o
- .debug_macro   0x0000000000001236       0x16 ./Core/Src/tmc2590.o
- .debug_macro   0x000000000000124c       0x16 ./Core/Src/tmc2590.o
- .debug_macro   0x0000000000001262      0x1fc ./Core/Src/usart.o
- .debug_macro   0x000000000000145e      0x231 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
- .debug_macro   0x000000000000168f      0x1e3 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o
- .debug_macro   0x0000000000001872      0x1ea ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o
- .debug_macro   0x0000000000001a5c      0x20d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o
- .debug_macro   0x0000000000001c69      0x225 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o
- .debug_macro   0x0000000000001e8e      0x20d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o
- .debug_macro   0x000000000000209b      0x1eb ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.o
- .debug_macro   0x0000000000002286      0x1eb ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.o
- .debug_macro   0x0000000000002471      0x1e9 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o
- .debug_macro   0x000000000000265a      0x20e ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.o
- .debug_macro   0x0000000000002868      0x1ef ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o
+ .debug_macro   0x000000000000115f      0x1fc ./Core/Src/usart.o
+ .debug_macro   0x000000000000135b      0x231 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
+ .debug_macro   0x000000000000158c      0x1e3 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o
+ .debug_macro   0x000000000000176f      0x1ea ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o
+ .debug_macro   0x0000000000001959      0x20d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o
+ .debug_macro   0x0000000000001b66      0x225 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o
+ .debug_macro   0x0000000000001d8b      0x20d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o
+ .debug_macro   0x0000000000001f98      0x1eb ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.o
+ .debug_macro   0x0000000000002183      0x1eb ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.o
+ .debug_macro   0x000000000000236e      0x1e9 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o
+ .debug_macro   0x0000000000002557      0x20e ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.o
+ .debug_macro   0x0000000000002765      0x1ef ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o
 
 .debug_line     0x0000000000000000    0x16c83
  .debug_line    0x0000000000000000      0x7ca ./Core/Src/gpio.o
