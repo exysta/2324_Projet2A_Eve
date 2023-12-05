@@ -141,7 +141,7 @@ Entrées :
 <div align="center">
 <br>
 <img src="Images/8.png" width="400"> </br>
-Code tmc2590_Init </br>
+Code sendOrderStepper </br>
 </br> 
 </div>
 

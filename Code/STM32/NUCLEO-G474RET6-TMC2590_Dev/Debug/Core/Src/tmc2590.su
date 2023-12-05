@@ -1,0 +1,10 @@
+../Core/Src/tmc2590.c:41:6:tmc2590_Init	32	static
+../Core/Src/tmc2590.c:73:6:tmc2590_SetnCS	16	static
+../Core/Src/tmc2590.c:77:6:tmc2590_SetPowerEnable	16	static
+../Core/Src/tmc2590.c:82:19:tmc2590_TransmitReceive	40	static
+../Core/Src/tmc2590.c:101:6:tmc2590_SetTxBuffer	24	static
+../Core/Src/tmc2590.c:105:6:tmc2590_SetTxBufferInt32	16	static
+../Core/Src/tmc2590.c:111:6:tmc2590_PrintReport	96	static
+../Core/Src/tmc2590.c:124:6:tmc2590_dumpRegister	32	static
+../Core/Src/tmc2590.c:150:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/tmc2590.c:157:6:sendOrderStepper	32	static

@@ -160,9 +160,6 @@ void sendOrderStepper(int numberStepper, int inputOrder){
 	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
 	 * For the moment, we have only one stepper but witch nCS signal, we will be able to change with
 	 * stepper we wwant to communicate
-	 *
-	 *
-	 *
 	 */
 	int polarity = (inputOrder<0);
 	int order = (int) abs(inputOrder)*142.2;
