@@ -197,3 +197,7 @@ WIP
 
 WIP
 Diagramme de Gantt
+
+<div align="center">
+<img src="/Images/Gannt_v1.png"width="900"> </br>
+</div>
