@@ -13,6 +13,8 @@
 #include "stm32h7xx.h"
 
 extern UART_HandleTypeDef huart3;
+extern UART_HandleTypeDef huart4;
+
 
 unsigned short update_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, unsigned short data_blk_size)
 {
@@ -69,7 +71,7 @@ void send_dynamixel(uint8_t instruction[], size_t array_size){
 	  instruction_sent[array_size -2]=crc_l;
 	  instruction_sent[array_size - 1]=crc_h;
 	  //while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
-	  HAL_UART_Transmit(&huart3,instruction_sent,sizeof(instruction_sent),10);
+	  HAL_UART_Transmit(&huart4,instruction_sent,sizeof(instruction_sent),10);
 }
 
 // Status 1 : Led ON, status 0 : Led OFF

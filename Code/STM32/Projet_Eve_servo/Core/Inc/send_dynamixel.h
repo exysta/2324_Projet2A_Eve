@@ -9,6 +9,7 @@
 #define INC_SEND_DYNAMIXEL_H_
 
 void send_dynamixel(uint8_t* instruction, size_t array_size);
+void ToggleLed(int status);
 
 void RotateToPosition(float angleInDeg);
 

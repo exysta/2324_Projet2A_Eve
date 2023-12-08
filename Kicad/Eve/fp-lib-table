@@ -1,9 +1,9 @@
 (fp_lib_table
   (version 7)
-  (lib (name "libs")(type "KiCad")(uri "C:/Users/charl/OneDrive - ensea (1)/2A/Projet Eve/QBPS_LT1076CR#PBF/libs")(options "")(descr ""))
-  (lib (name "Mosfet")(type "KiCad")(uri "C:/Users/charl/Documents/2324_Projet2A_Eve/Kicad/lib/Mosfet")(options "")(descr ""))
-  (lib (name "STM32U535RET6")(type "KiCad")(uri "C:/Users/charl/Documents/2324_Projet2A_Eve/Kicad/lib/STM32U535RET6")(options "")(descr ""))
-  (lib (name "TMC2590")(type "KiCad")(uri "C:/Users/charl/Documents/2324_Projet2A_Eve/Kicad/lib/TMC2590")(options "")(descr ""))
+  (lib (name "libs")(type "KiCad")(uri "C:/Users/charl/OneDrive - ensea (1)/2A/Projet Eve/QBPS_LT1076CR#PBF/libs")(options "")(descr "")(disabled))
+  (lib (name "Mosfet")(type "KiCad")(uri "C:/Users/lucas/Desktop/ENSEA/2324_Projet2A_Eve/Kicad/lib/Mosfet")(options "")(descr ""))
+  (lib (name "STM32U535RET6")(type "KiCad")(uri "C:/Users/lucas/Desktop/ENSEA/2324_Projet2A_Eve/Kicad/lib/STM32U535RET6")(options "")(descr ""))
+  (lib (name "TMC2590")(type "KiCad")(uri "C:/Users/lucas/Desktop/ENSEA/2324_Projet2A_Eve/Kicad/lib/TMC2590")(options "")(descr ""))
   (lib (name "Eagle_WE-PD (rev23a)")(type "Eagle")(uri "C:/Users/charl/Documents/2324_Projet2A_Eve/Kicad/lib/bobine22u/Eagle_WE-PD (rev23a).lbr")(options "")(descr "")(disabled))
   (lib (name "Inudctor")(type "KiCad")(uri "C:/Users/lucas/Desktop/ENSEA/2324_Projet2A_Eve/Kicad/lib/inductor")(options "")(descr ""))
 )

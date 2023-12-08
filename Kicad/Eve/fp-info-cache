@@ -1,4 +1,4 @@
-21667139260609613
+21672244676131680
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -61032,6 +61032,13 @@ ESP8266 WiFi microcontroller
 0
 16
 16
+Mosfet
+SQJ968EPT1GE3
+PowerPAK® SO-8L DUAL
+MOSFET (N-Channel)
+0
+10
+6
 Motors
 Vybronics_VZ30C1T8219732L
 Vibration motor, 2.3-3.2V, 14000rpm, 0.7G, https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ30C1T8219732L-datasheet.pdf
@@ -83019,6 +83026,13 @@ rotary encoder
 0
 7
 6
+STM32U535RET6
+QFP50P1200X1200X160-64N
+LQF64
+Integrated Circuit
+0
+64
+64
 Sensor
 Aosong_DHT11_5.5x12.0_P2.54mm
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/DHT11.pdf
@@ -84594,6 +84608,13 @@ Logo WEEE
 0
 0
 0
+TMC2590
+QFP50P700X700X114-33N
+TQFP32-EP
+Integrated Circuit
+0
+33
+33
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf

@@ -123,7 +123,7 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.19999999999999998,
-        "min_track_width": 0.15,
+        "min_track_width": 0.3,
         "min_via_annular_width": 0.09999999999999999,
         "min_via_diameter": 0.39999999999999997,
         "solder_mask_clearance": 0.0,
@@ -172,12 +172,17 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.3
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -422,9 +427,9 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.4,
-        "via_drill": 0.2,
+        "track_width": 0.3,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
@@ -440,8 +445,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
-        "via_diameter": 0.4,
-        "via_drill": 0.2,
+        "via_diameter": 0.7,
+        "via_drill": 0.5,
         "wire_width": 6
       }
     ],
@@ -464,12 +469,16 @@
         "pattern": "24V"
       },
       {
-        "netclass": "power",
+        "netclass": "Default",
         "pattern": "/driver_stepper1/LA2"
       },
       {
         "netclass": "Default",
         "pattern": "SPI2_MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
       },
       {
         "netclass": "Default",
@@ -481,7 +490,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "./",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
