@@ -17,16 +17,12 @@
 
 
 
-void stepper_Init(Stepper  *stepper, int stepperNumber ){
+void stepper_Init(Stepper *stepper1){
 
-	stepper->stepperID = stepperNumber;
-	stepper->angularPosition = 0;
-	stepper->speed = 0;
-
-
-
-
-
-
+	stepper1->stepperID = 1;
+	while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) != 0){
+		sendOrderStepper(20);
+	}
+	stepper1->angularPosition = 0;
 
 }

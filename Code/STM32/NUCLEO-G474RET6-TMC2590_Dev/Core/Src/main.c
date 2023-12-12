@@ -22,6 +22,7 @@
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
+#include "stepper.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -101,12 +102,15 @@ int main(void)
   MX_SPI3_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
-	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
-	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
+//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
+//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
+//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
 
+
+  	  uint16_t order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
+	//stepper_Init(stepper1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,14 +123,17 @@ int main(void)
 
 		// On va définir moteur 1/2/3 pour les steppers
 		// Moteur 4/5/6 pour les autres
-		sendOrderStepper(1, 90);
+
+		sendOrderStepper(order);
 
 		HAL_Delay(1000);
 		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
 
-		sendOrderStepper(1, -90);
+		sendOrderStepper(-order);
 
 		HAL_Delay(1000);
+
+
 
 
 

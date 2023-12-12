@@ -11,14 +11,16 @@
 
 typedef struct Stepper{
 	int stepperID;
-	int speed;
+	int velocity;
 	int angularPosition;
 	int angularPostionMax;
 } Stepper;
 
-extern Stepper stepper1;
-extern Stepper stepper2;
-extern Stepper stepper3;
+extern Stepper* stepper1;
+extern Stepper* stepper2;
+extern Stepper* stepper3;
+
+void stepper_Init(Stepper *stepper1);
 
 
 #endif /* INC_STEPPER_H_ */

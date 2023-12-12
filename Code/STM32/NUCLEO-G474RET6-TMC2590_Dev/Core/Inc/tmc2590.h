@@ -63,6 +63,7 @@ typedef struct __TMC2590_HandleTypeDef{
 
 extern TMC2590_HandleTypeDef htmc2590;
 
+
 extern const uint8_t sinTable[256];
 extern uint8_t perioedElapsed_IT;
 
@@ -74,7 +75,8 @@ void tmc2590_SetTxBuffer(TMC2590_HandleTypeDef *phtmc2590, uint8_t *pData, int s
 void tmc2590_SetTxBufferInt32(TMC2590_HandleTypeDef *phtmc2590, uint32_t data);
 void tmc2590_PrintReport(TMC2590_HandleTypeDef *phtmc2590);
 void tmc2590_dumpRegister(TMC2590_HandleTypeDef *phtmc2590);
-void sendOrderStepper(int numberStepper,int inputOrder);
+int sendOrderStepper(int inputOrder);
+
 
 
 #endif /* INC_TMC2590_H_ */

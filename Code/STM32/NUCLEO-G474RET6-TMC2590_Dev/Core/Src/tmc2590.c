@@ -10,8 +10,10 @@
 #include "gpio.h"
 #include "stdio.h"
 #include "tim.h"
+#include "stdlib.h"
 
 TMC2590_HandleTypeDef htmc2590;
+
 
 const char transmit_ok[] = "Transmission SPI done\r\n";
 const char stringReportHeader[] = "SPI Tx/Rx Buffers\r\n";
@@ -154,17 +156,21 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
-void sendOrderStepper(int numberStepper, int inputOrder){
+int sendOrderStepper(int inputOrder){
 
 	/*
 	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
 	 * For the moment, we have only one stepper but witch nCS signal, we will be able to change with
 	 * stepper we wwant to communicate
 	 */
-	int polarity = (inputOrder<0);
+	int polarity = (inputOrder>0);
 	int order = (int) abs(inputOrder)*142.2;
 	int indice = 0;
 	while (indice != order){
+		uint32_t stateInterruption = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8);
+		if (stateInterruption != 0){
+			return 0;
+		}
 		if(perioedElapsed_IT){
 				if(index_sin_loop < 256){
 					currentCoilA = sinTable[index_sin_loop];
@@ -199,6 +205,7 @@ void sendOrderStepper(int numberStepper, int inputOrder){
 				perioedElapsed_IT = 0;
 			}
 	}
+	return 1;
 }
 
 
