@@ -11,6 +11,8 @@
 9. [Séance 8](#séance-8)
 10. [Séance 9](#séance-9)
 11. [Séance 10](#séance-10)
+12. [Séance 11](#séance-11)
+
 
 
 ## Introduction
