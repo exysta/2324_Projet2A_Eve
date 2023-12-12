@@ -167,3 +167,17 @@ Journal de bord du projet Robourt - 2023.
 * Présentation 
 
 ### A faire
+
+* Continuer/Finir le routage
+* Ajouter les capteurs de fin de course pour le SPI et une manière de récupérer la position initiale
+
+## Séance 11
+
+### Contenu (12/12/2023)
+
+* SPI : Code pour récupérer la position initiale
+* Kicad : Restructuration du schematic et du routage
+
+### A faire
+
+* Régler les problèmes de code et continuer d'implémenter les structures de Stepper
