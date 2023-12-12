@@ -283,74 +283,6 @@
         )
       )
     )
-    (symbol "SQJ504EP-T1_GE3_1" (in_bom yes) (on_board yes)
-      (property "Reference" "Q?" (at 11.43 -12.7 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "SQJ504EP-T1_GE3" (at 11.43 -10.16 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "SQJ968EPT1GE3" (at 19.05 -94.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Datasheet" "https://www.vishay.com/docs/76029/sqj504ep.pdf" (at 19.05 -194.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Height" "" (at 19.05 -394.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Manufacturer_Name" "Vishay" (at 19.05 -494.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Manufacturer_Part_Number" "SQJ504EP-T1_GE3" (at 19.05 -594.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Mouser Part Number" "78-SQJ504EP-T1_GE3" (at 19.05 -694.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/SQJ504EP-T1_GE3?qs=lYGu3FyN48c%2FaMqXfdPaEA%3D%3D" (at 19.05 -794.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Arrow Part Number" "SQJ504EP-T1_GE3" (at 19.05 -894.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Arrow Price/Stock" "https://www.arrow.com/en/products/sqj504ep-t1-ge3/vishay?region=nac" (at 19.05 -994.92 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "ki_description" "SQJ504EP-T1_GE3 Dual N-Channel MOSFET, 30 (N Channel) A, 30 (P Channel) A, 40 V TrenchFET, 8-Pin SO-8 Vishay Siliconix" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "SQJ504EP-T1_GE3_1_1_1"
-        (rectangle (start 5.08 2.54) (end 17.78 -7.62)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at 0 -5.08 0) (length 5.08)
-          (name "S1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -2.54 0) (length 5.08)
-          (name "G1" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 0 0) (length 5.08)
-          (name "S2" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 22.86 -5.08 180) (length 5.08)
-          (name "G2" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 22.86 0 180) (length 5.08)
-          (name "D1" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 22.86 -2.54 180) (length 5.08)
-          (name "D2" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "TMC2590:TMC2590-TA" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 25.4 10.16 0)
         (effects (font (size 1.524 1.524)))
@@ -625,9 +557,6 @@
   (junction (at 233.68 43.18) (diameter 0) (color 0 0 0 0)
     (uuid 000cfa44-aa48-4db6-9d19-40d61c6b7026)
   )
-  (junction (at 91.44 48.26) (diameter 0) (color 0 0 0 0)
-    (uuid 06a69907-1e88-468f-a9a8-59f9664b6107)
-  )
   (junction (at 233.68 109.22) (diameter 0) (color 0 0 0 0)
     (uuid 0df701e0-082d-4d14-8c7c-53ad9d11bfc0)
   )
@@ -637,8 +566,8 @@
   (junction (at 270.51 123.19) (diameter 0) (color 0 0 0 0)
     (uuid 4d4ba422-1d67-4f4c-8b8f-fd10e4d947b8)
   )
-  (junction (at 91.44 55.88) (diameter 0) (color 0 0 0 0)
-    (uuid 571857c3-5090-49fe-9d99-125a0e0a4423)
+  (junction (at 58.42 55.88) (diameter 0) (color 0 0 0 0)
+    (uuid 5938f17c-2ce8-4ac8-bfd2-90cc8c9e7afa)
   )
   (junction (at 121.92 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 70ff486b-be86-405d-ac92-4d2653e51f80)
@@ -651,9 +580,6 @@
   )
   (junction (at 152.4 86.36) (diameter 0) (color 0 0 0 0)
     (uuid 871c5dc1-8e9e-4bb0-9a49-4a8b777e3b6e)
-  )
-  (junction (at 101.6 48.26) (diameter 0) (color 0 0 0 0)
-    (uuid 8765e739-816a-43ff-953b-94fdfb4a6099)
   )
   (junction (at 49.53 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 8cac22a2-521c-40ae-a0c3-bee5860f6487)
@@ -676,6 +602,9 @@
   (junction (at 233.68 95.25) (diameter 0) (color 0 0 0 0)
     (uuid b0e4fabb-8900-44a6-8756-2f50a49f735c)
   )
+  (junction (at 58.42 48.26) (diameter 0) (color 0 0 0 0)
+    (uuid b5555be1-8977-480d-9537-e240dab98289)
+  )
   (junction (at 81.28 48.26) (diameter 0) (color 0 0 0 0)
     (uuid ba562e4a-b025-4993-93c2-2b8f4a09d450)
   )
@@ -684,9 +613,6 @@
   )
   (junction (at 35.56 55.88) (diameter 0) (color 0 0 0 0)
     (uuid ca12bb7d-2695-4042-91ae-565d25b20b6b)
-  )
-  (junction (at 81.28 55.88) (diameter 0) (color 0 0 0 0)
-    (uuid d405f3af-8443-4068-a8d1-b301caac8016)
   )
   (junction (at 233.68 29.21) (diameter 0) (color 0 0 0 0)
     (uuid dc5afef2-3c0b-42df-9134-c630e4cb905b)
@@ -708,7 +634,10 @@
   )
 
   (no_connect (at 152.4 91.44) (uuid 08765bdf-5f07-4a6c-9ccb-234b70af7c05))
+  (no_connect (at 101.6 114.3) (uuid 7b477ce6-86a8-4cea-8746-587f46cf36c1))
+  (no_connect (at 152.4 83.82) (uuid 8a05ae58-2f0f-4d18-b825-b632dabfffca))
   (no_connect (at 152.4 93.98) (uuid c2e9ce57-1422-4d2c-b8f4-1f89bd34be72))
+  (no_connect (at 152.4 81.28) (uuid c64638ca-af5c-4d0f-be41-71e4b4ab4dbe))
 
   (wire (pts (xy 236.22 29.21) (xy 233.68 29.21))
     (stroke (width 0) (type default))
@@ -717,6 +646,10 @@
   (wire (pts (xy 156.21 104.14) (xy 152.4 104.14))
     (stroke (width 0) (type default))
     (uuid 0237c48e-7525-4df6-b8f4-0389d802b54e)
+  )
+  (wire (pts (xy 58.42 54.61) (xy 58.42 55.88))
+    (stroke (width 0) (type default))
+    (uuid 04e99db4-f6ed-42e0-ac0d-5122e34f5a58)
   )
   (wire (pts (xy 148.59 86.36) (xy 152.4 86.36))
     (stroke (width 0) (type default))
@@ -733,10 +666,6 @@
   (wire (pts (xy 121.92 48.26) (xy 129.54 48.26))
     (stroke (width 0) (type default))
     (uuid 13ab144f-a121-42b9-9aab-6a129e94d3bf)
-  )
-  (wire (pts (xy 81.28 55.88) (xy 91.44 55.88))
-    (stroke (width 0) (type default))
-    (uuid 151f369e-213b-4544-8f28-ca0f7cfdf6b3)
   )
   (wire (pts (xy 134.62 48.26) (xy 144.78 48.26))
     (stroke (width 0) (type default))
@@ -774,6 +703,10 @@
     (stroke (width 0) (type default))
     (uuid 33206d89-835d-4ec8-b2e8-295f0f423179)
   )
+  (wire (pts (xy 96.52 111.76) (xy 101.6 111.76))
+    (stroke (width 0) (type default))
+    (uuid 353e4479-e164-4846-9e83-1ffe2ffcbb3d)
+  )
   (wire (pts (xy 220.98 57.15) (xy 224.79 57.15))
     (stroke (width 0) (type default))
     (uuid 3a48cae1-9534-4f95-8c82-841981926d33)
@@ -786,7 +719,7 @@
     (stroke (width 0) (type default))
     (uuid 3dbc913b-696a-40cf-a37b-1a328419c541)
   )
-  (wire (pts (xy 49.53 48.26) (xy 69.85 48.26))
+  (wire (pts (xy 49.53 48.26) (xy 58.42 48.26))
     (stroke (width 0) (type default))
     (uuid 426ed3bc-9150-4c0c-ac55-f7d450ba0d52)
   )
@@ -822,6 +755,10 @@
     (stroke (width 0) (type default))
     (uuid 55a5b623-d916-4be1-8641-faae3dd610de)
   )
+  (wire (pts (xy 58.42 48.26) (xy 58.42 49.53))
+    (stroke (width 0) (type default))
+    (uuid 57b33bc9-4757-49e4-86e9-dd84a47be2b3)
+  )
   (wire (pts (xy 69.85 48.26) (xy 81.28 48.26))
     (stroke (width 0) (type default))
     (uuid 5abd7a57-a5dd-4c41-9dbb-6a9cc770805a)
@@ -833,6 +770,10 @@
   (wire (pts (xy 35.56 54.61) (xy 35.56 55.88))
     (stroke (width 0) (type default))
     (uuid 5bcc0547-69c2-4eb2-8fd7-7357755fff63)
+  )
+  (wire (pts (xy 58.42 55.88) (xy 69.85 55.88))
+    (stroke (width 0) (type default))
+    (uuid 62ca28b7-8cff-492d-a3ab-c2db6351a328)
   )
   (wire (pts (xy 154.94 88.9) (xy 152.4 88.9))
     (stroke (width 0) (type default))
@@ -853,14 +794,6 @@
   (wire (pts (xy 152.4 86.36) (xy 175.26 86.36))
     (stroke (width 0) (type default))
     (uuid 69c93bed-99cf-4609-b5ff-7fc4d88a9fee)
-  )
-  (wire (pts (xy 101.6 48.26) (xy 114.3 48.26))
-    (stroke (width 0) (type default))
-    (uuid 6b866429-ae32-4cd8-8183-5138f26bc813)
-  )
-  (wire (pts (xy 91.44 55.88) (xy 101.6 55.88))
-    (stroke (width 0) (type default))
-    (uuid 6d0fe3d4-a779-41ae-ac13-3e5855433e3b)
   )
   (wire (pts (xy 156.21 116.84) (xy 152.4 116.84))
     (stroke (width 0) (type default))
@@ -934,10 +867,6 @@
     (stroke (width 0) (type default))
     (uuid ac962c9f-e4e4-4b6d-8a8e-0e0e95620c99)
   )
-  (wire (pts (xy 81.28 48.26) (xy 91.44 48.26))
-    (stroke (width 0) (type default))
-    (uuid b169d3aa-cfb6-4a33-bc65-2869b424453b)
-  )
   (wire (pts (xy 233.68 119.38) (xy 247.65 119.38))
     (stroke (width 0) (type default))
     (uuid b421370e-3c3b-4f98-b255-5a838badd797)
@@ -958,7 +887,7 @@
     (stroke (width 0) (type default))
     (uuid b8811efa-ed7c-4874-91b8-400a28828f98)
   )
-  (wire (pts (xy 91.44 48.26) (xy 101.6 48.26))
+  (wire (pts (xy 81.28 48.26) (xy 114.3 48.26))
     (stroke (width 0) (type default))
     (uuid ba6610f0-9556-4133-bae0-690713bec50d)
   )
@@ -978,6 +907,10 @@
     (stroke (width 0) (type default))
     (uuid cb9d1ff7-2a4d-456b-acf9-62d57698e7d6)
   )
+  (wire (pts (xy 58.42 48.26) (xy 69.85 48.26))
+    (stroke (width 0) (type default))
+    (uuid d1c82018-aafa-4c4d-a560-df6fae682538)
+  )
   (wire (pts (xy 167.64 99.06) (xy 163.83 99.06))
     (stroke (width 0) (type default))
     (uuid d603f652-6cd1-491f-8ab4-8cb04d807990)
@@ -994,7 +927,7 @@
     (stroke (width 0) (type default))
     (uuid e0b1b10c-acbe-4492-8e7b-ae219bfb3d02)
   )
-  (wire (pts (xy 49.53 55.88) (xy 69.85 55.88))
+  (wire (pts (xy 49.53 55.88) (xy 58.42 55.88))
     (stroke (width 0) (type default))
     (uuid e221a4a9-8d12-492c-b4b8-c144ddec0236)
   )
@@ -1217,10 +1150,6 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 1d56d503-f709-4367-8fd9-b7cb6d78d2ed)
   )
-  (hierarchical_label "STEP" (shape input) (at 152.4 81.28 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 4ffe301b-36c4-4090-862a-4c2434e68a02)
-  )
   (hierarchical_label "Vdc" (shape input) (at 233.68 60.96 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 6c596d8b-84ff-49c4-a50e-7fa596637da2)
@@ -1229,17 +1158,9 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 73bb2676-8248-40cc-8fb0-6f5fc654b039)
   )
-  (hierarchical_label "CLK" (shape input) (at 101.6 114.3 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 74d6990f-43da-4700-8f79-c19d1e9073c9)
-  )
   (hierarchical_label "SDI" (shape input) (at 101.6 101.6 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 7ebc8b85-7ca9-4012-b7c8-8094f79d11d3)
-  )
-  (hierarchical_label "DIR" (shape input) (at 152.4 83.82 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 92461e5c-fdba-4ce7-91d6-9b312c103601)
   )
   (hierarchical_label "Vdc" (shape input) (at 237.49 124.46 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
@@ -1253,21 +1174,17 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d7213387-8e65-4b2b-88f5-14c9e4aeb77b)
   )
-  (hierarchical_label "ENN" (shape input) (at 101.6 111.76 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid ea2e35c2-7ca2-4854-8f8f-94c3262d4ed5)
-  )
 
-  (symbol (lib_name "SQJ504EP-T1_GE3_1") (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 224.79 124.46 180) (unit 1)
+  (symbol (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 224.79 124.46 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 03303183-1341-490f-9ecc-1229d23e8914)
-    (property "Reference" "Q6" (at 213.36 111.76 0)
+    (property "Reference" "Q?" (at 213.36 111.76 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SQJ504EP-T1_GE3" (at 213.36 114.3 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Mosfet:SQJ968EPT1GE3" (at 205.74 29.54 0)
+    (property "Footprint" "SQJ968EPT1GE3" (at 205.74 29.54 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://www.vishay.com/docs/76029/sqj504ep.pdf" (at 205.74 -70.46 0)
@@ -1302,19 +1219,19 @@
     (pin "6" (uuid 9a5ceabf-999d-4b2e-a1cd-e3f2ea9db819))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "Q6") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "Q2") (unit 1)
+          (reference "Q202") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "Q10") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "Q302") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "Q402") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "Q5") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
     )
@@ -1323,13 +1240,13 @@
   (symbol (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 247.65 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0bdc1992-b04a-404d-ac4e-14fe54300309)
-    (property "Reference" "Q8" (at 259.08 111.76 0)
+    (property "Reference" "Q?" (at 259.08 111.76 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SQJ504EP-T1_GE3" (at 259.08 114.3 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Mosfet:SQJ968EPT1GE3" (at 266.7 214.3 0)
+    (property "Footprint" "SQJ968EPT1GE3" (at 266.7 214.3 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://www.vishay.com/docs/76029/sqj504ep.pdf" (at 266.7 314.3 0)
@@ -1364,65 +1281,19 @@
     (pin "6" (uuid 62c6546d-4e83-42f8-8276-b4de8775c1c3))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "Q8") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "Q4") (unit 1)
+          (reference "Q204") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "Q12") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "Q304") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "Q404") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "Q7") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Polarized") (at 91.44 52.07 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0c9f7eee-299d-402f-b04e-d5de5c00fe13)
-    (property "Reference" "C27" (at 87.63 54.61 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "150u" (at 88.9 40.64 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 92.4052 55.88 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 91.44 52.07 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Voltage" "50V" (at 91.44 45.72 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "R" "45 mOhm" (at 91.44 43.18 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "MFR" "865060657011" (at 91.44 52.07 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bb9d8cc1-7aad-4206-bba5-63aaa513a289))
-    (pin "2" (uuid ff094d7e-ecd9-4f7c-807a-1875caf41130))
-    (instances
-      (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C27") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C17") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C43") (unit 1)
-        )
-      )
-      (project "driver_stepperLucas"
-        (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C203") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
     )
@@ -1431,13 +1302,13 @@
   (symbol (lib_id "Device:C_Small") (at 177.8 86.36 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0e26514e-dc70-4569-ba7d-2adf7569518f)
-    (property "Reference" "C31" (at 180.34 88.9 90)
+    (property "Reference" "C?" (at 180.34 88.9 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 180.34 77.47 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 177.8 86.36 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 177.8 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 177.8 86.36 0)
@@ -1453,19 +1324,19 @@
     (pin "2" (uuid 68ed0f7e-86f0-4f8c-bc9e-9fe4b7a24472))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C31") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C21") (unit 1)
+          (reference "C209") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C47") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C309") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C409") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1474,13 +1345,13 @@
   (symbol (lib_id "Device:C_Small") (at 114.3 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 147cee27-fbb6-4326-a6cc-dde655918711)
-    (property "Reference" "C50" (at 111.76 54.61 90)
+    (property "Reference" "C?" (at 111.76 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220n" (at 111.76 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 114.3 52.07 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 114.3 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 114.3 52.07 0)
@@ -1496,19 +1367,19 @@
     (pin "2" (uuid 304e90de-43de-41b7-bfa3-9086624300dc))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C50") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C49") (unit 1)
+          (reference "C206") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C51") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C306") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C406") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1517,7 +1388,7 @@
   (symbol (lib_id "TMC2590:TMC2590-TA") (at 101.6 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14fa1a3f-fbc9-4cc0-8e6d-4b12f17a2a3f)
-    (property "Reference" "U3" (at 127 67.31 0)
+    (property "Reference" "U201" (at 127 67.31 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "TMC2590-TA" (at 127 69.85 0)
@@ -1565,18 +1436,18 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "U3") (unit 1)
+          (reference "U201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "U4") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "U301") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "U5") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "U401") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "U1") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
     )
@@ -1585,7 +1456,7 @@
   (symbol (lib_id "power:GND") (at 152.4 76.2 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a8b2ca3-e1b5-4e60-8dc5-cc9dd9514abb)
-    (property "Reference" "#PWR074" (at 158.75 76.2 0)
+    (property "Reference" "#PWR?" (at 158.75 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 156.21 76.835 90)
@@ -1600,19 +1471,19 @@
     (pin "1" (uuid 725ab249-e864-4852-b018-82c70593d40c))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR074") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR0205") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR081") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0305") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0405") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1621,13 +1492,13 @@
   (symbol (lib_id "Device:R") (at 241.3 43.18 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 29976ca7-ced1-445e-a3a7-2c8230740f01)
-    (property "Reference" "R24" (at 242.57 40.64 90)
+    (property "Reference" "R?" (at 242.57 40.64 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10" (at 242.57 38.1 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 241.3 44.958 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 241.3 44.958 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 241.3 43.18 0)
@@ -1640,19 +1511,19 @@
     (pin "2" (uuid fc508c67-bb9c-4dcd-951f-ae4162edf601))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "R24") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "R20") (unit 1)
+          (reference "R203") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "R28") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "R303") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "R403") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "R5") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1661,13 +1532,13 @@
   (symbol (lib_id "Device:C_Small") (at 35.56 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 454a4ca2-cefc-4c4a-a895-2d8030fff95a)
-    (property "Reference" "C23" (at 33.02 54.61 90)
+    (property "Reference" "C?" (at 33.02 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 25.4 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 35.56 52.07 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 35.56 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 35.56 52.07 0)
@@ -1683,19 +1554,19 @@
     (pin "2" (uuid fe140ca3-592b-4eb8-87c0-b4328ecb74ad))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C23") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C13") (unit 1)
+          (reference "C201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C39") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C301") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C401") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1704,7 +1575,7 @@
   (symbol (lib_id "power:GND") (at 144.78 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 49191dcc-a8ee-426a-a736-1988b8f9bb91)
-    (property "Reference" "#PWR073" (at 144.78 62.23 0)
+    (property "Reference" "#PWR?" (at 144.78 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.78 60.96 0)
@@ -1719,65 +1590,19 @@
     (pin "1" (uuid ae4f5238-78da-4c05-b9c2-4333063944a9))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR0204") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR080") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0304") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0404") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR017") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Polarized") (at 101.6 52.07 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 58bd26ac-3dcc-4b21-9e32-d08587d5464a)
-    (property "Reference" "C28" (at 97.79 54.61 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "150u" (at 99.06 40.64 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 102.5652 55.88 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 101.6 52.07 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Voltage" "50V" (at 101.6 45.72 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "R" "45 mOhm" (at 101.6 43.18 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "MFR" "865060657011" (at 101.6 52.07 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b5e61647-3252-42a7-b75e-bac4bd500efc))
-    (pin "2" (uuid c7eb699b-9813-478c-95ae-1eb1a2db2daf))
-    (instances
-      (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C28") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C18") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C44") (unit 1)
-        )
-      )
-      (project "driver_stepperLucas"
-        (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C203") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1786,13 +1611,13 @@
   (symbol (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 243.84 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5937b01e-0630-48ed-9878-335cb2583b11)
-    (property "Reference" "Q7" (at 255.27 46.99 0)
+    (property "Reference" "Q?" (at 255.27 46.99 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SQJ504EP-T1_GE3" (at 255.27 49.53 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Mosfet:SQJ968EPT1GE3" (at 262.89 149.53 0)
+    (property "Footprint" "SQJ968EPT1GE3" (at 262.89 149.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://www.vishay.com/docs/76029/sqj504ep.pdf" (at 262.89 249.53 0)
@@ -1827,19 +1652,19 @@
     (pin "6" (uuid 36643064-af64-4081-84b0-326ad2e154cc))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "Q7") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "Q3") (unit 1)
+          (reference "Q203") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "Q11") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "Q303") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "Q403") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "Q8") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
     )
@@ -1848,13 +1673,13 @@
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 58.42 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 67a49fa8-8708-4459-9888-3ec497efbe4a)
-    (property "Reference" "J8" (at 60.96 113.665 0)
+    (property "Reference" "J201" (at 60.96 113.665 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x04" (at 60.96 116.205 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A2_2x02_P4.20mm_Vertical" (at 58.42 113.03 0)
+    (property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" (at 58.42 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 58.42 113.03 0)
@@ -1867,13 +1692,13 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "J8") (unit 1)
+          (reference "J201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "J9") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "J301") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "J10") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "J401") (unit 1)
         )
       )
     )
@@ -1882,13 +1707,13 @@
   (symbol (lib_id "Device:C_Small") (at 132.08 48.26 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7583d691-8a2c-49bd-8089-d99101cbc1fa)
-    (property "Reference" "C29" (at 134.62 50.8 90)
+    (property "Reference" "C?" (at 134.62 50.8 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 134.62 39.37 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 132.08 48.26 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 132.08 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 132.08 48.26 0)
@@ -1904,19 +1729,19 @@
     (pin "2" (uuid 05e602ca-a4d5-4b4f-9fd8-fa5261ca3228))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C29") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C19") (unit 1)
+          (reference "C207") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C45") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C307") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C407") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1925,13 +1750,13 @@
   (symbol (lib_id "Device:C_Small") (at 144.78 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7d0e9dbc-0fa6-4e97-a336-5730faf6dce3)
-    (property "Reference" "C30" (at 142.24 48.26 90)
+    (property "Reference" "C?" (at 142.24 48.26 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "470n" (at 142.24 34.29 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 144.78 45.72 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 144.78 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 45.72 0)
@@ -1947,19 +1772,19 @@
     (pin "2" (uuid 1302a4c0-ed5b-4f16-ba35-d6fedfda7200))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C30") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C20") (unit 1)
+          (reference "C208") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C46") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C308") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C408") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1968,7 +1793,7 @@
   (symbol (lib_id "power:GND") (at 184.15 86.36 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 81677323-5d3c-4787-bfa1-0aea8de2776a)
-    (property "Reference" "#PWR076" (at 190.5 86.36 0)
+    (property "Reference" "#PWR?" (at 190.5 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 186.69 88.9 90)
@@ -1983,19 +1808,19 @@
     (pin "1" (uuid b3f8f98f-9f66-4998-befb-39d5578ae005))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR076") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR069") (unit 1)
+          (reference "#PWR0207") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR083") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0307") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0407") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2004,13 +1829,13 @@
   (symbol (lib_id "SQJ504EP-T1_GE3:SQJ504EP-T1_GE3") (at 220.98 54.61 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 96ea20ce-1985-4861-b81e-eef2e7cc169b)
-    (property "Reference" "Q1" (at 209.55 48.26 0)
+    (property "Reference" "Q201" (at 209.55 48.26 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SQJ504EP-T1_GE3" (at 209.55 50.8 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Mosfet:SQJ968EPT1GE3" (at 201.93 149.53 0)
+    (property "Footprint" "SQJ968EPT1GE3" (at 201.93 149.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://www.vishay.com/docs/76029/sqj504ep.pdf" (at 201.93 249.53 0)
@@ -2046,13 +1871,13 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "Q1") (unit 1)
+          (reference "Q201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "Q5") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "Q301") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "Q9") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "Q401") (unit 1)
         )
       )
     )
@@ -2061,7 +1886,7 @@
   (symbol (lib_id "power:GND") (at 35.56 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 98bd3357-ed93-462a-ba3e-94e33c64bf41)
-    (property "Reference" "#PWR019" (at 35.56 66.04 0)
+    (property "Reference" "#PWR?" (at 35.56 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 64.77 0)
@@ -2076,19 +1901,19 @@
     (pin "1" (uuid 6ddaca5f-b2a7-44ca-832a-64caa5a07cdb))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR019") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR0201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR020") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0301") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0401") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2097,7 +1922,7 @@
   (symbol (lib_id "power:GND") (at 95.25 76.2 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f240a79-f435-4ac2-8782-f622e85947fd)
-    (property "Reference" "#PWR072" (at 88.9 76.2 0)
+    (property "Reference" "#PWR?" (at 88.9 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 91.44 76.835 90)
@@ -2112,19 +1937,55 @@
     (pin "1" (uuid 2a8bdf79-a56d-4218-b811-7b04e28b67fe))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR0202") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR079") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0302") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0402") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 96.52 111.76 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a01f3ed7-3e6e-4892-a216-0b0c5111224d)
+    (property "Reference" "#PWR?" (at 90.17 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 92.71 112.395 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 96.52 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 96.52 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fca6ee73-7ba3-4647-bd2a-0d5057f71a41))
+    (instances
+      (project "Robourt"
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
+          (reference "#PWR0203") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0303") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0403") (unit 1)
+        )
+      )
+      (project "driver_stepperLucas"
+        (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2133,7 +1994,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 69.85 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a5959054-d869-48f3-9248-d221719418e9)
-    (property "Reference" "C25" (at 66.04 54.61 90)
+    (property "Reference" "C?" (at 66.04 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "150u" (at 67.31 40.64 0)
@@ -2158,19 +2019,19 @@
     (pin "2" (uuid 158d6a1c-bfe5-4b5a-9710-ec592c0a7748))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C25") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C15") (unit 1)
+          (reference "C204") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C41") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C304") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C404") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C203") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -2179,7 +2040,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 81.28 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ae458bd5-b37d-424d-ba43-495812911d41)
-    (property "Reference" "C26" (at 77.47 54.61 90)
+    (property "Reference" "C?" (at 77.47 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "150u" (at 78.74 40.64 0)
@@ -2204,19 +2065,19 @@
     (pin "2" (uuid 56814874-64f6-4269-ac34-8f8ea07caf1b))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C26") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C16") (unit 1)
+          (reference "C205") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C42") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C305") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C405") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C203") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -2225,13 +2086,13 @@
   (symbol (lib_id "Device:C_Small") (at 49.53 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af013521-a559-4194-8b9d-79b4c3facf17)
-    (property "Reference" "C24" (at 46.99 54.61 90)
+    (property "Reference" "C?" (at 46.99 54.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 46.99 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 49.53 52.07 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 49.53 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 49.53 52.07 0)
@@ -2247,19 +2108,19 @@
     (pin "2" (uuid 6c40458f-51c6-4b55-b27f-8cc8eafb9551))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "C24") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "C14") (unit 1)
+          (reference "C202") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "C40") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C302") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C402") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "C201") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -2268,13 +2129,13 @@
   (symbol (lib_id "Device:R") (at 233.68 101.6 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b2f7f1dc-95bb-4cc6-a6f4-efcd50fd9a14)
-    (property "Reference" "R27" (at 227.33 100.33 0)
+    (property "Reference" "R?" (at 227.33 100.33 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0.075" (at 226.06 102.87 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" (at 235.458 101.6 90)
+    (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (at 235.458 101.6 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 101.6 0)
@@ -2287,19 +2148,19 @@
     (pin "2" (uuid 32d97547-fa32-4dbb-9d02-dd04a9dba932))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "R27") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "R23") (unit 1)
+          (reference "R202") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "R31") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "R302") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "R402") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "R10") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -2308,13 +2169,13 @@
   (symbol (lib_id "Device:R") (at 233.68 36.83 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b44274e0-682f-4a1d-a98f-331ad09c8dd8)
-    (property "Reference" "R26" (at 231.14 38.1 0)
+    (property "Reference" "R?" (at 231.14 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.075" (at 231.14 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" (at 235.458 36.83 90)
+    (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (at 235.458 36.83 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 36.83 0)
@@ -2327,19 +2188,19 @@
     (pin "2" (uuid 2b651f39-435b-45b6-bd0d-8528537fd7b3))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "R26") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "R22") (unit 1)
+          (reference "R201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "R30") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "R301") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "R401") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -2348,7 +2209,7 @@
   (symbol (lib_id "power:GND") (at 152.4 78.74 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b7e1bbc6-b9df-4fdb-adb5-d4219e161c04)
-    (property "Reference" "#PWR075" (at 158.75 78.74 0)
+    (property "Reference" "#PWR?" (at 158.75 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 156.21 79.375 90)
@@ -2363,19 +2224,19 @@
     (pin "1" (uuid c1fe2946-d2d9-481d-96a8-9fc28759d805))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR075") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR068") (unit 1)
+          (reference "#PWR0206") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR082") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0306") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0406") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2384,7 +2245,7 @@
   (symbol (lib_id "power:GND") (at 233.68 91.44 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ba682a14-387b-4013-9824-79d2f4be67fd)
-    (property "Reference" "#PWR078" (at 233.68 85.09 0)
+    (property "Reference" "#PWR?" (at 233.68 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 233.68 86.36 0)
@@ -2399,19 +2260,19 @@
     (pin "1" (uuid 4c9c423c-2f1c-42f5-abad-5c7713f1a12e))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR078") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR071") (unit 1)
+          (reference "#PWR0209") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR085") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0309") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0409") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2420,7 +2281,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 163.83 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c17c40b6-cd7a-490e-a764-fd26da7aa50c)
-    (property "Reference" "#FLG04" (at 163.83 100.965 0)
+    (property "Reference" "#FLG0201" (at 163.83 100.965 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 163.83 104.14 0)
@@ -2436,13 +2297,13 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#FLG04") (unit 1)
+          (reference "#FLG0201") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#FLG05") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#FLG0301") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#FLG06") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#FLG0401") (unit 1)
         )
       )
     )
@@ -2451,13 +2312,13 @@
   (symbol (lib_id "Device:R") (at 241.3 109.22 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f5733ebc-4411-46ab-aa22-2dc79baedf48)
-    (property "Reference" "R9" (at 242.57 105.41 90)
+    (property "Reference" "R?" (at 242.57 105.41 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10" (at 242.57 102.87 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 241.3 110.998 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 241.3 110.998 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 241.3 109.22 0)
@@ -2470,19 +2331,65 @@
     (pin "2" (uuid f1717eee-de29-46ac-bfc4-156b2843e1a1))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "R9") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "R8") (unit 1)
+          (reference "R204") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "R10") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "R304") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "R404") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "R5") (unit 1)
+          (reference "R?") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Small") (at 58.42 52.07 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f85462fe-33b9-4ddc-94f6-dfcaa9e4fc75)
+    (property "Reference" "C?" (at 55.88 54.61 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10u" (at 55.88 40.64 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_2220_5750Metric" (at 58.42 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 58.42 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Model" "2220" (at 58.42 43.18 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Voltage" "100V" (at 58.42 45.72 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "MFR" "885012214001" (at 58.42 52.07 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 20cb96e7-57c0-4c17-9f63-0cdd7408f307))
+    (pin "2" (uuid f80f2019-7012-4786-8b25-93f81602e789))
+    (instances
+      (project "Robourt"
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
+          (reference "C203") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "C303") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "C403") (unit 1)
+        )
+      )
+      (project "driver_stepperLucas"
+        (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -2491,7 +2398,7 @@
   (symbol (lib_id "power:GND") (at 233.68 25.4 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc286495-d54d-46d6-bf24-a4e4ca25209b)
-    (property "Reference" "#PWR077" (at 233.68 19.05 0)
+    (property "Reference" "#PWR?" (at 233.68 19.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 233.68 20.32 0)
@@ -2506,19 +2413,19 @@
     (pin "1" (uuid 6c47760d-d9b5-47ee-970f-58694ed13ec3))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c536fa3c-09d4-4c8c-ac7c-935d025d1d35"
-          (reference "#PWR077") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/26d05491-2800-4f91-9931-a85caf6c3ce4"
-          (reference "#PWR070") (unit 1)
+          (reference "#PWR0208") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/807609e6-6522-4206-8069-5cb73bf05af8"
-          (reference "#PWR084") (unit 1)
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/9dec379e-c3bc-4ee1-b3df-ad68de13271e"
+          (reference "#PWR0308") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/31c55380-a33e-4c31-b418-aac2c9db6a9a"
+          (reference "#PWR0408") (unit 1)
         )
       )
       (project "driver_stepperLucas"
         (path "/8b56e416-62b3-4f2a-b418-32bd641a0e6c"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )

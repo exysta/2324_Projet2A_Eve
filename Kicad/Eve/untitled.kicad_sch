@@ -398,7 +398,7 @@
   (symbol (lib_id "Regulator_Linear:MCP1802x-xx02xOT") (at 146.05 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d686876-a9f4-4b24-ab7b-a28c25667438)
-    (property "Reference" "U1" (at 146.05 66.04 0)
+    (property "Reference" "U501" (at 146.05 66.04 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BU33SD5WG-TR" (at 146.05 68.58 0)
@@ -418,7 +418,7 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "U1") (unit 1)
+          (reference "U501") (unit 1)
         )
       )
     )
@@ -427,13 +427,13 @@
   (symbol (lib_id "Device:C_Small") (at 123.19 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 335e571b-9474-49f5-b5f2-4f26fe85d3ea)
-    (property "Reference" "C7" (at 125.73 75.5713 0)
+    (property "Reference" "C?" (at 125.73 75.5713 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 125.73 78.1113 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 123.19 76.2 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 123.19 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 123.19 76.2 0)
@@ -444,12 +444,12 @@
     (instances
       (project "projet1"
         (path "/81e39f13-7d7a-4836-af42-8530ece466a5"
-          (reference "C7") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C6") (unit 1)
+          (reference "C501") (unit 1)
         )
       )
     )
@@ -458,13 +458,13 @@
   (symbol (lib_id "Device:LED") (at 209.55 87.63 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 609b6ea1-7c05-47a7-9aa0-c71119b80203)
-    (property "Reference" "D6" (at 213.36 88.5825 90)
+    (property "Reference" "D?" (at 213.36 88.5825 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 213.36 91.1225 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 209.55 87.63 0)
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 209.55 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 209.55 87.63 0)
@@ -475,15 +475,15 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "D6") (unit 1)
+          (reference "D?") (unit 1)
         )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "D3") (unit 1)
+          (reference "D501") (unit 1)
         )
       )
       (project "Regulateurs"
         (path "/c482be3d-70a8-4e95-a602-5f49202f2a67"
-          (reference "D5") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "QBPS_LT1076CR#PBF"
@@ -500,7 +500,7 @@
           (reference "D?") (unit 1)
         )
         (path "/d1da92a7-0236-4679-a8f0-7224ece43232"
-          (reference "D5") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
     )
@@ -509,13 +509,13 @@
   (symbol (lib_id "Device:R_Small") (at 209.55 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6170b8a7-ffa7-4147-8f2b-64a189359e57)
-    (property "Reference" "R7" (at 212.09 76.835 0)
+    (property "Reference" "R?" (at 212.09 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220" (at 212.09 79.375 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 209.55 77.47 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 209.55 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 209.55 77.47 0)
@@ -526,15 +526,15 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "R7") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "R4") (unit 1)
+          (reference "R501") (unit 1)
         )
       )
       (project "Regulateurs"
         (path "/c482be3d-70a8-4e95-a602-5f49202f2a67"
-          (reference "R8") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "QBPS_LT1076CR#PBF"
@@ -551,7 +551,7 @@
           (reference "R?") (unit 1)
         )
         (path "/d1da92a7-0236-4679-a8f0-7224ece43232"
-          (reference "R5") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -560,7 +560,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 132.08 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6634bc66-b8e3-4f4a-a973-f71c978ff3aa)
-    (property "Reference" "#FLG01" (at 132.08 70.485 0)
+    (property "Reference" "#FLG?" (at 132.08 70.485 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 132.08 68.58 0)
@@ -576,12 +576,12 @@
     (instances
       (project "projet1"
         (path "/81e39f13-7d7a-4836-af42-8530ece466a5"
-          (reference "#FLG01") (unit 1)
+          (reference "#FLG?") (unit 1)
         )
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#FLG08") (unit 1)
+          (reference "#FLG0502") (unit 1)
         )
       )
     )
@@ -590,13 +590,13 @@
   (symbol (lib_id "Device:C_Small") (at 162.56 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9bc13380-21fb-4b09-a97a-f079f83596d2)
-    (property "Reference" "C8" (at 165.1 76.8413 0)
+    (property "Reference" "C?" (at 165.1 76.8413 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 165.1 79.3813 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 162.56 77.47 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 162.56 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 162.56 77.47 0)
@@ -607,12 +607,12 @@
     (instances
       (project "projet1"
         (path "/81e39f13-7d7a-4836-af42-8530ece466a5"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C7") (unit 1)
+          (reference "C502") (unit 1)
         )
       )
     )
@@ -621,7 +621,7 @@
   (symbol (lib_id "power:GND") (at 209.55 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d4f432f-7fa0-43f6-9b82-4ef59ecca0cd)
-    (property "Reference" "#PWR043" (at 209.55 104.14 0)
+    (property "Reference" "#PWR?" (at 209.55 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 209.55 102.87 0)
@@ -637,15 +637,15 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR0502") (unit 1)
         )
       )
       (project "Regulateurs"
         (path "/c482be3d-70a8-4e95-a602-5f49202f2a67"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "QBPS_LT1076CR#PBF"
@@ -662,7 +662,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/d1da92a7-0236-4679-a8f0-7224ece43232"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -671,7 +671,7 @@
   (symbol (lib_id "power:GND") (at 123.19 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a26f0189-6725-476d-b326-a164592dac51)
-    (property "Reference" "#PWR011" (at 123.19 91.44 0)
+    (property "Reference" "#PWR?" (at 123.19 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 123.19 90.17 0)
@@ -687,12 +687,12 @@
     (instances
       (project "projet1"
         (path "/81e39f13-7d7a-4836-af42-8530ece466a5"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR0501") (unit 1)
         )
       )
     )
@@ -701,7 +701,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 123.19 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d03ca3f1-487f-4d85-ba85-f656433196fd)
-    (property "Reference" "#FLG02" (at 121.285 82.55 0)
+    (property "Reference" "#FLG?" (at 121.285 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 119.38 83.185 90)
@@ -717,12 +717,12 @@
     (instances
       (project "projet1"
         (path "/81e39f13-7d7a-4836-af42-8530ece466a5"
-          (reference "#FLG02") (unit 1)
+          (reference "#FLG?") (unit 1)
         )
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#FLG07") (unit 1)
+          (reference "#FLG0501") (unit 1)
         )
       )
     )
