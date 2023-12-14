@@ -1,4 +1,4 @@
-22467009669300443
+22453399320174589
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -52968,13 +52968,6 @@ SMD SMT ceramic resonator filter filter hand-soldering
 0
 3
 3
-DST10100S
-DST10100S
-
-
-0
-3
-3
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -62502,13 +62495,6 @@ Yellow 5381 Series LED
 0
 2
 2
-LT1076CR
-LT1076CR-PBF
-
-
-0
-8
-8
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -62768,13 +62754,6 @@ ESP8266 WiFi microcontroller
 0
 16
 16
-Mosfet
-SQJ968EPT1GE3
-PowerPAK® SO-8L DUAL
-MOSFET (N-Channel)
-0
-10
-6
 Motors
 Vybronics_VZ30C1T8219732L
 Vibration motor, 2.3-3.2V, 14000rpm, 0.7G, https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ30C1T8219732L-datasheet.pdf
@@ -85266,13 +85245,6 @@ rotary encoder
 0
 7
 6
-STM32U535RET6
-QFP50P1200X1200X160-64N
-LQF64
-Integrated Circuit
-0
-64
-64
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -86904,13 +86876,6 @@ Logo WEEE
 0
 0
 0
-TMC2590
-QFP50P700X700X114-33N
-TQFP32-EP
-Integrated Circuit
-0
-33
-33
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
@@ -91671,27 +91636,6 @@ transformer flyback
 0
 14
 14
-Transistor_Power
-GaN_Systems_GaNPX-3_5x6.6mm_Drain2.93x0.6mm
-GaN Systems GaNPX GS66502B Package, https://gansystems.com/wp-content/uploads/2020/04/GS66502B-DS-Rev-200402.pdf
-ganpx gs66502b
-0
-7
-3
-Transistor_Power
-GaN_Systems_GaNPX-3_5x6.6mm_Drain3.76x0.6mm
-GaN Systems GaNPX GS66504B Package, https://gansystems.com/wp-content/uploads/2020/04/GS66504B-DS-Rev-200402.pdf
-ganpx gs66504b
-0
-7
-3
-Transistor_Power
-GaN_Systems_GaNPX-4_7x8.4mm
-GaN Systems GaNPX GS66508B Package, https://gansystems.com/wp-content/uploads/2020/04/GS66508B-DS-Rev-200402.pdf
-ganpx gs66508b
-0
-15
-4
 Transistor_Power_Module
 Infineon_AG-ECONO2
 28-lead TH, EconoPACK 2, same as Littelfuse_Package_H_XN2MM, https://www.infineon.com/dgdl/Infineon-FS75R07N2E4-DS-v02_00-en_de.pdf?fileId=db3a30432f5008fe012f52f916333979

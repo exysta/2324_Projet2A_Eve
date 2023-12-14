@@ -173,7 +173,8 @@
       ],
       "track_widths": [
         0.0,
-        0.3
+        0.3,
+        0.5
       ],
       "via_dimensions": [
         {
@@ -444,7 +445,7 @@
         "name": "power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 1.0,
         "via_diameter": 0.7,
         "via_drill": 0.5,
         "wire_width": 6
@@ -458,7 +459,7 @@
     "netclass_patterns": [
       {
         "netclass": "power",
-        "pattern": "*V*"
+        "pattern": "*11.7V*"
       },
       {
         "netclass": "power",
@@ -469,20 +470,20 @@
         "pattern": "24V"
       },
       {
-        "netclass": "Default",
-        "pattern": "/driver_stepper1/LA2"
+        "netclass": "power",
+        "pattern": "*5.1V*"
       },
       {
-        "netclass": "Default",
-        "pattern": "SPI2_MOSI"
+        "netclass": "power",
+        "pattern": "*7.5V*"
       },
       {
-        "netclass": "Default",
-        "pattern": ""
+        "netclass": "power",
+        "pattern": "*24V*"
       },
       {
-        "netclass": "Default",
-        "pattern": ""
+        "netclass": "power",
+        "pattern": "/driver*/S"
       }
     ]
   },
