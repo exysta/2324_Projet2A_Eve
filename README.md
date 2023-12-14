@@ -106,12 +106,14 @@ Formats des registres de réponse </br>
 
 Nous avons donc configuré les registres avec les paramètres suivants :
 
-<div align="center">
-<br>
-<img src="Images/6.png" width="400"> </br>
-Configuration des registres par bit </br>
-</br> 
-</div>
+
+```c
+	phtmc2590->drvCtrlRegister 			= 0x00000; // No Current
+	phtmc2590->chopConfRegister			= 0b10011000000000001111; // 100 10
+	phtmc2590->smartEnRegister 			= 0b10100000000000000000; // 101 0
+	phtmc2590->stallGuardCtrlRegister 	= 0b11000000000000011111;//0xD001F; // 110 1---- 11111
+	phtmc2590->drvConfRegister 			= 0b11100000011110110000;//0xE0480; // 1110 0000 0100 1000 0000
+```
 
 #### Explication du code
 
@@ -120,12 +122,46 @@ Le code de commande pour la TMC2590 est séparé en plusieurs parties :
 
 * tmc2590_Init : Permet d'initialiser les registres du driver et de le mettre prêt au fonctionnement. Pour le moment, l'activation du signal nCS se fait à ce moment mais par la suite, il sera fait dans une autre fonction qui décidera avec quel stepper on communique.
 
+
+
+```c
+void tmc2590_Init(TMC2590_HandleTypeDef *phtmc2590, SPI_HandleTypeDef *hspi, GPIO_TypeDef *gpioPortNCS, uint16_t gpioPinNCS, GPIO_TypeDef *gpioPortDrvEnN, uint16_t gpioPinDrvEnN){
+	uint8_t pData[3];
+	phtmc2590->hspi = hspi;
+	phtmc2590->gpioPinNCS = gpioPinNCS;
+	phtmc2590->gpioPortNCS = gpioPortNCS;
+	phtmc2590->gpioPinDrvEnN = gpioPinDrvEnN;
+	phtmc2590->gpioPortDrvEnN = gpioPortDrvEnN;
+
+	tmc2590_SetPowerEnable(phtmc2590, SET);
+	tmc2590_SetnCS(phtmc2590, SET);
+
+	phtmc2590->drvCtrlRegister 			= 0x00000; // No Current
+	phtmc2590->chopConfRegister			= 0b10011000000000001111; // 100 10
+	phtmc2590->smartEnRegister 			= 0b10100000000000000000; // 101 0
+	phtmc2590->stallGuardCtrlRegister 	= 0b11000000000000011111;//0xD001F; // 110 1---- 11111
+	phtmc2590->drvConfRegister 			= 0b11100000011110110000;//0xE0480; // 1110 0000 0100 1000 0000
+
+	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->drvCtrlRegister);
+	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
+	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->chopConfRegister);
+	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
+	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->smartEnRegister);
+	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
+	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->stallGuardCtrlRegister);
+	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
+	tmc2590_SetTxBufferInt32(phtmc2590, phtmc2590->drvConfRegister);
+	tmc2590_TransmitReceive(phtmc2590, TMC2590_CMD_SIZE);
+
+	HAL_TIM_Base_Start_IT(&htim2);
+
+}
+```
 <div align="center">
-<br>
-<img src="Images/7.png" width="400"> </br>
 Code tmc2590_Init </br>
 </br> 
 </div>
+
 
 Entrées : 
 * Structure TMC2590
