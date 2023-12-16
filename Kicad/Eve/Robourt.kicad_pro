@@ -462,7 +462,7 @@
         "pattern": "*11.7V*"
       },
       {
-        "netclass": "power",
+        "netclass": "Default",
         "pattern": "*SR*"
       },
       {

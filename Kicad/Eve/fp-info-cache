@@ -1,4 +1,4 @@
-22453399320174589
+22492370156222302
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -3082,6 +3082,20 @@ capacitor
 Capacitor_SMD
 C_1825_4564Metric_Pad1.57x6.80mm_HandSolder
 Capacitor SMD 1825 (4564 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+capacitor handsolder
+0
+2
+2
+Capacitor_SMD
+C_2220_5650Metric
+Capacitor SMD 2220 (5650 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+Capacitor_SMD
+C_2220_5650Metric_Pad1.97x5.40mm_HandSolder
+Capacitor SMD 2220 (5650 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
 capacitor handsolder
 0
 2
@@ -8827,6 +8841,13 @@ DIN 41612 IEC 60603 Q/2
 32
 32
 Connector_DIN
+DIN41612_Q2_2x16_Male_Horizontal_THT
+DIN41612 connector, type Q/2, Horizontal, 2 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 Q/2
+0
+32
+32
+Connector_DIN
 DIN41612_Q2_2x16_Male_Vertical_THT
 DIN41612 connector, type Q/2, Vertical, 2 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 Q/2
@@ -8835,6 +8856,13 @@ DIN 41612 IEC 60603 Q/2
 32
 Connector_DIN
 DIN41612_Q3_2x10_Female_Horizontal_THT
+DIN41612 connector, type Q/3, Horizontal, 2 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 Q/3
+0
+20
+20
+Connector_DIN
+DIN41612_Q3_2x10_Male_Horizontal_THT
 DIN41612 connector, type Q/3, Horizontal, 2 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 Q/3
 0
@@ -8855,6 +8883,13 @@ DIN 41612 IEC 60603 Q
 64
 64
 Connector_DIN
+DIN41612_Q_2x32_Male_Horizontal_THT
+DIN41612 connector, type Q, Horizontal, 2 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 Q
+0
+64
+64
+Connector_DIN
 DIN41612_Q_2x32_Male_Vertical_THT
 DIN41612 connector, type Q, Vertical, 2 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 Q
@@ -8863,6 +8898,13 @@ DIN 41612 IEC 60603 Q
 64
 Connector_DIN
 DIN41612_R2_2x16_Female_Horizontal_THT
+DIN41612 connector, type R/2, Horizontal, 3 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R/2
+0
+32
+32
+Connector_DIN
+DIN41612_R2_2x16_Male_Horizontal_THT
 DIN41612 connector, type R/2, Horizontal, 3 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R/2
 0
@@ -8883,6 +8925,13 @@ DIN 41612 IEC 60603 R/2
 48
 48
 Connector_DIN
+DIN41612_R2_3x16_Male_Horizontal_THT
+DIN41612 connector, type R/2, Horizontal, 3 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R/2
+0
+48
+48
+Connector_DIN
 DIN41612_R2_3x16_Male_Vertical_THT
 DIN41612 connector, type R/2, Vertical, 3 rows 16 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R/2
@@ -8891,6 +8940,13 @@ DIN 41612 IEC 60603 R/2
 48
 Connector_DIN
 DIN41612_R3_2x10_Female_Horizontal_THT
+DIN41612 connector, type R/3, Horizontal, 3 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R/3
+0
+20
+20
+Connector_DIN
+DIN41612_R3_2x10_Male_Horizontal_THT
 DIN41612 connector, type R/3, Horizontal, 3 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R/3
 0
@@ -8911,6 +8967,13 @@ DIN 41612 IEC 60603 R/3
 30
 30
 Connector_DIN
+DIN41612_R3_3x10_Male_Horizontal_THT
+DIN41612 connector, type R/3, Horizontal, 3 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R/3
+0
+30
+30
+Connector_DIN
 DIN41612_R3_3x10_Male_Vertical_THT
 DIN41612 connector, type R/3, Vertical, 3 rows 10 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R/3
@@ -8919,6 +8982,13 @@ DIN 41612 IEC 60603 R/3
 30
 Connector_DIN
 DIN41612_R_1x32_Female_Horizontal_THT
+DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R
+0
+32
+32
+Connector_DIN
+DIN41612_R_1x32_Male_Horizontal_THT
 DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R
 0
@@ -8939,6 +9009,13 @@ DIN 41612 IEC 60603 R
 32
 32
 Connector_DIN
+DIN41612_R_2x16_Male_Horizontal_THT
+DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R
+0
+32
+32
+Connector_DIN
 DIN41612_R_2x16_Male_Vertical_THT
 DIN41612 connector, type R, Vertical, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R
@@ -8947,6 +9024,13 @@ DIN 41612 IEC 60603 R
 32
 Connector_DIN
 DIN41612_R_2x32_Female_Horizontal_THT
+DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R
+0
+64
+64
+Connector_DIN
+DIN41612_R_2x32_Male_Horizontal_THT
 DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R
 0
@@ -8967,6 +9051,13 @@ DIN 41612 IEC 60603 R
 48
 48
 Connector_DIN
+DIN41612_R_3x16_Male_Horizontal_THT
+DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R
+0
+48
+48
+Connector_DIN
 DIN41612_R_3x16_Male_Vertical_THT
 DIN41612 connector, type R, Vertical, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R
@@ -8975,6 +9066,13 @@ DIN 41612 IEC 60603 R
 48
 Connector_DIN
 DIN41612_R_3x32_Female_Horizontal_THT
+DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
+DIN 41612 IEC 60603 R
+0
+96
+96
+Connector_DIN
+DIN41612_R_3x32_Male_Horizontal_THT
 DIN41612 connector, type R, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf
 DIN 41612 IEC 60603 R
 0
@@ -42735,6 +42833,13 @@ RJ9 Connector tab down
 4
 4
 Connector_RJ
+RJ12_Amphenol_54601
+RJ12 connector  https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c-bmj-0082.pdf
+RJ12 connector
+0
+6
+6
+Connector_RJ
 RJ12_Amphenol_54601-x06_Horizontal
 RJ12 6P6C horizontal socket, plastic body, tab down, https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c-bmj-0082.pdf
 RJ12 connector
@@ -52968,6 +53073,13 @@ SMD SMT ceramic resonator filter filter hand-soldering
 0
 3
 3
+DST10100S
+DST10100S
+
+
+0
+3
+3
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -62495,6 +62607,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LT1076CR
+LT1076CR-PBF
+
+
+0
+8
+8
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -62754,6 +62873,13 @@ ESP8266 WiFi microcontroller
 0
 16
 16
+Mosfet
+SQJ968EPT1GE3
+PowerPAK® SO-8L DUAL
+MOSFET (N-Channel)
+0
+10
+6
 Motors
 Vybronics_VZ30C1T8219732L
 Vibration motor, 2.3-3.2V, 14000rpm, 0.7G, https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ30C1T8219732L-datasheet.pdf
@@ -85232,6 +85358,20 @@ rotary encoder
 7
 6
 Rotary_Encoder
+RotaryEncoder_Bourns_Horizontal_PEC12R-2xxxF-Nxxxx
+Bourns rotary encoder, PEC12R, without switch, horizontal shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
+rotary encoder
+0
+5
+4
+Rotary_Encoder
+RotaryEncoder_Bourns_Horizontal_PEC12R-2xxxF-Sxxxx
+Bourns rotary encoder, PEC12R, with switch, horizontal shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
+rotary encoder
+0
+7
+6
+Rotary_Encoder
 RotaryEncoder_Bourns_Vertical_PEC12R-3x17F-Nxxxx
 Bourns rotary encoder, PEC12R, without switch, with bushing, vertical shaft, 17.5mm shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
 rotary encoder
@@ -85245,6 +85385,27 @@ rotary encoder
 0
 7
 6
+Rotary_Encoder
+RotaryEncoder_Bourns_Vertical_PEC12R-3xxxF-Nxxxx
+Bourns rotary encoder, PEC12R, without switch, vertical shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
+rotary encoder
+0
+5
+4
+Rotary_Encoder
+RotaryEncoder_Bourns_Vertical_PEC12R-3xxxF-Sxxxx
+Bourns rotary encoder, PEC12R, with switch, vertical shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
+rotary encoder
+0
+7
+6
+STM32U535RET6
+QFP50P1200X1200X160-64N
+LQF64
+Integrated Circuit
+0
+64
+64
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -85710,6 +85871,13 @@ QFN 0.5
 Sensor_Pressure
 CFSensor_XGZP6897x
 Port External Dia 3.13mm, Port Internal Dia 0.9mm, 8 Pin (https://cfsensor.com/wp-content/uploads/2022/11/XGZP6897D-Pressure-Sensor-V2.7.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py, hand modified
+sop sensor
+0
+8
+8
+Sensor_Pressure
+CFSensor_XGZP6899D
+Port External Dia 3mm, Port Internal Dia 1mm, 8 Pin (https://cfsensor.com/wp-content/uploads/2022/11/XGZP6899D-Pressure-Sensor-V2.8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py, hand modified
 sop sensor
 0
 8
@@ -86876,6 +87044,13 @@ Logo WEEE
 0
 0
 0
+TMC2590
+QFP50P700X700X114-33N
+TQFP32-EP
+Integrated Circuit
+0
+33
+33
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
