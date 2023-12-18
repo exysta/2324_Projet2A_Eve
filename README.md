@@ -174,11 +174,63 @@ Entrées :
 
 * sendOrderStepper : 
 
+
+```c
+int sendOrderStepper(int inputOrder){
+
+	/*
+	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
+	 * For the moment, we have only one stepper but witch nCS signal, we will be able to change with
+	 * stepper we wwant to communicate
+	 */
+	int polarity = (inputOrder>0);
+	int order = (int) abs(inputOrder)*142.2;
+	int indice = 0;
+	while (indice != order){
+		uint32_t stateInterruption = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8);
+		if (stateInterruption != 0){
+			return 0;
+		}
+		if(perioedElapsed_IT){
+				if(index_sin_loop < 256){
+					currentCoilA = sinTable[index_sin_loop];
+					currentCoilB = sinTable[256-index_sin_loop];
+					polarityCoilA = polarity;
+					polarityCoilB = 1;
+				}
+				else if(index_sin_loop < 512){
+					currentCoilA = sinTable[512-index_sin_loop];
+					currentCoilB = sinTable[index_sin_loop-256];
+					polarityCoilA = polarity;
+					polarityCoilB = 0;
+				}
+				else if(index_sin_loop < 768){
+					currentCoilA = sinTable[index_sin_loop-512];
+					currentCoilB = sinTable[768-index_sin_loop];
+					polarityCoilA = 1 - polarity;
+					polarityCoilB = 0;
+				}
+				else{
+					currentCoilA = sinTable[1024-index_sin_loop];
+					currentCoilB = sinTable[index_sin_loop-768];
+					polarityCoilA = 1 - polarity;
+					polarityCoilB = 1;
+				}
+				index_sin_loop = (index_sin_loop+1)%1024;
+				indice++;
+
+				drvCtrlCommand = (polarityCoilA << 17) | (currentCoilA << 9) | (polarityCoilB << 8) | (currentCoilB << 0);
+				tmc2590_SetTxBufferInt32(&htmc2590, drvCtrlCommand);
+				tmc2590_TransmitReceive(&htmc2590, TMC2590_CMD_SIZE);
+				perioedElapsed_IT = 0;
+			}
+	}
+	return 1;
+
+```
+
 <div align="center">
-<br>
-<img src="Images/8.png" width="400"> </br>
 Code sendOrderStepper </br>
-</br> 
 </div>
 
 ### ROS 2
