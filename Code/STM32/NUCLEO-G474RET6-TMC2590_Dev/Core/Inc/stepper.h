@@ -16,11 +16,10 @@ typedef struct Stepper{
 	int angularPostionMax;
 } Stepper;
 
-extern Stepper* stepper1;
-extern Stepper* stepper2;
-extern Stepper* stepper3;
 
-void stepper_Init(Stepper *stepper1);
+
+
+void stepper_Init(Stepper * stepper);
 
 
 #endif /* INC_STEPPER_H_ */

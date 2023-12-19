@@ -14,15 +14,15 @@
 #include "stepper.h"
 
 
+void stepper_Init(Stepper * stepper){
 
-
-
-void stepper_Init(Stepper *stepper1){
-
-	stepper1->stepperID = 1;
-	while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) != 0){
-		sendOrderStepper(20);
+	stepper->angularPostionMax = 360;
+	stepper->angularPosition = 360;
+	stepper->stepperID = 1;
+	while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == 0){
+		sendOrderStepper(-20,stepper);
+		HAL_Delay(10);
 	}
-	stepper1->angularPosition = 0;
+	stepper->angularPosition = 0;
 
 }

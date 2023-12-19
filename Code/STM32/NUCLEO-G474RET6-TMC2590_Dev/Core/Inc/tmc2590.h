@@ -9,6 +9,7 @@
 #define INC_TMC2590_H_
 
 #include "main.h"
+#include "stepper.h"
 
 #define SPI_BUFFER_SIZE 6
 #define TMC2590_CMD_SIZE 3
@@ -75,7 +76,7 @@ void tmc2590_SetTxBuffer(TMC2590_HandleTypeDef *phtmc2590, uint8_t *pData, int s
 void tmc2590_SetTxBufferInt32(TMC2590_HandleTypeDef *phtmc2590, uint32_t data);
 void tmc2590_PrintReport(TMC2590_HandleTypeDef *phtmc2590);
 void tmc2590_dumpRegister(TMC2590_HandleTypeDef *phtmc2590);
-int sendOrderStepper(int inputOrder);
+int sendOrderStepper(int inputOrder, Stepper * stepper);
 
 
 

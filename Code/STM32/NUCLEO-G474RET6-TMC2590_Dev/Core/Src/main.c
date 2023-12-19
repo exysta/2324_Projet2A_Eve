@@ -22,11 +22,11 @@
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
-#include "stepper.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "tmc2590.h"
+#include "stepper.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -68,14 +68,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-/*	uint8_t pData[SPI_BUFFER_SIZE] = {0};
-	int index_sin_loop = 0;
-	uint8_t currentCoilA;
-	uint8_t currentCoilB;
-	uint8_t polarityCoilA;
-	uint8_t polarityCoilB;
-	uint32_t drvCtrlCommand;
-	int ordre = 0; */
+
 
   /* USER CODE END 1 */
 
@@ -85,7 +78,9 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  Stepper stepper1;
+  Stepper stepper2;
+  Stepper stepper3;
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -110,7 +105,9 @@ int main(void)
   	  uint16_t order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
-	//stepper_Init(stepper1);
+
+
+	stepper_Init(&stepper1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,15 +120,19 @@ int main(void)
 
 		// On va définir moteur 1/2/3 pour les steppers
 		// Moteur 4/5/6 pour les autres
+//		while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == 0){
+//			sendOrderStepper(20);
+//			HAL_Delay(100);
+//		}
 
-		sendOrderStepper(order);
+		sendOrderStepper(order,&stepper1);
 
 		HAL_Delay(1000);
 		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
 
-		sendOrderStepper(-order);
-
-		HAL_Delay(1000);
+//		sendOrderStepper(-order,stepper1);
+//
+//		HAL_Delay(1000);
 
 
 
