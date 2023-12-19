@@ -782,7 +782,7 @@
     (property "Value" "22uH" (at 142.24 74.93 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Inductor_SMD:L_12x12mm_H8mm" (at 142.24 76.2 0)
+    (property "Footprint" "Inductor_SMD:L_Changjiang_FNR8065S" (at 142.24 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 142.24 76.2 0)
@@ -999,6 +999,63 @@
     )
   )
 
+  (symbol (lib_id "Device:C_Polarized_Small") (at 105.41 85.09 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 67ec9531-72a1-4a9a-b18e-b33bb5769b81)
+    (property "Reference" "C?" (at 100.33 86.36 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100u" (at 97.79 88.8111 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7" (at 105.41 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 105.41 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MFR" "865060445005" (at 105.41 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Vmax" "25V" (at 105.41 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a99efdab-0342-42aa-a32b-86ec523281f6))
+    (pin "2" (uuid eb2cbc9c-4a04-485b-bf25-5803b7d50e56))
+    (instances
+      (project "Robourt"
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
+          (reference "C?") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/b0f3c6bf-43ee-43a7-9a34-92e1e933f121"
+          (reference "C801") (unit 1)
+        )
+        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c08e9c7d-1604-43bb-a00c-546e3bb44d34"
+          (reference "C704") (unit 1)
+        )
+      )
+      (project "Regulateurs"
+        (path "/c482be3d-70a8-4e95-a602-5f49202f2a67"
+          (reference "C?") (unit 1)
+        )
+      )
+      (project "QBPS_LT1076CR#PBF"
+        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/caa3dddc-44de-4526-a352-aeb906051043"
+          (reference "C?") (unit 1)
+        )
+        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/13fecffc-9de7-4a7f-bbf5-bc48726faeaa"
+          (reference "C?") (unit 1)
+        )
+        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/62fde565-aeb8-4b1e-8686-1a60119375b4"
+          (reference "C?") (unit 1)
+        )
+        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/19a5ec18-751a-4622-82f3-c22b8bd4516c"
+          (reference "C?") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 143.51 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 69d78a6b-311a-4456-a29f-e18e2555c8b0)
@@ -1046,76 +1103,22 @@
     )
   )
 
-  (symbol (lib_id "Device:C_Polarized_Small") (at 105.41 85.09 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 93468b03-4584-4c4d-a6e5-8e5212ffeb3f)
-    (property "Reference" "C?" (at 100.33 86.36 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "220u" (at 97.79 88.8111 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 105.41 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 105.41 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "MFR" "865060657012" (at 105.41 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vmax" "50V" (at 105.41 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2e8588fa-68b2-417a-a188-3f8c22bb0bac))
-    (pin "2" (uuid e365d37c-bbd2-4441-983d-5c81e4edfa43))
-    (instances
-      (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C?") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c08e9c7d-1604-43bb-a00c-546e3bb44d34"
-          (reference "C701") (unit 1)
-        )
-      )
-      (project "Regulateurs"
-        (path "/c482be3d-70a8-4e95-a602-5f49202f2a67"
-          (reference "C?") (unit 1)
-        )
-      )
-      (project "QBPS_LT1076CR#PBF"
-        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/caa3dddc-44de-4526-a352-aeb906051043"
-          (reference "C?") (unit 1)
-        )
-        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/13fecffc-9de7-4a7f-bbf5-bc48726faeaa"
-          (reference "C?") (unit 1)
-        )
-        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/62fde565-aeb8-4b1e-8686-1a60119375b4"
-          (reference "C?") (unit 1)
-        )
-        (path "/d1da92a7-0236-4679-a8f0-7224ece43232/19a5ec18-751a-4622-82f3-c22b8bd4516c"
-          (reference "C?") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C_Polarized_Small") (at 146.05 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 95c5a475-dd88-495a-a2e2-f881093feb2d)
     (property "Reference" "C?" (at 148.59 83.9089 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "470u" (at 148.59 86.36 0)
+    (property "Value" "47u" (at 148.59 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 146.05 85.09 0)
+    (property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MFR" "865060457009" (at 146.05 85.09 0)
+    (property "MFR" "865060543005" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 9657ab7b-90e7-41e5-a488-de23898fd3f8))
