@@ -11,6 +11,7 @@
 #include "stdio.h"
 #include "tim.h"
 #include "stdlib.h"
+#include "stepper.h"
 
 TMC2590_HandleTypeDef htmc2590;
 
@@ -156,7 +157,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
-int sendOrderStepper(int inputOrder){
+int sendOrderStepper(int inputOrder, Stepper * stepper){
 
 	/*
 	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
@@ -166,11 +167,17 @@ int sendOrderStepper(int inputOrder){
 	int polarity = (inputOrder>0);
 	int order = (int) abs(inputOrder)*142.2;
 	int indice = 0;
+	stepper->angularPosition += inputOrder;
+	if (stepper->angularPosition >= stepper->angularPostionMax){
+		stepper->angularPosition -= inputOrder;
+		return 0;
+	}
 	while (indice != order){
 		uint32_t stateInterruption = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8);
-		if (stateInterruption != 0){
+		if (stateInterruption != 0 && !polarity){
 			return 0;
 		}
+
 		if(perioedElapsed_IT){
 				if(index_sin_loop < 256){
 					currentCoilA = sinTable[index_sin_loop];

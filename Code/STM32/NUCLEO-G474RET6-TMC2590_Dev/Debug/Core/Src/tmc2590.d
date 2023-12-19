@@ -30,7 +30,8 @@ Core/Src/tmc2590.o: ../Core/Src/tmc2590.c ../Core/Inc/tmc2590.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h \
- ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/tim.h
+ ../Core/Inc/stepper.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
+ ../Core/Inc/tim.h ../Core/Inc/stepper.h
 ../Core/Inc/tmc2590.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
@@ -64,6 +65,8 @@ Core/Src/tmc2590.o: ../Core/Src/tmc2590.c ../Core/Inc/tmc2590.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h:
+../Core/Inc/stepper.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
 ../Core/Inc/tim.h:
+../Core/Inc/stepper.h:
