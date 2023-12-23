@@ -13518,7 +13518,7 @@
   (gr_text "B1" (at 42.8 31.3) (layer "B.SilkS" knockout) (tstamp f8c6c044-b5ea-4eee-9755-64993da60cbc)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom mirror))
   )
-  (gr_text "BTN1↑3↓" (at 92.6 52.2 90) (layer "F.SilkS" knockout) (tstamp 0b391002-6576-43ed-b8e5-ac45771eb4b4)
+  (gr_text "BTN1↑2↓" (at 92.6 52.2 90) (layer "F.SilkS" knockout) (tstamp 0b391002-6576-43ed-b8e5-ac45771eb4b4)
     (effects (font (size 0.7 0.7) (thickness 0.1)) (justify left bottom))
   )
   (gr_text "5.1V" (at 38.8 69.9) (layer "F.SilkS" knockout) (tstamp 214dd531-00f8-41e1-8060-7b886f776f54)
