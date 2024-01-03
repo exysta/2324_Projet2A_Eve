@@ -6,4 +6,5 @@
   (lib (name "Inudctor")(type "KiCad")(uri "${KIPRJMOD}/lib/inductor")(options "")(descr ""))
   (lib (name "DST10100S")(type "KiCad")(uri "${KIPRJMOD}/lib/DST10100S")(options "")(descr ""))
   (lib (name "LT1076CR")(type "KiCad")(uri "${KIPRJMOD}/lib/LT1076CR")(options "")(descr ""))
+  (lib (name "Custom")(type "KiCad")(uri "${KIPRJMOD}/Custom.pretty")(options "")(descr ""))
 )

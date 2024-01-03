@@ -721,7 +721,7 @@
   (symbol (lib_id "Device:LED") (at 205.74 91.44 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00fceb2c-0daf-4598-b3ca-82da1450cc09)
-    (property "Reference" "D?" (at 209.55 92.3925 90)
+    (property "Reference" "D601" (at 209.55 92.3925 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 209.55 94.9325 90)
@@ -737,9 +737,6 @@
     (pin "2" (uuid 196f8c0b-ce86-4ebf-aeba-e2856c2296a2))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "D?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "D601") (unit 1)
         )
@@ -816,7 +813,7 @@
   (symbol (lib_id "Device:C_Small") (at 110.49 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1d9be42a-a91a-465d-96ed-26862b25ad81)
-    (property "Reference" "C?" (at 113.03 98.4313 0)
+    (property "Reference" "C602" (at 113.03 98.4313 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 113.03 100.9713 0)
@@ -832,9 +829,6 @@
     (pin "2" (uuid b846ebb5-77cc-4491-b0b9-53f1204864f5))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "C602") (unit 1)
         )
@@ -864,7 +858,7 @@
   (symbol (lib_id "power:GND") (at 110.49 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c76b8c6-6608-40a7-ac59-34270adbd221)
-    (property "Reference" "#PWR?" (at 110.49 107.95 0)
+    (property "Reference" "#PWR0602" (at 110.49 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 110.49 106.68 0)
@@ -879,9 +873,6 @@
     (pin "1" (uuid efcb5452-bda9-4658-ba90-e4631176c35b))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "#PWR0602") (unit 1)
         )
@@ -956,7 +947,7 @@
   (symbol (lib_name "DST10100S_1") (lib_id "2023-03-19_11-33-54:DST10100S") (at 135.89 95.25 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 52edd004-f9c9-44c6-a684-f4822af8351d)
-    (property "Reference" "CR?" (at 142.24 81.915 90)
+    (property "Reference" "CR601" (at 142.24 81.915 90)
       (effects (font (size 1.524 1.524)) (justify right))
     )
     (property "Value" "DST10100S" (at 142.24 84.455 90)
@@ -973,9 +964,6 @@
     (pin "3" (uuid 33bdd039-761b-4360-bba9-080c8465c340))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "CR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "CR601") (unit 1)
         )
@@ -986,7 +974,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 105.41 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5cc3d9dd-0684-45d6-a497-925cc6bac71f)
-    (property "Reference" "C?" (at 100.33 80.01 0)
+    (property "Reference" "C601" (at 100.33 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100u" (at 97.79 82.4611 0)
@@ -1008,17 +996,8 @@
     (pin "2" (uuid e3d526fe-bb7e-4d1f-88ab-ef6b7f1a14a9))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C?") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/b0f3c6bf-43ee-43a7-9a34-92e1e933f121"
-          (reference "C801") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c08e9c7d-1604-43bb-a00c-546e3bb44d34"
-          (reference "C704") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
-          (reference "C604") (unit 1)
+          (reference "C601") (unit 1)
         )
       )
       (project "Regulateurs"
@@ -1046,7 +1025,7 @@
   (symbol (lib_id "Device:R_Small") (at 205.74 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a27a5e4-b6c1-4dd5-adfa-5f379f0641e5)
-    (property "Reference" "R?" (at 208.28 80.645 0)
+    (property "Reference" "R604" (at 208.28 80.645 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1k" (at 208.28 83.185 0)
@@ -1062,9 +1041,6 @@
     (pin "2" (uuid 6fa199d3-1697-4525-bea7-118d2dc46e1a))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "R?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "R604") (unit 1)
         )
@@ -1142,7 +1118,7 @@
   (symbol (lib_id "power:GND") (at 105.41 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 880bd976-b226-4026-a2ac-8fd65cd3252e)
-    (property "Reference" "#PWR?" (at 105.41 91.44 0)
+    (property "Reference" "#PWR0601" (at 105.41 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 105.41 90.17 0)
@@ -1157,9 +1133,6 @@
     (pin "1" (uuid dcbd478f-62c6-456a-9afd-e19ef855b987))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "#PWR0601") (unit 1)
         )
@@ -1189,7 +1162,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 146.05 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9188c574-f671-4cad-95e4-b35219bd5f2c)
-    (property "Reference" "C?" (at 148.59 77.5589 0)
+    (property "Reference" "C603" (at 148.59 77.5589 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47u" (at 148.59 80.01 0)
@@ -1208,9 +1181,6 @@
     (pin "2" (uuid a4c186d8-b364-45b1-be2f-fc63a47616e7))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "C?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "C603") (unit 1)
         )
@@ -1240,7 +1210,7 @@
   (symbol (lib_id "power:GND") (at 143.51 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 96ea9434-7084-4e27-8e54-21be3ad3fac4)
-    (property "Reference" "#PWR?" (at 143.51 101.6 0)
+    (property "Reference" "#PWR0604" (at 143.51 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 139.7 96.52 0)
@@ -1255,9 +1225,6 @@
     (pin "1" (uuid 71e3c0e2-fe01-458d-8e7e-d94c064a9c5f))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "#PWR0604") (unit 1)
         )
@@ -1287,7 +1254,7 @@
   (symbol (lib_id "Device:R_Small") (at 110.49 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a42d4ce3-e60a-4682-bddc-3ab8e67e65ca)
-    (property "Reference" "R?" (at 111.76 92.71 0)
+    (property "Reference" "R601" (at 111.76 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2.7k" (at 111.76 95.25 0)
@@ -1303,9 +1270,6 @@
     (pin "2" (uuid 8b154cbc-5e1b-47de-998c-17a76a80ba16))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "R?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "R601") (unit 1)
         )
@@ -1335,7 +1299,7 @@
   (symbol (lib_name "LT1076_1") (lib_id "custom:LT1076") (at 121.92 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bd13e136-a1a3-42da-8777-848b4c3fd7af)
-    (property "Reference" "U?" (at 121.92 69.85 0)
+    (property "Reference" "U601" (at 121.92 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LT1076CR-PBF" (at 121.92 67.31 0)
@@ -1344,7 +1308,7 @@
     (property "Footprint" "LT1076CR:LT1076CR-PBF" (at 116.84 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 116.84 77.47 0)
+    (property "Datasheet" "https://www.mouser.fr/datasheet/2/609/1074fds-3123169.pdf" (at 116.84 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 9b80f9cb-b6bc-4c8d-bc5f-a7059529a98b))
@@ -1356,9 +1320,6 @@
     (pin "7" (uuid efae796f-ce86-4836-93e8-2feb822bf12c))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "U?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "U601") (unit 1)
         )
@@ -1369,7 +1330,7 @@
   (symbol (lib_id "power:GND") (at 121.92 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5d12df3-4565-48cf-911a-45b3c2b5c6e0)
-    (property "Reference" "#PWR?" (at 121.92 107.95 0)
+    (property "Reference" "#PWR0603" (at 121.92 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 121.92 106.68 0)
@@ -1384,9 +1345,6 @@
     (pin "1" (uuid 82d4d77b-b3fd-4054-9f93-d10d19c398c3))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "#PWR0603") (unit 1)
         )
@@ -1416,7 +1374,7 @@
   (symbol (lib_id "Device:L_Small") (at 142.24 69.85 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f2ec83f4-a8ad-4f4e-8009-50e0612d72d0)
-    (property "Reference" "L?" (at 142.24 66.04 90)
+    (property "Reference" "L601" (at 142.24 66.04 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "220u" (at 142.24 68.58 90)
@@ -1438,9 +1396,6 @@
     (pin "2" (uuid 296197f4-bf2d-413a-8c7d-023fcc0d17ff))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
-          (reference "L?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "L601") (unit 1)
         )
@@ -1470,7 +1425,7 @@
   (symbol (lib_id "power:GND") (at 205.74 102.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ff6ad9f7-2446-47fa-93aa-4b13673d5bd7)
-    (property "Reference" "#PWR?" (at 205.74 109.22 0)
+    (property "Reference" "#PWR0606" (at 205.74 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 205.74 107.95 0)
@@ -1485,9 +1440,6 @@
     (pin "1" (uuid 8f146d83-cb97-4375-8952-6adbd5da6a53))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/9b84e365-6524-43b0-9106-e6e67f034906"
           (reference "#PWR0606") (unit 1)
         )

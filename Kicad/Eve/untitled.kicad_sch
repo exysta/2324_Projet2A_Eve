@@ -458,7 +458,7 @@
   (symbol (lib_id "Device:LED") (at 209.55 87.63 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 609b6ea1-7c05-47a7-9aa0-c71119b80203)
-    (property "Reference" "D?" (at 213.36 88.5825 90)
+    (property "Reference" "D501" (at 213.36 88.5825 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 213.36 91.1225 90)
@@ -474,9 +474,6 @@
     (pin "2" (uuid 52c65c3c-c159-411a-9839-4996c1c0a675))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "D?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
           (reference "D501") (unit 1)
         )
@@ -509,7 +506,7 @@
   (symbol (lib_id "Device:R_Small") (at 209.55 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6170b8a7-ffa7-4147-8f2b-64a189359e57)
-    (property "Reference" "R?" (at 212.09 76.835 0)
+    (property "Reference" "R501" (at 212.09 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220" (at 212.09 79.375 0)
@@ -525,9 +522,6 @@
     (pin "2" (uuid 2d1975b6-fa7e-4e36-a258-2fc509edc879))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "R?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
           (reference "R501") (unit 1)
         )
@@ -621,7 +615,7 @@
   (symbol (lib_id "power:GND") (at 209.55 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d4f432f-7fa0-43f6-9b82-4ef59ecca0cd)
-    (property "Reference" "#PWR?" (at 209.55 104.14 0)
+    (property "Reference" "#PWR0502" (at 209.55 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 209.55 102.87 0)
@@ -636,9 +630,6 @@
     (pin "1" (uuid 929f59e1-5a94-4200-b88f-570bef471214))
     (instances
       (project "Robourt"
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/87ede840-4957-4951-b25a-c132e7988ddc/45a40ff7-b6ec-4165-9635-bd80258dd043"
           (reference "#PWR0502") (unit 1)
         )

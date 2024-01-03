@@ -4143,7 +4143,7 @@
       )
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "J115") (unit 1)
+          (reference "J108") (unit 1)
         )
       )
     )
@@ -4993,9 +4993,6 @@
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
           (reference "#PWR0146") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/b0f3c6bf-43ee-43a7-9a34-92e1e933f121"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -5059,7 +5056,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 243.84 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 389cc789-92e3-4288-87d1-2901d21e3bcc)
-    (property "Reference" "J109" (at 246.38 128.905 0)
+    (property "Reference" "J106" (at 246.38 128.905 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x03" (at 246.38 131.445 0)
@@ -5077,10 +5074,7 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "J109") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c08e9c7d-1604-43bb-a00c-546e3bb44d34"
-          (reference "J?") (unit 1)
+          (reference "J106") (unit 1)
         )
       )
     )
@@ -5167,9 +5161,6 @@
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
           (reference "#PWR0147") (unit 1)
         )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/c08e9c7d-1604-43bb-a00c-546e3bb44d34"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -5233,7 +5224,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x08_Odd_Even") (at 228.6 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4164f507-83f2-4f33-8741-2c4e4f017dd1)
-    (property "Reference" "J1" (at 229.87 146.05 0)
+    (property "Reference" "J104" (at 229.87 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x08_Odd_Even" (at 229.87 148.59 0)
@@ -5264,7 +5255,7 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "J1") (unit 1)
+          (reference "J104") (unit 1)
         )
       )
     )
@@ -6694,7 +6685,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 243.84 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 94a9fd2f-075f-4072-b025-8b68a4e4b019)
-    (property "Reference" "J108" (at 246.38 112.395 0)
+    (property "Reference" "J105" (at 246.38 112.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x03" (at 246.38 114.935 0)
@@ -6712,10 +6703,7 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "J108") (unit 1)
-        )
-        (path "/87ede840-4957-4951-b25a-c132e7988ddc/b0f3c6bf-43ee-43a7-9a34-92e1e933f121"
-          (reference "J?") (unit 1)
+          (reference "J105") (unit 1)
         )
       )
     )
@@ -7897,7 +7885,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 250.19 92.71 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d9bb1153-37d4-4771-b6bd-e164064dcd31)
-    (property "Reference" "J110" (at 250.19 85.09 0)
+    (property "Reference" "J107" (at 250.19 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x02" (at 250.19 87.63 0)
@@ -7914,7 +7902,7 @@
     (instances
       (project "Robourt"
         (path "/87ede840-4957-4951-b25a-c132e7988ddc"
-          (reference "J110") (unit 1)
+          (reference "J107") (unit 1)
         )
       )
       (project "Regulateurs"
