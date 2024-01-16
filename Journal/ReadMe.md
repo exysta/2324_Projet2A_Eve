@@ -12,7 +12,7 @@
 10. [Séance 9](#séance-9)
 11. [Séance 10](#séance-10)
 12. [Séance 11](#séance-11)
-
+12. [Séance 12](#séance-12)
 
 
 ## Introduction
@@ -183,3 +183,15 @@ Journal de bord du projet Robourt - 2023.
 ### A faire
 
 * Régler les problèmes de code et continuer d'implémenter les structures de Stepper
+
+## Séance 12
+
+### Contenu (16/01/2024)
+
+* Avancement du code pour récupérer la position initiale
+* Kicad : Le routage a été finalisé avant cette séance. Inventaire des composants nécessaires
+
+### A faire
+
+* Régler les problèmes de code et continuer d'implémenter les structures de Stepper
+* Soudage PCB
