@@ -105,9 +105,21 @@ int main(void)
   	uint16_t order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
+	// Code for position captor
+	float receivedData = readAnalogValue();
+	if (receivedData > 500)
+	  {
+		HAL_UART_Transmit(&huart3, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100); // if captor is pushed
+	  }
+	else
+	  {
+		HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100); // else
+	  }
+	  HAL_Delay(1000);
 
-
-	stepper_Init(&stepper1);
+	  sendOrderStepper(0, &stepper1);
+	  stepper_Init(&stepper1);
+	  HAL_Delay(1000);
 
 
 
