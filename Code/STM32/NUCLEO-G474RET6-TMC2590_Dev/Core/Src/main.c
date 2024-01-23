@@ -102,12 +102,15 @@ int main(void)
 //	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
 
 
-  	  uint16_t order = 90;
+  	uint16_t order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
 
 
 	stepper_Init(&stepper1);
+
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -120,10 +123,6 @@ int main(void)
 
 		// On va définir moteur 1/2/3 pour les steppers
 		// Moteur 4/5/6 pour les autres
-//		while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == 0){
-//			sendOrderStepper(20);
-//			HAL_Delay(100);
-//		}
 
 		sendOrderStepper(order,&stepper1);
 
@@ -166,7 +165,6 @@ int main(void)
 			polarityCoilA = 1;
 			polarityCoilB = 1;
 		}
-
 
 
 		drvCtrlCommand = (polarityCoilA << 17) | (currentCoilA << 9) | (polarityCoilB << 8) | (currentCoilB << 0);
