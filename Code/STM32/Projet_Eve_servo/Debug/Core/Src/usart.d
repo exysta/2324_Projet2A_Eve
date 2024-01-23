@@ -1,4 +1,4 @@
-Core/Src/send_dynamixel.o: ../Core/Src/send_dynamixel.c \
+Core/Src/usart.o: ../Core/Src/usart.c ../Core/Inc/usart.h \
  ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -29,6 +29,7 @@ Core/Src/send_dynamixel.o: ../Core/Src/send_dynamixel.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+../Core/Inc/usart.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:

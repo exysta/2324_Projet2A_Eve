@@ -1,8 +1,0 @@
-../Core/Src/send_dynamixel.c:19:16:update_crc	536	static
-../Core/Src/send_dynamixel.c:65:6:send_dynamixel	56	dynamic
-../Core/Src/send_dynamixel.c:78:6:ToggleLed	56	static
-../Core/Src/send_dynamixel.c:96:6:ToggleTorque	56	static
-../Core/Src/send_dynamixel.c:125:6:SetOperatingMode	32	static
-../Core/Src/send_dynamixel.c:134:6:RotateToPosition	56	static
-../Core/Src/send_dynamixel.c:170:6:RotateToExtendedPosition	16	static
-../Core/Src/send_dynamixel.c:173:6:DriveMode	4	static
