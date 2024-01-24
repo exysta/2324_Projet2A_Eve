@@ -12,10 +12,12 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "usart.h"
 #include <stdint.h>
+#define BUFFER_SIZE 32
 
-void dyn2_send(uint8_t* instruction);
+int dyn2_send(uint8_t buffer[BUFFER_SIZE]);
 void dyn2_led(int status);
 
 void dyn2_rotate_positionPosition(float angleInDeg);
