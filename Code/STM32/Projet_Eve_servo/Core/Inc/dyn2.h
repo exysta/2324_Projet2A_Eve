@@ -21,6 +21,8 @@ int dyn2_send(uint8_t buffer[BUFFER_SIZE]);
 void dyn2_led(int status);
 
 void dyn2_rotate_positionPosition(float angleInDeg);
+void dyn2_debug_sendArrayAsString(uint8_t* array, int size);
+
 
 
 #endif /* INC_DYN2_H_ */

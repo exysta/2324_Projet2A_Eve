@@ -17,7 +17,6 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <dyn2.h>
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
@@ -93,18 +92,29 @@ int main(void)
   MX_USART3_UART_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-
+  uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
+  			/* calcul of CRC after */,0x19,0x4E};
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
-	  //HAL_UART_Transmit(&huart4, "hello", 5, 10);
-	  //HAL_UART_Transmit(&huart4,"hello",strlen("hello"),10);
-	  //HAL_Delay(100);
+	  //dyn2_debug_sendArrayAsString(Dynamixel_PING, sizeof(Dynamixel_PING));
+
+	  HAL_Delay(1000);
+	  huart3.Instance->CR1 |= USART_CR1_TE;
+	  huart3.Instance->CR1 &= ~USART_CR1_RE;
+	  HAL_UART_Transmit(&huart3,"ABCD\n",strlen("ABCD\n"),100);
+	  huart3.Instance->CR1 &= ~USART_CR1_TE;
+	  huart3.Instance->CR1 |= USART_CR1_RE;
 
 
-	  dyn2_led(1);
+
+	  //dyn2_ping();
+	  HAL_Delay(1000);
+
+	  //HAL_UART_Transmit(&huart3, (uint8_t*)"NEW PING\n", sizeof("NEW PING\n") - 1, 100);
+
 	  /*
 	  HAL_Delay(100);
 

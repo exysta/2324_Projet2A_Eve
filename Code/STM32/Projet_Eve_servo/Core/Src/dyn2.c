@@ -7,6 +7,8 @@
 
 #include "dyn2.h"
 #define HUART_SERVO &huart4
+#define HUART_ST_LINK &huart3
+
 
 
 
@@ -56,45 +58,57 @@ unsigned short dyn2_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, u
 	return crc_accum;
 }
 uint8_t* dyn2_append_crc(const uint8_t* instruction) {
-    uint8_t* instruction_sent = (uint8_t*)malloc(BUFFER_SIZE);
+	uint8_t* instruction_sent = (uint8_t*)malloc(BUFFER_SIZE);
 
-    if (instruction_sent == NULL) {
-        // Handle memory allocation failure
-        return NULL;
-    }
+	if (instruction_sent == NULL) {
+		// Handle memory allocation failure
+		return NULL;
+	}
 
-    memcpy(instruction_sent, instruction, BUFFER_SIZE);
+	memcpy(instruction_sent, instruction, BUFFER_SIZE);
 
-    unsigned short crc = dyn2_crc(0, instruction_sent, BUFFER_SIZE - 2);
-    unsigned char crc_l = (unsigned char)(crc & 0x00FF);
-    unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
+	unsigned short crc = dyn2_crc(0, instruction_sent, BUFFER_SIZE - 2);
+	unsigned char crc_l = (unsigned char)(crc & 0x00FF);
+	unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
 
-    instruction_sent[BUFFER_SIZE - 2] = crc_l;
-    instruction_sent[BUFFER_SIZE - 1] = crc_h;
+	instruction_sent[BUFFER_SIZE - 2] = crc_l;
+	instruction_sent[BUFFER_SIZE - 1] = crc_h;
 
-    return instruction_sent;
+	return instruction_sent;
 }
 
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
 int dyn2_send(uint8_t buffer[BUFFER_SIZE]) {
-    uint8_t* buffer_crc = dyn2_append_crc(buffer);
-    if (buffer_crc == NULL) {
-            // Handle memory allocation failure
-            return -1;
-        }
-    memcpy(buffer, buffer_crc, BUFFER_SIZE);
-    //while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
-    if(HAL_UART_Transmit(HUART_SERVO, buffer_crc, BUFFER_SIZE, 100)!=0){
+	uint8_t* buffer_crc = dyn2_append_crc(buffer);
+	if (buffer_crc == NULL) {
+		// Handle memory allocation failure
+		free(buffer_crc); // Free the dynamically allocated memory
+		return -1;
+	}
+	memcpy(buffer, buffer_crc, BUFFER_SIZE);
+	//while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
+	/*
+    if(HAL_UART_Transmit(&huart3, buffer_crc, BUFFER_SIZE, 100)!=0){
     	return -1;
-    }
-    free(buffer_crc); // Free the dynamically allocated memory
+	 */
+	dyn2_debug_sendArrayAsString(buffer_crc, BUFFER_SIZE);
+	free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
 
 void dyn2_ping(){
 	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
-	dyn2_send(Dynamixel_PING);
+	uint8_t buffer[BUFFER_SIZE];
+
+	// Copy the template to the buffer
+	memcpy(buffer, Dynamixel_PING, strlen(Dynamixel_PING));
+
+	// Fill the remaining space in the buffer with a specific value (padding)
+	memset(buffer + strlen(Dynamixel_PING), 0x00, BUFFER_SIZE - strlen(Dynamixel_PING));
+
+	// Send the message using the dyn2_send function
+	dyn2_send(buffer);
 }
 // Status 1 : Led ON, status 0 : Led OFF
 void dyn2_led(int status){
@@ -151,7 +165,7 @@ void dyn2_rotation_mod(int mode){
 			/*débutparam, address 116:*/ ,0x74,0x00
 			/*value in the address : 2048*/,0x00,0x08,0x00,0x00
 			/*CRC*/				,0xCA,0x89};
-//0.088 [deg/pulse]	1[rev] : 0 ~ 4,09
+	//0.088 [deg/pulse]	1[rev] : 0 ~ 4,09
 }
 void dyn2_rotate_position(float angleInDeg) {
 	// Value range: 0 to 4095
@@ -184,4 +198,22 @@ void dyn2_rotate_position(float angleInDeg) {
 			/*débutparam, address 116:*/ ,0x74,0x00
 			/*value in the address :2048*/,0x00,0x08,0x00,0x00
 			/*CRC*/				,0xCA,0x89};
+}
+
+void dyn2_debug_sendArrayAsString(uint8_t* array, int size)
+{
+	// Convert array to a string
+	char arrayString[100];  // Adjust the size according to your needs
+	int index = 0;
+
+	for (int i = 0; i < size; i++) {
+		// Convert each element to a string and append to arrayString
+		index += sprintf(&arrayString[index], "%d\t", array[i]);
+	}
+
+	// Add a newline character at the end
+	index += sprintf(&arrayString[index], "\n");
+
+	// Send the string through UART
+	HAL_UART_Transmit(&huart3, (uint8_t*)arrayString, strlen(arrayString), HAL_MAX_DELAY);
 }
