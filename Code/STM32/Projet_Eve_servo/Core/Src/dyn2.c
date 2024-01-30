@@ -57,41 +57,42 @@ unsigned short dyn2_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, u
 	}
 	return crc_accum;
 }
-uint8_t* dyn2_append_crc(const uint8_t* instruction) {
-	uint8_t* instruction_sent = (uint8_t*)malloc(BUFFER_SIZE);
+uint8_t* dyn2_append_crc(const uint8_t* instruction,uint16_t bufferSize) {
+
+	uint8_t* instruction_sent = (uint8_t*)malloc(bufferSize);
 
 	if (instruction_sent == NULL) {
 		// Handle memory allocation failure
 		return NULL;
 	}
 
-	memcpy(instruction_sent, instruction, BUFFER_SIZE);
+	memcpy(instruction_sent, instruction, bufferSize-2);
 
-	unsigned short crc = dyn2_crc(0, instruction_sent, BUFFER_SIZE - 2);
+	unsigned short crc = dyn2_crc(0, instruction_sent, bufferSize - 2);
 	unsigned char crc_l = (unsigned char)(crc & 0x00FF);
 	unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
 
-	instruction_sent[BUFFER_SIZE - 2] = crc_l;
-	instruction_sent[BUFFER_SIZE - 1] = crc_h;
+	instruction_sent[bufferSize - 2] = crc_l;
+	instruction_sent[bufferSize - 1] = crc_h;
 
 	return instruction_sent;
 }
 
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
-int dyn2_send(uint8_t buffer[BUFFER_SIZE]) {
-	uint8_t* buffer_crc = dyn2_append_crc(buffer);
+int dyn2_send(uint8_t* buffer) {
+	uint8_t* buffer_crc = dyn2_append_crc(buffer,sizeof(buffer));
 	if (buffer_crc == NULL) {
 		// Handle memory allocation failure
 		free(buffer_crc); // Free the dynamically allocated memory
 		return -1;
 	}
-	memcpy(buffer, buffer_crc, BUFFER_SIZE);
+	memcpy(buffer, buffer_crc, sizeof(buffer));
 	//while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
 	/*
     if(HAL_UART_Transmit(&huart3, buffer_crc, BUFFER_SIZE, 100)!=0){
     	return -1;
 	 */
-	dyn2_debug_sendArrayAsString(buffer_crc, BUFFER_SIZE);
+	dyn2_debug_sendArrayAsString(buffer_crc, sizeof(buffer));
 	free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
@@ -99,17 +100,18 @@ int dyn2_send(uint8_t buffer[BUFFER_SIZE]) {
 void dyn2_ping(){
 	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
-	uint8_t buffer[BUFFER_SIZE];
+	uint8_t* buffer;
 
 	// Copy the template to the buffer
-	memcpy(buffer, Dynamixel_PING, strlen(Dynamixel_PING));
+	memcpy(buffer, Dynamixel_PING, sizeof(Dynamixel_PING));
 
 	// Fill the remaining space in the buffer with a specific value (padding)
-	memset(buffer + strlen(Dynamixel_PING), 0x00, BUFFER_SIZE - strlen(Dynamixel_PING));
+	//memset(buffer + strlen(Dynamixel_PING), 0x00, BUFFER_SIZE - strlen(Dynamixel_PING));
 
 	// Send the message using the dyn2_send function
 	dyn2_send(buffer);
 }
+
 // Status 1 : Led ON, status 0 : Led OFF
 void dyn2_led(int status){
 	uint8_t Dynamixel_LED_ON_XL430[BUFFER_SIZE] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03

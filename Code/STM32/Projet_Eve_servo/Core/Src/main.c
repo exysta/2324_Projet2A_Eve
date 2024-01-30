@@ -94,23 +94,26 @@ int main(void)
   /* USER CODE BEGIN 2 */
   uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
   			/* calcul of CRC after */,0x19,0x4E};
+  uint8_t* Dynamixel_PING_CRC = dyn2_append_crc(Dynamixel_PING);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
-	  //dyn2_debug_sendArrayAsString(Dynamixel_PING, sizeof(Dynamixel_PING));
 
 	  HAL_Delay(1000);
+	  //Acitvate Transmit and disiable Receive, the message transmited need to be between the 2 blocks
 	  huart3.Instance->CR1 |= USART_CR1_TE;
 	  huart3.Instance->CR1 &= ~USART_CR1_RE;
-	  HAL_UART_Transmit(&huart3,"ABCD\n",strlen("ABCD\n"),100);
+	  //dyn2_ping();
+	  dyn2_debug_sendArrayAsString(Dynamixel_PING_CRC, sizeof(Dynamixel_PING_CRC));
+
+	  //HAL_UART_Transmit(&huart3,"ABCD\n",strlen("ABCD\n"),100);
 	  huart3.Instance->CR1 &= ~USART_CR1_TE;
 	  huart3.Instance->CR1 |= USART_CR1_RE;
 
 
 
-	  //dyn2_ping();
 	  HAL_Delay(1000);
 
 	  //HAL_UART_Transmit(&huart3, (uint8_t*)"NEW PING\n", sizeof("NEW PING\n") - 1, 100);
