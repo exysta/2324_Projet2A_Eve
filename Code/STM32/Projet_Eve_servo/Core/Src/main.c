@@ -105,8 +105,8 @@ int main(void)
 	  //Acitvate Transmit and disiable Receive, the message transmited need to be between the 2 blocks
 	  huart3.Instance->CR1 |= USART_CR1_TE;
 	  huart3.Instance->CR1 &= ~USART_CR1_RE;
-	  //dyn2_ping();
 	  dyn2_debug_sendArrayAsString(Dynamixel_PING_CRC, sizeof(Dynamixel_PING_CRC));
+
 
 	  //HAL_UART_Transmit(&huart3,"ABCD\n",strlen("ABCD\n"),100);
 	  huart3.Instance->CR1 &= ~USART_CR1_TE;

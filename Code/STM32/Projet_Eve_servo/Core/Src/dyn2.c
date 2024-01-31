@@ -8,11 +8,13 @@
 #include "dyn2.h"
 #define HUART_SERVO &huart4
 #define HUART_ST_LINK &huart3
+#define NbOfElements(x) (sizeof(x)/sizeof(x[0]))
+#define TIMEOUT 10
 
 
 
 
-unsigned short dyn2_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, unsigned short data_blk_size)
+unsigned short dyn2_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, size_t data_blk_size)
 {
 	unsigned short i, j;
 	unsigned short crc_table[256] = {
@@ -66,7 +68,7 @@ uint8_t* dyn2_append_crc(const uint8_t* instruction,uint16_t bufferSize) {
 		return NULL;
 	}
 
-	memcpy(instruction_sent, instruction, bufferSize-2);
+	memcpy(instruction_sent, instruction, bufferSize);
 
 	unsigned short crc = dyn2_crc(0, instruction_sent, bufferSize - 2);
 	unsigned char crc_l = (unsigned char)(crc & 0x00FF);
@@ -79,59 +81,49 @@ uint8_t* dyn2_append_crc(const uint8_t* instruction,uint16_t bufferSize) {
 }
 
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
-int dyn2_send(uint8_t* buffer) {
-	uint8_t* buffer_crc = dyn2_append_crc(buffer,sizeof(buffer));
+int dyn2_send(uint8_t* buffer,uint16_t size) {
+	uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
 	if (buffer_crc == NULL) {
 		// Handle memory allocation failure
 		free(buffer_crc); // Free the dynamically allocated memory
 		return -1;
 	}
-	memcpy(buffer, buffer_crc, sizeof(buffer));
+	memcpy(buffer, buffer_crc, size);
 	//while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
 	/*
     if(HAL_UART_Transmit(&huart3, buffer_crc, BUFFER_SIZE, 100)!=0){
     	return -1;
 	 */
-	dyn2_debug_sendArrayAsString(buffer_crc, sizeof(buffer));
+	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
+	HAL_UART_Transmit(&huart3, buffer_crc, size, TIMEOUT)
 	free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
 
-void dyn2_ping(){
+void dyn2_ping(uint8_t id){
 	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
-	uint8_t* buffer;
+	Dynamixel_PING[4]= id;
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_PING);
 
-	// Copy the template to the buffer
-	memcpy(buffer, Dynamixel_PING, sizeof(Dynamixel_PING));
-
-	// Fill the remaining space in the buffer with a specific value (padding)
-	//memset(buffer + strlen(Dynamixel_PING), 0x00, BUFFER_SIZE - strlen(Dynamixel_PING));
-
-	// Send the message using the dyn2_send function
-	dyn2_send(buffer);
+	dyn2_send(Dynamixel_PING,size);
 }
 
 // Status 1 : Led ON, status 0 : Led OFF
-void dyn2_led(int status){
-	uint8_t Dynamixel_LED_ON_XL430[BUFFER_SIZE] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
+void dyn2_led(int status,uint8_t id){
+	uint8_t Dynamixel_LED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 			/*débutparam, address 65:*/ ,0x41,0x00
 			/*value in the address*/,0x01
 			/*on calcule le CRC après */,0x00,0x00};
 
-	uint8_t Dynamixel_LED_OFF_XL430[BUFFER_SIZE] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-			/*débutparam, address 65:*/ ,0x41,0x00
-			/*value in the address*/,0x00
-			/*on calcule le CRC après */,0x00,0x00};
-
-
-	if(status == 1){
-		dyn2_send(Dynamixel_LED_ON_XL430);
+	Dynamixel_LED_XL430[4]= id;
+	if(status=0){
+		Dynamixel_LED_XL430[10]=0x00;
 	}
-	if(status == 0){
-		dyn2_send(Dynamixel_LED_OFF_XL430);
-	}
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_OFF_XL430);
+	dyn2_send(Dynamixel_LED_XL430,size);
 }
+
 // mode 1 : rotate mode, mode 0 : receive and transmit mode
 void dyn2_mod(int mode){
 	/*autorise le moteur a tourner ( pas de transimission/récpetion possible dans ce mode*/
@@ -144,11 +136,14 @@ void dyn2_mod(int mode){
 			/*débutparam, address 64:*/ ,0x40,0x00
 			/*value in the address : 1*/,0x00
 			/*CRC*/				,0x00,0x00};
+
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_ComMode_XL430);
+
 	if(mode == 1){
-		dyn2_send(Dynamixel_RotateMode_XL430);
+		dyn2_send(Dynamixel_RotateMode_XL430,size);
 	}
 	if(mode == 0){
-		dyn2_send(Dynamixel_ComMode_XL430);
+		dyn2_send(Dynamixel_ComMode_XL430,size);
 	}
 }
 /*value :
@@ -168,6 +163,9 @@ void dyn2_rotation_mod(int mode){
 			/*value in the address : 2048*/,0x00,0x08,0x00,0x00
 			/*CRC*/				,0xCA,0x89};
 	//0.088 [deg/pulse]	1[rev] : 0 ~ 4,09
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_ChangePosition_XL430);
+	dyn2_send(Dynamixel_ChangePosition_XL430, size);
+
 }
 void dyn2_rotate_position(float angleInDeg) {
 	// Value range: 0 to 4095
