@@ -59,8 +59,8 @@ unsigned short dyn2_crc(unsigned short crc_accum, unsigned char *data_blk_ptr, s
 	}
 	return crc_accum;
 }
-uint8_t* dyn2_append_crc(const uint8_t* instruction,uint16_t bufferSize) {
-
+uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize){
+	/*
 	uint8_t* instruction_sent = (uint8_t*)malloc(bufferSize);
 
 	if (instruction_sent == NULL) {
@@ -69,19 +69,19 @@ uint8_t* dyn2_append_crc(const uint8_t* instruction,uint16_t bufferSize) {
 	}
 
 	memcpy(instruction_sent, instruction, bufferSize);
+	*/
+	unsigned short crc = dyn2_crc(0, instruction, bufferSize - 2);
+	unsigned char crc_l = crc & 0x00FF;
+	unsigned char crc_h = (crc >> 8) & 0x00FF;
 
-	unsigned short crc = dyn2_crc(0, instruction_sent, bufferSize - 2);
-	unsigned char crc_l = (unsigned char)(crc & 0x00FF);
-	unsigned char crc_h = (unsigned char)((crc >> 8) & 0x00FF);
+	instruction[bufferSize - 2] = crc_l;
+	instruction[bufferSize - 1] = crc_h;
 
-	instruction_sent[bufferSize - 2] = crc_l;
-	instruction_sent[bufferSize - 1] = crc_h;
-
-	return instruction_sent;
+	return instruction;
 }
 
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
-int dyn2_send(uint8_t* buffer,uint16_t size) {
+int dyn2_send(uint8_t* buffer,uint16_t size){
 	uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
 	if (buffer_crc == NULL) {
 		// Handle memory allocation failure
@@ -95,7 +95,7 @@ int dyn2_send(uint8_t* buffer,uint16_t size) {
     	return -1;
 	 */
 	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
-	HAL_UART_Transmit(&huart3, buffer_crc, size, TIMEOUT)
+	HAL_UART_Transmit(&huart3, buffer_crc, size, TIMEOUT);
 	free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
@@ -117,10 +117,10 @@ void dyn2_led(int status,uint8_t id){
 			/*on calcule le CRC après */,0x00,0x00};
 
 	Dynamixel_LED_XL430[4]= id;
-	if(status=0){
+	if(status==0){
 		Dynamixel_LED_XL430[10]=0x00;
 	}
-	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_OFF_XL430);
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_XL430);
 	dyn2_send(Dynamixel_LED_XL430,size);
 }
 

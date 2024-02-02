@@ -17,9 +17,9 @@
 #include <stdint.h>
 #define BUFFER_SIZE 32
 
-int dyn2_send(uint8_t buffer[BUFFER_SIZE]);
-void dyn2_led(int status);
-
+int dyn2_send(uint8_t* buffer,uint16_t size);
+uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize);
+void dyn2_led(int status,uint8_t id);
 void dyn2_rotate_positionPosition(float angleInDeg);
 void dyn2_debug_sendArrayAsString(uint8_t* array, int size);
 
