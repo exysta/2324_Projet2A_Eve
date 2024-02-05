@@ -1,0 +1,1046 @@
+[0.000000] (-) TimerEvent: {}
+[0.000772] (-) JobUnselected: {'identifier': 'micro_ros_setup'}
+[0.000951] (micro_ros_msgs) JobQueued: {'identifier': 'micro_ros_msgs', 'dependencies': OrderedDict()}
+[0.001010] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict([('micro_ros_msgs', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs')])}
+[0.001062] (micro_ros_msgs) JobStarted: {'identifier': 'micro_ros_msgs'}
+[0.073236] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'cmake'}
+[0.073583] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src/uros/micro_ros_msgs', '-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli', '-DCMAKE_INSTALL_PREFIX=/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[0.079203] (micro_ros_msgs) StdoutLine: {'line': b'Not searching for unused variables given on the command line.\n'}
+[0.099049] (-) TimerEvent: {}
+[0.141562] (micro_ros_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.195569] (micro_ros_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.199154] (-) TimerEvent: {}
+[0.207908] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.269763] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.275564] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.275839] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.276068] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.278602] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299298] (-) TimerEvent: {}
+[0.357516] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.376657] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.377190] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.378000] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.382564] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399411] (-) TimerEvent: {}
+[0.499753] (-) TimerEvent: {}
+[0.600140] (-) TimerEvent: {}
+[0.700508] (-) TimerEvent: {}
+[0.800933] (-) TimerEvent: {}
+[0.901376] (-) TimerEvent: {}
+[0.968600] (micro_ros_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.001510] (-) TimerEvent: {}
+[1.064567] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.069959] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.081887] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.101633] (-) TimerEvent: {}
+[1.124948] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.153883] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.201797] (-) TimerEvent: {}
+[1.302229] (-) TimerEvent: {}
+[1.402613] (-) TimerEvent: {}
+[1.435792] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.502789] (-) TimerEvent: {}
+[1.582471] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.602940] (-) TimerEvent: {}
+[1.703454] (-) TimerEvent: {}
+[1.768916] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.803583] (-) TimerEvent: {}
+[1.806539] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.809655] (micro_ros_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.856348] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.856710] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.856859] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.857008] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.892077] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.903722] (-) TimerEvent: {}
+[1.956016] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.967644] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.973327] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.981045] (micro_ros_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.003876] (-) TimerEvent: {}
+[2.019567] (micro_ros_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[2.021713] (micro_ros_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs\n'}
+[2.026749] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[2.027509] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'build'}
+[2.028042] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs', '--', '-j8', '-l8'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[2.055981] (micro_ros_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.060340] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.063306] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_micro_ros_msgs\n'}
+[2.104003] (-) TimerEvent: {}
+[2.204388] (-) TimerEvent: {}
+[2.269658] (micro_ros_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.270028] (micro_ros_msgs) StdoutLine: {'line': b'creating micro_ros_msgs.egg-info\n'}
+[2.270250] (micro_ros_msgs) StdoutLine: {'line': b'writing micro_ros_msgs.egg-info/PKG-INFO\n'}
+[2.270484] (micro_ros_msgs) StdoutLine: {'line': b'writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt\n'}
+[2.270648] (micro_ros_msgs) StdoutLine: {'line': b'writing top-level names to micro_ros_msgs.egg-info/top_level.txt\n'}
+[2.270817] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.272125] (micro_ros_msgs) StdoutLine: {'line': b"reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.272644] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.299063] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_micro_ros_msgs_egg\n'}
+[2.304489] (-) TimerEvent: {}
+[2.344566] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target micro_ros_msgs__cpp\n'}
+[2.351151] (micro_ros_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.351625] (micro_ros_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.351870] (micro_ros_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.387366] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/node__functions.c.o\x1b[0m\n'}
+[2.387624] (micro_ros_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/graph__functions.c.o\x1b[0m\n'}
+[2.387719] (micro_ros_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/entity__functions.c.o\x1b[0m\n'}
+[2.404640] (-) TimerEvent: {}
+[2.432831] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.457578] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] Built target micro_ros_msgs__rosidl_generator_c\n'}
+[2.462355] (micro_ros_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.462535] (micro_ros_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.462990] (micro_ros_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.504785] (-) TimerEvent: {}
+[2.603571] (micro_ros_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[2.603917] (micro_ros_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[2.604897] (-) TimerEvent: {}
+[2.605347] (micro_ros_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[2.676879] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/graph__type_support.cpp.o\x1b[0m\n'}
+[2.705041] (-) TimerEvent: {}
+[2.709024] (micro_ros_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/graph__type_support.cpp.o\x1b[0m\n'}
+[2.747224] (micro_ros_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[2.786736] (micro_ros_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[2.805183] (-) TimerEvent: {}
+[2.812455] (micro_ros_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[2.819593] (micro_ros_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/graph__type_support.c.o\x1b[0m\n'}
+[2.823344] (micro_ros_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/graph__type_support_c.cpp.o\x1b[0m\n'}
+[2.842227] (micro_ros_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.858198] (micro_ros_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/node__type_support.c.o\x1b[0m\n'}
+[2.866408] (micro_ros_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/entity__type_support.c.o\x1b[0m\n'}
+[2.871885] (micro_ros_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/node__type_support.cpp.o\x1b[0m\n'}
+[2.878332] (micro_ros_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.882103] (micro_ros_msgs) StdoutLine: {'line': b'[ 57%] Built target micro_ros_msgs__rosidl_typesupport_c\n'}
+[2.885899] (micro_ros_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/entity__type_support.cpp.o\x1b[0m\n'}
+[2.891126] (micro_ros_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/node__type_support.cpp.o\x1b[0m\n'}
+[2.899846] (micro_ros_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.905312] (-) TimerEvent: {}
+[2.911054] (micro_ros_msgs) StdoutLine: {'line': b'[ 63%] Built target micro_ros_msgs__rosidl_typesupport_cpp\n'}
+[2.917065] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/entity__type_support.cpp.o\x1b[0m\n'}
+[2.917308] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c\n'}
+[2.920836] (micro_ros_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/node__type_support_c.cpp.o\x1b[0m\n'}
+[3.005456] (-) TimerEvent: {}
+[3.105861] (-) TimerEvent: {}
+[3.120553] (micro_ros_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/entity__type_support_c.cpp.o\x1b[0m\n'}
+[3.205998] (-) TimerEvent: {}
+[3.306354] (-) TimerEvent: {}
+[3.335788] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.336633] (micro_ros_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.406502] (-) TimerEvent: {}
+[3.418221] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.438132] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.438844] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[3.506915] (-) TimerEvent: {}
+[3.521844] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.537247] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs\n'}
+[3.558590] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.607072] (-) TimerEvent: {}
+[3.707490] (-) TimerEvent: {}
+[3.807828] (-) TimerEvent: {}
+[3.908153] (-) TimerEvent: {}
+[3.979800] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] Built target micro_ros_msgs__py\n'}
+[3.993866] (micro_ros_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_graph_s.c.o\x1b[0m\n'}
+[3.994329] (micro_ros_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_node_s.c.o\x1b[0m\n'}
+[3.995919] (micro_ros_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_entity_s.c.o\x1b[0m\n'}
+[4.008303] (-) TimerEvent: {}
+[4.100741] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[4.108443] (-) TimerEvent: {}
+[4.127979] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] Built target micro_ros_msgs__rosidl_generator_py\n'}
+[4.138473] (micro_ros_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.139001] (micro_ros_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.140575] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.207887] (micro_ros_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.208561] (-) TimerEvent: {}
+[4.237566] (micro_ros_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.237890] (micro_ros_msgs) StdoutLine: {'line': b'[ 97%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.243220] (micro_ros_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.254080] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext\n'}
+[4.263660] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.269316] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[4.308727] (-) TimerEvent: {}
+[4.368050] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'install'}
+[4.371760] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[4.374913] (micro_ros_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.375051] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs\n'}
+[4.375263] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.375332] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.375441] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h\n'}
+[4.375498] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.375581] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h\n'}
+[4.375664] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h\n'}
+[4.375724] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h\n'}
+[4.375775] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h\n'}
+[4.375862] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h\n'}
+[4.375936] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h\n'}
+[4.375988] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h\n'}
+[4.376092] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h\n'}
+[4.376164] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.c\n'}
+[4.376244] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.c\n'}
+[4.376302] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h\n'}
+[4.376389] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.c\n'}
+[4.376437] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h\n'}
+[4.376484] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.376532] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h\n'}
+[4.376669] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh\n'}
+[4.376873] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv\n'}
+[4.377022] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so\n'}
+[4.377229] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so" to ""\n'}
+[4.377375] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.377513] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.377666] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.377717] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h\n'}
+[4.377798] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h\n'}
+[4.377872] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h\n'}
+[4.377946] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.378017] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.378070] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.378117] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.378163] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.378269] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.378317] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h\n'}
+[4.378362] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h\n'}
+[4.378420] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.c\n'}
+[4.378467] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.c\n'}
+[4.378513] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h\n'}
+[4.378722] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.c\n'}
+[4.378981] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.379204] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.379439] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.379571] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so\n'}
+[4.379692] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.379892] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.379989] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.380088] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.380275] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp\n'}
+[4.380383] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp\n'}
+[4.380484] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp\n'}
+[4.380631] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp\n'}
+[4.380727] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp\n'}
+[4.380825] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp\n'}
+[4.380927] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp\n'}
+[4.381026] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp\n'}
+[4.381125] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp\n'}
+[4.381224] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp\n'}
+[4.381324] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp\n'}
+[4.381424] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp\n'}
+[4.381524] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.381623] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.381723] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.381823] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.381923] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.382024] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/dds_fastrtps\n'}
+[4.382124] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.382225] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.382324] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.382423] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.382587] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[4.382693] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[4.382815] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[4.382912] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.383007] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.cpp\n'}
+[4.383110] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.383225] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.cpp\n'}
+[4.383323] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.cpp\n'}
+[4.383419] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.383515] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.383612] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.383708] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so\n'}
+[4.383803] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.383900] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh\n'}
+[4.383996] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv\n'}
+[4.384091] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info\n'}
+[4.384187] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[4.384284] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt\n'}
+[4.384380] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO\n'}
+[4.384478] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[4.384576] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs\n'}
+[4.384671] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.384777] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.384874] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[4.384969] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.385065] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg\n'}
+[4.385161] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c\n'}
+[4.385267] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py\n'}
+[4.385364] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c\n'}
+[4.385460] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py\n'}
+[4.385562] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py\n'}
+[4.385700] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py\n'}
+[4.385832] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c\n'}
+[4.385963] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.386095] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.386227] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.386358] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py\n'}
+[4.408868] (-) TimerEvent: {}
+[4.435648] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...\n"}
+[4.435941] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py'...\n"}
+[4.436095] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...\n"}
+[4.436230] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py'...\n"}
+[4.436391] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py'...\n"}
+[4.436522] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py'...\n"}
+[4.436652] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py'...\n"}
+[4.439784] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.440215] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.440579] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.440939] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.441278] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.441555] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.441721] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[4.441975] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so" to ""\n'}
+[4.442210] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl\n'}
+[4.442397] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl\n'}
+[4.442584] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl\n'}
+[4.442772] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg\n'}
+[4.442981] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg\n'}
+[4.443253] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg\n'}
+[4.443556] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs\n'}
+[4.443901] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs\n'}
+[4.444174] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh\n'}
+[4.444382] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv\n'}
+[4.444554] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh\n'}
+[4.444765] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv\n'}
+[4.444976] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash\n'}
+[4.445187] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh\n'}
+[4.445573] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh\n'}
+[4.445910] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv\n'}
+[4.446161] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv\n'}
+[4.446318] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs\n'}
+[4.446521] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake\n'}
+[4.446672] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.446870] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.447012] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.447229] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.447431] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.447627] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.447838] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.448001] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.448199] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.448369] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.448582] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.448796] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.448942] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.449121] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.449261] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.449436] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.449574] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.449755] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.449894] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.450076] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.450264] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.450403] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.450585] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.450727] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake\n'}
+[4.450950] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake\n'}
+[4.451092] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/package.xml\n'}
+[4.456547] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[4.509732] (-) TimerEvent: {}
+[4.610297] (-) TimerEvent: {}
+[4.683669] (micro_ros_msgs) JobEnded: {'identifier': 'micro_ros_msgs', 'rc': 0}
+[4.684453] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[4.710900] (-) TimerEvent: {}
+[4.760813] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[4.761170] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src/uros/micro-ROS-Agent/micro_ros_agent', '-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli', '-DCMAKE_INSTALL_PREFIX=/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[4.764580] (micro_ros_agent) StdoutLine: {'line': b'Not searching for unused variables given on the command line.\n'}
+[4.808861] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.810966] (-) TimerEvent: {}
+[4.815263] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.864076] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.871027] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.871248] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.871357] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.911085] (-) TimerEvent: {}
+[4.913500] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.926054] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.999661] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.011195] (-) TimerEvent: {}
+[5.018288] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.018657] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.019880] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.078438] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.080491] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[5.081002] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent\n'}
+[5.084223] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[5.084938] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[5.085103] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent', '--', '-j8', '-l8'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[5.110192] (micro_ros_agent) StdoutLine: {'line': b"[  6%] \x1b[34m\x1b[1mCreating directories for 'xrceagent'\x1b[0m\n"}
+[5.111271] (-) TimerEvent: {}
+[5.123834] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mPerforming download step (git clone) for 'xrceagent'\x1b[0m\n"}
+[5.133675] (micro_ros_agent) StderrLine: {'line': b"Cloning into 'xrceagent'...\n"}
+[5.211444] (-) TimerEvent: {}
+[5.311945] (-) TimerEvent: {}
+[5.412513] (-) TimerEvent: {}
+[5.512967] (-) TimerEvent: {}
+[5.613463] (-) TimerEvent: {}
+[5.713926] (-) TimerEvent: {}
+[5.814345] (-) TimerEvent: {}
+[5.914769] (-) TimerEvent: {}
+[6.015240] (-) TimerEvent: {}
+[6.115637] (-) TimerEvent: {}
+[6.215959] (-) TimerEvent: {}
+[6.316241] (-) TimerEvent: {}
+[6.416659] (-) TimerEvent: {}
+[6.517077] (-) TimerEvent: {}
+[6.617476] (-) TimerEvent: {}
+[6.717815] (-) TimerEvent: {}
+[6.818260] (-) TimerEvent: {}
+[6.918660] (-) TimerEvent: {}
+[7.019112] (-) TimerEvent: {}
+[7.119590] (-) TimerEvent: {}
+[7.220033] (-) TimerEvent: {}
+[7.320443] (-) TimerEvent: {}
+[7.420827] (-) TimerEvent: {}
+[7.521145] (-) TimerEvent: {}
+[7.540645] (micro_ros_agent) StderrLine: {'line': b"Switched to a new branch 'ros2'\n"}
+[7.541089] (micro_ros_agent) StdoutLine: {'line': b"Branch 'ros2' set up to track remote branch 'ros2' from 'origin'.\n"}
+[7.568315] (micro_ros_agent) StdoutLine: {'line': b"[ 18%] \x1b[34m\x1b[1mPerforming update step for 'xrceagent'\x1b[0m\n"}
+[7.621279] (-) TimerEvent: {}
+[7.721890] (-) TimerEvent: {}
+[7.822577] (-) TimerEvent: {}
+[7.923056] (-) TimerEvent: {}
+[8.023724] (-) TimerEvent: {}
+[8.124640] (-) TimerEvent: {}
+[8.226797] (-) TimerEvent: {}
+[8.327328] (-) TimerEvent: {}
+[8.427912] (-) TimerEvent: {}
+[8.528358] (-) TimerEvent: {}
+[8.628913] (-) TimerEvent: {}
+[8.729337] (-) TimerEvent: {}
+[8.829758] (-) TimerEvent: {}
+[8.930131] (-) TimerEvent: {}
+[9.030563] (-) TimerEvent: {}
+[9.131011] (-) TimerEvent: {}
+[9.231476] (-) TimerEvent: {}
+[9.331926] (-) TimerEvent: {}
+[9.432386] (-) TimerEvent: {}
+[9.532844] (-) TimerEvent: {}
+[9.633291] (-) TimerEvent: {}
+[9.733752] (-) TimerEvent: {}
+[9.834443] (-) TimerEvent: {}
+[9.935252] (-) TimerEvent: {}
+[10.035897] (-) TimerEvent: {}
+[10.136345] (-) TimerEvent: {}
+[10.236860] (-) TimerEvent: {}
+[10.337299] (-) TimerEvent: {}
+[10.437714] (-) TimerEvent: {}
+[10.538381] (-) TimerEvent: {}
+[10.638831] (-) TimerEvent: {}
+[10.739274] (-) TimerEvent: {}
+[10.839759] (-) TimerEvent: {}
+[10.940600] (-) TimerEvent: {}
+[11.041196] (-) TimerEvent: {}
+[11.141951] (-) TimerEvent: {}
+[11.242415] (-) TimerEvent: {}
+[11.342859] (-) TimerEvent: {}
+[11.443581] (-) TimerEvent: {}
+[11.544176] (-) TimerEvent: {}
+[11.644644] (-) TimerEvent: {}
+[11.745126] (-) TimerEvent: {}
+[11.845573] (-) TimerEvent: {}
+[11.946003] (-) TimerEvent: {}
+[12.046431] (-) TimerEvent: {}
+[12.146854] (-) TimerEvent: {}
+[12.247233] (-) TimerEvent: {}
+[12.347662] (-) TimerEvent: {}
+[12.448102] (-) TimerEvent: {}
+[12.548550] (-) TimerEvent: {}
+[12.649100] (-) TimerEvent: {}
+[12.749505] (-) TimerEvent: {}
+[12.850337] (-) TimerEvent: {}
+[12.951305] (-) TimerEvent: {}
+[13.051637] (-) TimerEvent: {}
+[13.055302] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo patch step for 'xrceagent'\x1b[0m\n"}
+[13.068220] (micro_ros_agent) StdoutLine: {'line': b"[ 31%] \x1b[34m\x1b[1mPerforming configure step for 'xrceagent'\x1b[0m\n"}
+[13.073903] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake\n'}
+[13.151293] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[13.151724] (-) TimerEvent: {}
+[13.164981] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[13.230558] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[13.248628] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[13.249074] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[13.249731] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[13.251820] (-) TimerEvent: {}
+[13.306534] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[13.311912] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[13.351968] (-) TimerEvent: {}
+[13.367442] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[13.375196] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[13.375418] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[13.375647] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[13.378153] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[13.429204] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[13.430618] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[13.451896] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.452176] (-) TimerEvent: {}
+[13.456201] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[13.457569] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[13.471352] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mPerforming build step for 'xrceagent'\x1b[0m\n"}
+[13.498046] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mCreating directories for 'uagent'\x1b[0m\n"}
+[13.511714] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo download step for 'uagent'\x1b[0m\n"}
+[13.522601] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mNo update step for 'uagent'\x1b[0m\n"}
+[13.534352] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mNo patch step for 'uagent'\x1b[0m\n"}
+[13.546826] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mPerforming configure step for 'uagent'\x1b[0m\n"}
+[13.552394] (-) TimerEvent: {}
+[13.552809] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent/agent/src/xrceagent-build/uagent-prefix/tmp/uagent-cache-.cmake\n'}
+[13.565193] (micro_ros_agent) StdoutLine: {'line': b"-- Setting build type to 'Release' as none was specified.\n"}
+[13.608650] (micro_ros_agent) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[13.608878] (micro_ros_agent) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (tinyxml2)\n'}
+[13.608981] (micro_ros_agent) StderrLine: {'line': b'  does not match the name of the calling package (TinyXML2).  This can lead\n'}
+[13.609077] (micro_ros_agent) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[13.609169] (micro_ros_agent) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[13.609263] (micro_ros_agent) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[13.609354] (micro_ros_agent) StderrLine: {'line': b'  cmake/modules/FindTinyXML2.cmake:40 (find_package_handle_standard_args)\n'}
+[13.609468] (micro_ros_agent) StderrLine: {'line': b'  /opt/ros/humble/share/fastrtps/cmake/fastrtps-config.cmake:51 (find_package)\n'}
+[13.609561] (micro_ros_agent) StderrLine: {'line': b'  CMakeLists.txt:153 (find_package)\n'}
+[13.609653] (micro_ros_agent) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[13.609745] (micro_ros_agent) StderrLine: {'line': b'\x1b[0m\n'}
+[13.609837] (micro_ros_agent) StdoutLine: {'line': b'-- Found tinyxml2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so  \n'}
+[13.651801] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[13.652464] (-) TimerEvent: {}
+[13.657643] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.666263] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[13.666663] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[13.673632] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mPerforming build step for 'uagent'\x1b[0m\n"}
+[13.694143] (micro_ros_agent) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/processor/Processor.cpp.o\x1b[0m\n'}
+[13.694396] (micro_ros_agent) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/client/ProxyClient.cpp.o\x1b[0m\n'}
+[13.694484] (micro_ros_agent) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Agent.cpp.o\x1b[0m\n'}
+[13.694543] (micro_ros_agent) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Root.cpp.o\x1b[0m\n'}
+[13.694707] (micro_ros_agent) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/AgentInstance.cpp.o\x1b[0m\n'}
+[13.695985] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/publisher/Publisher.cpp.o\x1b[0m\n'}
+[13.696195] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/participant/Participant.cpp.o\x1b[0m\n'}
+[13.696250] (micro_ros_agent) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/topic/Topic.cpp.o\x1b[0m\n'}
+[13.752636] (-) TimerEvent: {}
+[13.853455] (-) TimerEvent: {}
+[13.954788] (-) TimerEvent: {}
+[14.055247] (-) TimerEvent: {}
+[14.155658] (-) TimerEvent: {}
+[14.256050] (-) TimerEvent: {}
+[14.356450] (-) TimerEvent: {}
+[14.456878] (-) TimerEvent: {}
+[14.557289] (-) TimerEvent: {}
+[14.657903] (-) TimerEvent: {}
+[14.758309] (-) TimerEvent: {}
+[14.816828] (micro_ros_agent) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/subscriber/Subscriber.cpp.o\x1b[0m\n'}
+[14.858441] (-) TimerEvent: {}
+[14.958942] (-) TimerEvent: {}
+[14.998470] (micro_ros_agent) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datawriter/DataWriter.cpp.o\x1b[0m\n'}
+[15.036949] (micro_ros_agent) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datareader/DataReader.cpp.o\x1b[0m\n'}
+[15.059088] (-) TimerEvent: {}
+[15.159538] (-) TimerEvent: {}
+[15.260108] (-) TimerEvent: {}
+[15.360760] (-) TimerEvent: {}
+[15.461227] (-) TimerEvent: {}
+[15.561736] (-) TimerEvent: {}
+[15.662132] (-) TimerEvent: {}
+[15.762569] (-) TimerEvent: {}
+[15.863167] (-) TimerEvent: {}
+[15.963800] (-) TimerEvent: {}
+[16.064585] (-) TimerEvent: {}
+[16.165125] (-) TimerEvent: {}
+[16.237009] (micro_ros_agent) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/requester/Requester.cpp.o\x1b[0m\n'}
+[16.265264] (-) TimerEvent: {}
+[16.365818] (-) TimerEvent: {}
+[16.466304] (-) TimerEvent: {}
+[16.567374] (-) TimerEvent: {}
+[16.668197] (-) TimerEvent: {}
+[16.768788] (-) TimerEvent: {}
+[16.869448] (-) TimerEvent: {}
+[16.970092] (-) TimerEvent: {}
+[17.070966] (-) TimerEvent: {}
+[17.171767] (-) TimerEvent: {}
+[17.272304] (-) TimerEvent: {}
+[17.372822] (-) TimerEvent: {}
+[17.473300] (-) TimerEvent: {}
+[17.573857] (-) TimerEvent: {}
+[17.674773] (-) TimerEvent: {}
+[17.775357] (-) TimerEvent: {}
+[17.875808] (-) TimerEvent: {}
+[17.976408] (-) TimerEvent: {}
+[18.076919] (-) TimerEvent: {}
+[18.177373] (-) TimerEvent: {}
+[18.277974] (-) TimerEvent: {}
+[18.378491] (-) TimerEvent: {}
+[18.478949] (-) TimerEvent: {}
+[18.579451] (-) TimerEvent: {}
+[18.679933] (-) TimerEvent: {}
+[18.780423] (-) TimerEvent: {}
+[18.880923] (-) TimerEvent: {}
+[18.981419] (-) TimerEvent: {}
+[19.081920] (-) TimerEvent: {}
+[19.182410] (-) TimerEvent: {}
+[19.220884] (micro_ros_agent) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/replier/Replier.cpp.o\x1b[0m\n'}
+[19.282568] (-) TimerEvent: {}
+[19.382948] (-) TimerEvent: {}
+[19.483322] (-) TimerEvent: {}
+[19.583682] (-) TimerEvent: {}
+[19.668058] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/object/XRCEObject.cpp.o\x1b[0m\n'}
+[19.683817] (-) TimerEvent: {}
+[19.784198] (-) TimerEvent: {}
+[19.884604] (-) TimerEvent: {}
+[19.968327] (micro_ros_agent) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/XRCETypes.cpp.o\x1b[0m\n'}
+[19.984754] (-) TimerEvent: {}
+[20.085132] (-) TimerEvent: {}
+[20.185511] (-) TimerEvent: {}
+[20.210441] (micro_ros_agent) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/MessageHeader.cpp.o\x1b[0m\n'}
+[20.285661] (-) TimerEvent: {}
+[20.386052] (-) TimerEvent: {}
+[20.486456] (-) TimerEvent: {}
+[20.569815] (micro_ros_agent) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/SubMessageHeader.cpp.o\x1b[0m\n'}
+[20.586604] (-) TimerEvent: {}
+[20.686965] (-) TimerEvent: {}
+[20.705875] (micro_ros_agent) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/InputMessage.cpp.o\x1b[0m\n'}
+[20.787105] (-) TimerEvent: {}
+[20.887589] (-) TimerEvent: {}
+[20.988093] (-) TimerEvent: {}
+[21.028146] (micro_ros_agent) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/OutputMessage.cpp.o\x1b[0m\n'}
+[21.045611] (micro_ros_agent) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/utils/ArgumentParser.cpp.o\x1b[0m\n'}
+[21.088245] (-) TimerEvent: {}
+[21.188796] (-) TimerEvent: {}
+[21.289298] (-) TimerEvent: {}
+[21.389812] (-) TimerEvent: {}
+[21.490311] (-) TimerEvent: {}
+[21.590824] (-) TimerEvent: {}
+[21.691340] (-) TimerEvent: {}
+[21.757628] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/Server.cpp.o\x1b[0m\n'}
+[21.791470] (-) TimerEvent: {}
+[21.891960] (-) TimerEvent: {}
+[21.992471] (-) TimerEvent: {}
+[22.092960] (-) TimerEvent: {}
+[22.193443] (-) TimerEvent: {}
+[22.293972] (-) TimerEvent: {}
+[22.394484] (-) TimerEvent: {}
+[22.494989] (-) TimerEvent: {}
+[22.581514] (micro_ros_agent) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/stream_framing/StreamFramingProtocol.cpp.o\x1b[0m\n'}
+[22.595120] (-) TimerEvent: {}
+[22.695631] (-) TimerEvent: {}
+[22.796125] (-) TimerEvent: {}
+[22.820080] (micro_ros_agent) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/custom/CustomAgent.cpp.o\x1b[0m\n'}
+[22.844413] (micro_ros_agent) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv4AgentLinux.cpp.o\x1b[0m\n'}
+[22.896251] (-) TimerEvent: {}
+[22.996736] (-) TimerEvent: {}
+[23.097235] (-) TimerEvent: {}
+[23.197750] (-) TimerEvent: {}
+[23.298273] (-) TimerEvent: {}
+[23.398830] (-) TimerEvent: {}
+[23.499572] (-) TimerEvent: {}
+[23.600025] (-) TimerEvent: {}
+[23.700550] (-) TimerEvent: {}
+[23.801084] (-) TimerEvent: {}
+[23.901609] (-) TimerEvent: {}
+[24.002144] (-) TimerEvent: {}
+[24.102661] (-) TimerEvent: {}
+[24.203165] (-) TimerEvent: {}
+[24.244259] (micro_ros_agent) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv6AgentLinux.cpp.o\x1b[0m\n'}
+[24.303285] (-) TimerEvent: {}
+[24.403800] (-) TimerEvent: {}
+[24.438167] (micro_ros_agent) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv4AgentLinux.cpp.o\x1b[0m\n'}
+[24.503943] (-) TimerEvent: {}
+[24.604467] (-) TimerEvent: {}
+[24.681227] (micro_ros_agent) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv6AgentLinux.cpp.o\x1b[0m\n'}
+[24.704628] (-) TimerEvent: {}
+[24.774808] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/SerialAgentLinux.cpp.o\x1b[0m\n'}
+[24.804767] (-) TimerEvent: {}
+[24.905268] (-) TimerEvent: {}
+[25.005688] (-) TimerEvent: {}
+[25.106094] (-) TimerEvent: {}
+[25.206509] (-) TimerEvent: {}
+[25.306919] (-) TimerEvent: {}
+[25.407358] (-) TimerEvent: {}
+[25.507751] (-) TimerEvent: {}
+[25.608153] (-) TimerEvent: {}
+[25.708588] (-) TimerEvent: {}
+[25.809125] (-) TimerEvent: {}
+[25.909644] (-) TimerEvent: {}
+[26.010187] (-) TimerEvent: {}
+[26.110713] (-) TimerEvent: {}
+[26.211251] (-) TimerEvent: {}
+[26.311802] (-) TimerEvent: {}
+[26.412304] (-) TimerEvent: {}
+[26.512824] (-) TimerEvent: {}
+[26.613304] (-) TimerEvent: {}
+[26.713700] (-) TimerEvent: {}
+[26.814078] (-) TimerEvent: {}
+[26.914476] (-) TimerEvent: {}
+[26.982954] (micro_ros_agent) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/TermiosAgentLinux.cpp.o\x1b[0m\n'}
+[27.014615] (-) TimerEvent: {}
+[27.115004] (-) TimerEvent: {}
+[27.199016] (micro_ros_agent) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiSerialAgentLinux.cpp.o\x1b[0m\n'}
+[27.215177] (-) TimerEvent: {}
+[27.315537] (-) TimerEvent: {}
+[27.415925] (-) TimerEvent: {}
+[27.516312] (-) TimerEvent: {}
+[27.616735] (-) TimerEvent: {}
+[27.717153] (-) TimerEvent: {}
+[27.817534] (-) TimerEvent: {}
+[27.917929] (-) TimerEvent: {}
+[27.922057] (micro_ros_agent) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiTermiosAgentLinux.cpp.o\x1b[0m\n'}
+[28.018067] (-) TimerEvent: {}
+[28.069561] (micro_ros_agent) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/PseudoTerminalAgentLinux.cpp.o\x1b[0m\n'}
+[28.118193] (-) TimerEvent: {}
+[28.218590] (-) TimerEvent: {}
+[28.318990] (-) TimerEvent: {}
+[28.388670] (micro_ros_agent) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/can/CanAgentLinux.cpp.o\x1b[0m\n'}
+[28.423237] (-) TimerEvent: {}
+[28.531530] (-) TimerEvent: {}
+[28.632047] (-) TimerEvent: {}
+[28.659705] (micro_ros_agent) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServerLinux.cpp.o\x1b[0m\n'}
+[28.732263] (-) TimerEvent: {}
+[28.832930] (-) TimerEvent: {}
+[28.933403] (-) TimerEvent: {}
+[29.033869] (-) TimerEvent: {}
+[29.134259] (-) TimerEvent: {}
+[29.234763] (-) TimerEvent: {}
+[29.335255] (-) TimerEvent: {}
+[29.435756] (-) TimerEvent: {}
+[29.536276] (-) TimerEvent: {}
+[29.636730] (-) TimerEvent: {}
+[29.638730] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServer.cpp.o\x1b[0m\n'}
+[29.736881] (-) TimerEvent: {}
+[29.837410] (-) TimerEvent: {}
+[29.857444] (micro_ros_agent) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/TopicPubSubType.cpp.o\x1b[0m\n'}
+[29.937553] (-) TimerEvent: {}
+[30.038047] (-) TimerEvent: {}
+[30.138551] (-) TimerEvent: {}
+[30.239068] (-) TimerEvent: {}
+[30.339591] (-) TimerEvent: {}
+[30.392818] (micro_ros_agent) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/xmlobjects/xmlobjects.cpp.o\x1b[0m\n'}
+[30.439730] (-) TimerEvent: {}
+[30.541503] (-) TimerEvent: {}
+[30.576379] (micro_ros_agent) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastEntities.cpp.o\x1b[0m\n'}
+[30.641631] (-) TimerEvent: {}
+[30.742017] (-) TimerEvent: {}
+[30.842412] (-) TimerEvent: {}
+[30.942813] (-) TimerEvent: {}
+[31.043244] (-) TimerEvent: {}
+[31.143622] (-) TimerEvent: {}
+[31.244003] (-) TimerEvent: {}
+[31.344416] (-) TimerEvent: {}
+[31.371591] (micro_ros_agent) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastMiddleware.cpp.o\x1b[0m\n'}
+[31.444569] (-) TimerEvent: {}
+[31.455396] (micro_ros_agent) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSEntities.cpp.o\x1b[0m\n'}
+[31.544704] (-) TimerEvent: {}
+[31.632914] (micro_ros_agent) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSMiddleware.cpp.o\x1b[0m\n'}
+[31.644839] (-) TimerEvent: {}
+[31.745255] (-) TimerEvent: {}
+[31.845739] (-) TimerEvent: {}
+[31.946124] (-) TimerEvent: {}
+[32.046507] (-) TimerEvent: {}
+[32.146863] (-) TimerEvent: {}
+[32.247255] (-) TimerEvent: {}
+[32.347656] (-) TimerEvent: {}
+[32.447994] (-) TimerEvent: {}
+[32.548391] (-) TimerEvent: {}
+[32.649001] (-) TimerEvent: {}
+[32.749547] (-) TimerEvent: {}
+[32.850102] (-) TimerEvent: {}
+[32.950494] (-) TimerEvent: {}
+[33.050857] (-) TimerEvent: {}
+[33.151240] (-) TimerEvent: {}
+[33.251743] (-) TimerEvent: {}
+[33.352105] (-) TimerEvent: {}
+[33.452513] (-) TimerEvent: {}
+[33.552944] (-) TimerEvent: {}
+[33.653344] (-) TimerEvent: {}
+[33.753749] (-) TimerEvent: {}
+[33.854965] (-) TimerEvent: {}
+[33.955407] (-) TimerEvent: {}
+[34.055786] (-) TimerEvent: {}
+[34.156210] (-) TimerEvent: {}
+[34.256737] (-) TimerEvent: {}
+[34.357189] (-) TimerEvent: {}
+[34.457656] (-) TimerEvent: {}
+[34.558109] (-) TimerEvent: {}
+[34.659203] (-) TimerEvent: {}
+[34.759622] (-) TimerEvent: {}
+[34.860041] (-) TimerEvent: {}
+[34.960440] (-) TimerEvent: {}
+[35.060858] (-) TimerEvent: {}
+[35.161440] (-) TimerEvent: {}
+[35.262010] (-) TimerEvent: {}
+[35.362453] (-) TimerEvent: {}
+[35.462902] (-) TimerEvent: {}
+[35.563393] (-) TimerEvent: {}
+[35.663850] (-) TimerEvent: {}
+[35.764240] (-) TimerEvent: {}
+[35.864606] (-) TimerEvent: {}
+[35.964967] (-) TimerEvent: {}
+[36.065346] (-) TimerEvent: {}
+[36.165768] (-) TimerEvent: {}
+[36.266222] (-) TimerEvent: {}
+[36.366687] (-) TimerEvent: {}
+[36.467180] (-) TimerEvent: {}
+[36.567611] (-) TimerEvent: {}
+[36.668030] (-) TimerEvent: {}
+[36.768449] (-) TimerEvent: {}
+[36.868886] (-) TimerEvent: {}
+[36.969339] (-) TimerEvent: {}
+[37.069747] (-) TimerEvent: {}
+[37.170200] (-) TimerEvent: {}
+[37.270635] (-) TimerEvent: {}
+[37.371098] (-) TimerEvent: {}
+[37.471718] (-) TimerEvent: {}
+[37.572130] (-) TimerEvent: {}
+[37.672560] (-) TimerEvent: {}
+[37.773194] (-) TimerEvent: {}
+[37.873596] (-) TimerEvent: {}
+[37.904428] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libmicroxrcedds_agent.so\x1b[0m\n'}
+[37.973988] (-) TimerEvent: {}
+[38.074692] (-) TimerEvent: {}
+[38.175129] (-) TimerEvent: {}
+[38.193564] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[38.211082] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'uagent'\x1b[0m\n"}
+[38.225794] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'uagent'\x1b[0m\n"}
+[38.245429] (micro_ros_agent) StdoutLine: {'line': b'Built target uagent\n'}
+[38.259519] (micro_ros_agent) StdoutLine: {'line': b"[ 43%] \x1b[34m\x1b[1mPerforming install step for 'xrceagent'\x1b[0m\n"}
+[38.275241] (-) TimerEvent: {}
+[38.338450] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[38.347157] (micro_ros_agent) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[38.351062] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[38.351349] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1\n'}
+[38.353460] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4\n'}
+[38.353751] (micro_ros_agent) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1" to ""\n'}
+[38.353866] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/libmicroxrcedds_agent.so\n'}
+[38.354022] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent\n'}
+[38.354125] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport\n'}
+[38.354223] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp\n'}
+[38.354322] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPServerBase.hpp\n'}
+[38.354421] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentWindows.hpp\n'}
+[38.354519] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentWindows.hpp\n'}
+[38.354723] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentLinux.hpp\n'}
+[38.354826] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentLinux.hpp\n'}
+[38.354924] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPConnection.hpp\n'}
+[38.355022] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/p2p\n'}
+[38.355121] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscovererLinux.hpp\n'}
+[38.355240] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscoverer.hpp\n'}
+[38.355337] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/discovery\n'}
+[38.355437] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerLinux.hpp\n'}
+[38.355536] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServer.hpp\n'}
+[38.355632] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerWindows.hpp\n'}
+[38.355729] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/TransportRc.hpp\n'}
+[38.355948] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/util\n'}
+[38.356048] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceWindows.hpp\n'}
+[38.356145] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceLinux.hpp\n'}
+[38.356243] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/udp\n'}
+[38.356342] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentLinux.hpp\n'}
+[38.356442] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentLinux.hpp\n'}
+[38.356540] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentWindows.hpp\n'}
+[38.356642] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentWindows.hpp\n'}
+[38.356735] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/SessionManager.hpp\n'}
+[38.356830] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/Server.hpp\n'}
+[38.356939] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/can\n'}
+[38.357041] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/can/CanAgentLinux.hpp\n'}
+[38.357136] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial\n'}
+[38.357231] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/TermiosAgentLinux.hpp\n'}
+[38.357326] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/SerialAgentLinux.hpp\n'}
+[38.357421] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiTermiosAgentLinux.hpp\n'}
+[38.357521] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiSerialAgentLinux.hpp\n'}
+[38.357615] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/PseudoTerminalAgentLinux.hpp\n'}
+[38.357709] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/serial/baud_rate_table_linux.h\n'}
+[38.357803] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/custom\n'}
+[38.357898] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/custom/CustomAgent.hpp\n'}
+[38.357992] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint\n'}
+[38.358170] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CustomEndPoint.hpp\n'}
+[38.358522] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/SerialEndPoint.hpp\n'}
+[38.358632] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv6EndPoint.hpp\n'}
+[38.358734] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/MultiSerialEndPoint.hpp\n'}
+[38.358834] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CanEndPoint.hpp\n'}
+[38.358939] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv4EndPoint.hpp\n'}
+[38.359036] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/stream_framing\n'}
+[38.359148] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/transport/stream_framing/StreamFramingProtocol.hpp\n'}
+[38.359255] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/datawriter\n'}
+[38.359355] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/datawriter/DataWriter.hpp\n'}
+[38.359453] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/p2p\n'}
+[38.359552] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/p2p/InternalClient.hpp\n'}
+[38.359652] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/p2p/InternalClientManager.hpp\n'}
+[38.359750] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/publisher\n'}
+[38.359849] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/publisher/Publisher.hpp\n'}
+[38.359947] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/topic\n'}
+[38.360045] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/topic/Topic.hpp\n'}
+[38.360143] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/logger\n'}
+[38.360241] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/logger/Logger.hpp\n'}
+[38.360371] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/scheduler\n'}
+[38.360685] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/scheduler/PacketScheduler.hpp\n'}
+[38.360817] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/scheduler/Scheduler.hpp\n'}
+[38.360921] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/datareader\n'}
+[38.361031] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/datareader/DataReader.hpp\n'}
+[38.361125] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/object\n'}
+[38.361218] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/object/XRCEObject.hpp\n'}
+[38.361313] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/Agent.hpp\n'}
+[38.361602] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/reader\n'}
+[38.361711] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/reader/Reader.hpp\n'}
+[38.361811] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware\n'}
+[38.361909] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fast\n'}
+[38.362007] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastMiddleware.hpp\n'}
+[38.362106] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastEntities.hpp\n'}
+[38.362205] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/ced\n'}
+[38.362303] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedMiddleware.hpp\n'}
+[38.362402] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedEntities.hpp\n'}
+[38.362501] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/Middleware.hpp\n'}
+[38.362599] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fastdds\n'}
+[38.362698] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSEntities.hpp\n'}
+[38.362795] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSMiddleware.hpp\n'}
+[38.362898] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/utils\n'}
+[38.362997] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/middleware/utils/Callbacks.hpp\n'}
+[38.363094] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/processor\n'}
+[38.363218] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/processor/Processor.hpp\n'}
+[38.363320] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types\n'}
+[38.363420] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types/SubMessageHeader.hpp\n'}
+[38.363585] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types/Optional.hpp\n'}
+[38.363681] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types/TopicPubSubType.hpp\n'}
+[38.363775] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types/XRCETypes.hpp\n'}
+[38.363869] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/types/MessageHeader.hpp\n'}
+[38.363963] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client\n'}
+[38.364064] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session\n'}
+[38.364159] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session/SessionInfo.hpp\n'}
+[38.364252] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session/stream\n'}
+[38.364348] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session/stream/OutputStream.hpp\n'}
+[38.364450] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session/stream/InputStream.hpp\n'}
+[38.364545] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/session/Session.hpp\n'}
+[38.364638] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/client/ProxyClient.hpp\n'}
+[38.364733] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/Root.hpp\n'}
+[38.364827] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/replier\n'}
+[38.364922] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/replier/Replier.hpp\n'}
+[38.365024] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/subscriber\n'}
+[38.365119] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/subscriber/Subscriber.hpp\n'}
+[38.365213] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/message\n'}
+[38.365308] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/message/OutputMessage.hpp\n'}
+[38.365404] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/message/Packet.hpp\n'}
+[38.365497] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/message/InputMessage.hpp\n'}
+[38.365591] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/visibility.hpp\n'}
+[38.365685] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/AgentInstance.hpp\n'}
+[38.365786] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/participant\n'}
+[38.365880] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/participant/Participant.hpp\n'}
+[38.365975] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils\n'}
+[38.366069] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/Functions.hpp\n'}
+[38.366164] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/Conversion.hpp\n'}
+[38.366258] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/TokenBucket.hpp\n'}
+[38.366353] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/Color.hpp\n'}
+[38.366448] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/SeqNum.hpp\n'}
+[38.366543] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/SharedMutexPriority.hpp\n'}
+[38.366637] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/ArgumentParser.hpp\n'}
+[38.366731] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/SharedMutex.hpp\n'}
+[38.366825] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/utils/Time.hpp\n'}
+[38.366920] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/requester\n'}
+[38.367014] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/requester/Requester.hpp\n'}
+[38.367115] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake\n'}
+[38.367253] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets-release.cmake\n'}
+[38.367356] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/include/uxr/agent/config.hpp\n'}
+[38.367485] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/microxrcedds_agent/LICENSE\n'}
+[38.367614] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfig.cmake\n'}
+[38.367741] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfigVersion.cmake\n'}
+[38.372428] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mCompleted 'xrceagent'\x1b[0m\n"}
+[38.375331] (-) TimerEvent: {}
+[38.387798] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] Built target xrceagent\n'}
+[38.402136] (micro_ros_agent) StdoutLine: {'line': b"[ 56%] \x1b[34m\x1b[1mCreating directories for 'micro_ros_agent'\x1b[0m\n"}
+[38.412499] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mNo download step for 'micro_ros_agent'\x1b[0m\n"}
+[38.426521] (micro_ros_agent) StdoutLine: {'line': b"[ 68%] \x1b[34m\x1b[1mNo update step for 'micro_ros_agent'\x1b[0m\n"}
+[38.435656] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mNo patch step for 'micro_ros_agent'\x1b[0m\n"}
+[38.448290] (micro_ros_agent) StdoutLine: {'line': b"[ 81%] \x1b[34m\x1b[1mPerforming configure step for 'micro_ros_agent'\x1b[0m\n"}
+[38.451347] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent/micro_ros_agent-prefix/tmp/micro_ros_agent-cache-.cmake\n'}
+[38.455734] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[38.475443] (-) TimerEvent: {}
+[38.575784] (-) TimerEvent: {}
+[38.676121] (-) TimerEvent: {}
+[38.776526] (-) TimerEvent: {}
+[38.876996] (-) TimerEvent: {}
+[38.977425] (-) TimerEvent: {}
+[39.007256] (micro_ros_agent) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[39.077552] (-) TimerEvent: {}
+[39.177964] (-) TimerEvent: {}
+[39.187508] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[39.190026] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[39.253307] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[39.254865] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[39.263462] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)\n'}
+[39.266076] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[39.278108] (-) TimerEvent: {}
+[39.301418] (micro_ros_agent) StdoutLine: {'line': b'-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)\n'}
+[39.302189] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)\n'}
+[39.327005] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[39.334873] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[39.342098] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[39.355686] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[39.370747] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_fastrtps_shared_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)\n'}
+[39.378213] (-) TimerEvent: {}
+[39.420097] (micro_ros_agent) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[39.420264] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[39.420317] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.7 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[39.420688] (micro_ros_agent) StdoutLine: {'line': b'-- Found micro_ros_msgs: 3.0.1 (/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/share/micro_ros_msgs/cmake)\n'}
+[39.478362] (-) TimerEvent: {}
+[39.489030] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[39.495358] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[39.500963] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent\n'}
+[39.515013] (micro_ros_agent) StdoutLine: {'line': b"[ 87%] \x1b[34m\x1b[1mPerforming build step for 'micro_ros_agent'\x1b[0m\n"}
+[39.539540] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o\x1b[0m\n'}
+[39.541433] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o\x1b[0m\n'}
+[39.541585] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o\x1b[0m\n'}
+[39.542291] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o\x1b[0m\n'}
+[39.542425] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/utils/demangle.cpp.o\x1b[0m\n'}
+[39.578493] (-) TimerEvent: {}
+[39.678926] (-) TimerEvent: {}
+[39.779247] (-) TimerEvent: {}
+[39.879612] (-) TimerEvent: {}
+[39.979945] (-) TimerEvent: {}
+[40.080279] (-) TimerEvent: {}
+[40.180641] (-) TimerEvent: {}
+[40.280970] (-) TimerEvent: {}
+[40.381292] (-) TimerEvent: {}
+[40.481614] (-) TimerEvent: {}
+[40.581936] (-) TimerEvent: {}
+[40.682298] (-) TimerEvent: {}
+[40.782709] (-) TimerEvent: {}
+[40.883151] (-) TimerEvent: {}
+[40.983564] (-) TimerEvent: {}
+[41.083964] (-) TimerEvent: {}
+[41.184344] (-) TimerEvent: {}
+[41.284740] (-) TimerEvent: {}
+[41.385142] (-) TimerEvent: {}
+[41.485550] (-) TimerEvent: {}
+[41.585951] (-) TimerEvent: {}
+[41.686310] (-) TimerEvent: {}
+[41.786712] (-) TimerEvent: {}
+[41.887115] (-) TimerEvent: {}
+[41.987510] (-) TimerEvent: {}
+[42.087876] (-) TimerEvent: {}
+[42.188235] (-) TimerEvent: {}
+[42.288597] (-) TimerEvent: {}
+[42.389406] (-) TimerEvent: {}
+[42.489885] (-) TimerEvent: {}
+[42.590462] (-) TimerEvent: {}
+[42.679712] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable micro_ros_agent\x1b[0m\n'}
+[42.691117] (-) TimerEvent: {}
+[42.791524] (-) TimerEvent: {}
+[42.891977] (-) TimerEvent: {}
+[42.992436] (-) TimerEvent: {}
+[43.080414] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[43.089841] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'micro_ros_agent'\x1b[0m\n"}
+[43.092529] (-) TimerEvent: {}
+[43.097849] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'micro_ros_agent'\x1b[0m\n"}
+[43.110044] (micro_ros_agent) StdoutLine: {'line': b'Built target micro_ros_agent\n'}
+[43.117622] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[43.138118] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[43.138883] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent'], 'cwd': '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'exysta'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/exysta'), ('OLDPWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/src'), ('DESKTOP_SESSION', 'cinnamon2d'), ('CINNAMON_2D', '1'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('CINNAMON_VERSION', '5.8.4'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('INSIDE_NEMO_PYTHON', ''), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install:/home/exysta/project/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'exysta'), ('CINNAMON_SLOWDOWN_FACTOR', '0.0001'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/exysta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Kiss:@/tmp/.ICE-unix/1744,unix/Kiss:/tmp/.ICE-unix/1744'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0feb922c_9979_4d3e_beae_68cdae4c7454'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('CLUTTER_DEFAULT_FPS', '15'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XDG_SESSION_DESKTOP', 'cinnamon2d'), ('XAUTHORITY', '/home/exysta/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.199'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/exysta'), ('AMENT_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('CLUTTER_PAINT', 'disable-culling'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon2d'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon2d:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon2d:/usr/share/gnome:/home/exysta/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('MUFFIN_NO_SHADOWS', '1'), ('PYTHONPATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/exysta/project/ros2_ws/build/bob_controller:/home/exysta/project/ros2_ws/install/bob_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_msgs:/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_setup:/home/exysta/project/ros2_ws/install/bob_controller:/opt/ros/humble')]), 'shell': False}
+[43.140883] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[43.141021] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[43.141266] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[43.141380] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[43.141464] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[43.141545] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[43.141666] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[43.141735] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[43.141823] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[43.141888] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[43.141961] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[43.142035] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[43.142109] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[43.142195] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[43.142273] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[43.142350] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[43.142423] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[43.142513] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[43.143453] (micro_ros_agent) StdoutLine: {'line': b'-- Set runtime path of "/home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""\n'}
+[43.143529] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[43.143578] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/exysta/2324_Projet2A_Eve/Code/ROS2/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[43.144701] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[43.192630] (-) TimerEvent: {}
+[43.291691] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[43.292236] (-) EventReactorShutdown: {}
