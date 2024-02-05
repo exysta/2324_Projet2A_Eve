@@ -1,0 +1,8 @@
+{
+  "package_name": "micro_ros_msgs",
+  "non_idl_tuples": [
+    "/home/exysta/2324_Projet2A_Eve/Code/ROS2/src/uros/micro_ros_msgs:msg/Graph.msg",
+    "/home/exysta/2324_Projet2A_Eve/Code/ROS2/src/uros/micro_ros_msgs:msg/Node.msg",
+    "/home/exysta/2324_Projet2A_Eve/Code/ROS2/src/uros/micro_ros_msgs:msg/Entity.msg"
+  ]
+}
