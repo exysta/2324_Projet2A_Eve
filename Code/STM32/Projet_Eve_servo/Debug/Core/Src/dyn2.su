@@ -1,9 +1,9 @@
 ../Core/Src/dyn2.c:17:16:dyn2_crc	544	static
 ../Core/Src/dyn2.c:62:10:dyn2_append_crc	24	static
 ../Core/Src/dyn2.c:84:5:dyn2_send	24	static
-../Core/Src/dyn2.c:103:6:dyn2_ping	32	static
-../Core/Src/dyn2.c:113:6:dyn2_led	40	static
-../Core/Src/dyn2.c:128:6:dyn2_mod	56	static
-../Core/Src/dyn2.c:160:6:dyn2_rotation_mod	48	static
-../Core/Src/dyn2.c:170:6:dyn2_rotate_position	56	static
-../Core/Src/dyn2.c:203:6:dyn2_debug_sendArrayAsString	128	static
+../Core/Src/dyn2.c:111:6:dyn2_ping	32	static
+../Core/Src/dyn2.c:121:6:dyn2_led	40	static
+../Core/Src/dyn2.c:136:6:dyn2_mod	56	static
+../Core/Src/dyn2.c:168:6:dyn2_rotation_mod	48	static
+../Core/Src/dyn2.c:178:6:dyn2_rotate_position	56	static
+../Core/Src/dyn2.c:211:6:dyn2_debug_sendArrayAsString	128	static

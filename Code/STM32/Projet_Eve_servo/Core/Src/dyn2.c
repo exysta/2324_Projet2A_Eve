@@ -83,20 +83,28 @@ uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize){
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
 int dyn2_send(uint8_t* buffer,uint16_t size){
 	uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
+	/*
 	if (buffer_crc == NULL) {
 		// Handle memory allocation failure
 		free(buffer_crc); // Free the dynamically allocated memory
 		return -1;
 	}
-	memcpy(buffer, buffer_crc, size);
+	*/
 	//while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
 	/*
     if(HAL_UART_Transmit(&huart3, buffer_crc, BUFFER_SIZE, 100)!=0){
     	return -1;
 	 */
 	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
-	HAL_UART_Transmit(&huart3, buffer_crc, size, TIMEOUT);
-	free(buffer_crc); // Free the dynamically allocated memory
+	huart4.Instance->CR1 |= USART_CR1_TE;
+	huart4.Instance->CR1 &= ~USART_CR1_RE;
+
+	HAL_UART_Transmit(&huart4, buffer_crc, size, TIMEOUT);
+
+	huart4.Instance->CR1 &= ~USART_CR1_TE;
+	huart4.Instance->CR1 |= USART_CR1_RE;
+
+	//free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
 
