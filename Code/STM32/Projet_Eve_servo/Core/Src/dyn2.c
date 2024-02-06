@@ -6,10 +6,8 @@
  */
 
 #include "dyn2.h"
-#define HUART_SERVO &huart4
-#define HUART_ST_LINK &huart3
-#define NbOfElements(x) (sizeof(x)/sizeof(x[0]))
-#define TIMEOUT 10
+
+
 
 
 
@@ -82,7 +80,7 @@ uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize){
 
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
 int dyn2_send(uint8_t* buffer,uint16_t size){
-	uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
+	//uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
 	/*
 	if (buffer_crc == NULL) {
 		// Handle memory allocation failure
@@ -99,7 +97,9 @@ int dyn2_send(uint8_t* buffer,uint16_t size){
 	huart4.Instance->CR1 |= USART_CR1_TE;
 	huart4.Instance->CR1 &= ~USART_CR1_RE;
 
-	HAL_UART_Transmit(&huart4, buffer_crc, size, TIMEOUT);
+	HAL_UART_Transmit(&huart4, buffer, size, TIMEOUT);
+	// Wait until UART transmission is complete
+	while (HAL_UART_GetState(&huart4) != HAL_UART_STATE_READY);
 
 	huart4.Instance->CR1 &= ~USART_CR1_TE;
 	huart4.Instance->CR1 |= USART_CR1_RE;
@@ -119,17 +119,39 @@ void dyn2_ping(uint8_t id){
 
 // Status 1 : Led ON, status 0 : Led OFF
 void dyn2_led(int status,uint8_t id){
-	uint8_t Dynamixel_LED_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-			/*débutparam, address 65:*/ ,0x41,0x00
-			/*value in the address*/,0x01
-			/*on calcule le CRC après */,0x00,0x00};
-
-	Dynamixel_LED_XL430[4]= id;
+//	uint8_t Dynamixel_LED_XL430[13] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
+//			/*débutparam, address 65:*/ ,0x41,0x00
+//			/*value in the address*/,0x01
+//			/*on calcule le CRC après */,0x00,0x00};
+	uint8_t DYN2_LED_XL430[13];
+	// HEADER
+	DYN2_LED_XL430[0] = HEADER_1;
+	DYN2_LED_XL430[1] = HEADER_2;
+	DYN2_LED_XL430[2] = HEADER_3;
+	DYN2_LED_XL430[3] = HEADER_4;
+	// ID
+	DYN2_LED_XL430[4]= id;
+	// LENGTH
+	DYN2_LED_XL430[5]= NbOfElements(DYN2_LED_XL430)- 7; // tkt ca marche
+	DYN2_LED_XL430[6]= 0x00;
+	// INSTRUCTION
+	DYN2_LED_XL430[7]= WRITE;
+	// PARAMETERS
+	// ADDRRESS
+	DYN2_LED_XL430[8]= 0x41; //ADDRESS 61 en dec
+	DYN2_LED_XL430[9]= 0x00;
+	// LED VALUE
 	if(status==0){
-		Dynamixel_LED_XL430[10]=0x00;
+		DYN2_LED_XL430[10]=0x00;
 	}
+	else{
+		DYN2_LED_XL430[10]=0x01;
+	}
+	// SENDING
 	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_XL430);
-	dyn2_send(Dynamixel_LED_XL430,size);
+	uint8_t* DYN2_LED_XL430_CRC = dyn2_append_crc(DYN2_LED_XL430,size);
+
+	dyn2_send(Dynamixel_LED_XL430_CRC,size);
 }
 
 // mode 1 : rotate mode, mode 0 : receive and transmit mode
