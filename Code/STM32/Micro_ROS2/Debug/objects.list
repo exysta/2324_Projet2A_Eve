@@ -10,7 +10,6 @@
 "./Core/Src/stm32h7xx_hal_timebase_tim.o"
 "./Core/Src/stm32h7xx_it.o"
 "./Core/Src/syscalls.o"
-"./Core/Src/sysmem.o"
 "./Core/Src/system_stm32h7xx.o"
 "./Core/Src/usart.o"
 "./Core/Src/usb_otg.o"

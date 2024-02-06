@@ -93,11 +93,12 @@ int main(void)
   MX_USART3_UART_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-  uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x03, 0x00,/*type instruction, ici Ping*/0x01
-  			/* calcul of CRC after */,0x00,0x00};
-  uint16_t size = sizeof(Dynamixel_PING)/sizeof(Dynamixel_PING[0]);
+  uint8_t Dynamixel_LED_CRC[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0xFE, /*length*/0x0B, 0x00,/*type instruction, ici Ping*/0x83
+  		/*param*/,0x41,0x00,0x01,0x00,0x01,0x01,0x02,0x01
+		  /* calcul of CRC after */,0xC1,0x74};
+  uint16_t size = sizeof(Dynamixel_LED_CRC)/sizeof(Dynamixel_LED_CRC[0]);
 
-  uint8_t* Dynamixel_PING_CRC = dyn2_append_crc(Dynamixel_PING,size);
+  //uint8_t* Dynamixel_PING_CRC = dyn2_append_crc(Dynamixel_PING,size);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,14 +107,14 @@ int main(void)
 
 	  HAL_Delay(1000);
 	  //Acitvate Transmit and disiable Receive, the message transmited need to be between the 2 blocks
-	  huart3.Instance->CR1 |= USART_CR1_TE;
-	  huart3.Instance->CR1 &= ~USART_CR1_RE;
+	  huart4.Instance->CR1 |= USART_CR1_TE;
+	  huart4.Instance->CR1 &= ~USART_CR1_RE;
 
-	  //dyn2_debug_sendArrayAsString(Dynamixel_PING_CRC, size);
-	  dyn2_led(1, 254);
-	  HAL_UART_Transmit(&huart3,"ABCD\n",strlen("ABCD\n"),100);
-	  huart3.Instance->CR1 &= ~USART_CR1_TE;
-	  huart3.Instance->CR1 |= USART_CR1_RE;
+	  //dyn2_debug_sendArrayAsString(Dynamixel_LED_CRC, size);
+	  //dyn2_led(1, 254);
+	  HAL_UART_Transmit(&huart4,Dynamixel_LED_CRC,size,100);
+	  huart4.Instance->CR1 &= ~USART_CR1_TE;
+	  huart4.Instance->CR1 |= USART_CR1_RE;
 
 
 
