@@ -88,11 +88,6 @@ int dyn2_send(uint8_t* buffer,uint16_t size){
 		return -1;
 	}
 	*/
-	//while(!__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE));
-	/*
-    if(HAL_UART_Transmit(&huart3, buffer_crc, BUFFER_SIZE, 100)!=0){
-    	return -1;
-	 */
 	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
 	huart4.Instance->CR1 |= USART_CR1_TE;
 	huart4.Instance->CR1 &= ~USART_CR1_RE;
@@ -154,27 +149,49 @@ void dyn2_led(int status,uint8_t id){
 	dyn2_send(Dynamixel_LED_XL430_CRC,size);
 }
 
-// mode 1 : rotate mode, mode 0 : receive and transmit mode
-void dyn2_mod(int mode){
-	/*autorise le moteur a tourner ( pas de transimission/récpetion possible dans ce mode*/
-	uint8_t Dynamixel_RotateMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-			/*débutparam, address 64:*/ ,0x40,0x00
-			/*value in the address : 1*/,0x01
-			/*CRC*/				,0x00,0x00};
-
-	uint8_t Dynamixel_ComMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-			/*débutparam, address 64:*/ ,0x40,0x00
-			/*value in the address : 1*/,0x00
-			/*CRC*/				,0x00,0x00};
+void dyn2_torque(int mode,uint8_t ID){
+//	/*autorise le moteur a tourner ( pas de transimission/récpetion possible dans ce mode*/
+//	uint8_t Dynamixel_RotateMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
+//			/*débutparam, address 64:*/ ,0x40,0x00
+//			/*value in the address : 1*/,0x01
+//			/*CRC*/				,0x00,0x00};
+//
+//	uint8_t Dynamixel_ComMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
+//			/*débutparam, address 64:*/ ,0x40,0x00
+//			/*value in the address : 1*/,0x00
+//			/*CRC*/				,0x00,0x00};
 
 	uint16_t size = (uint16_t) NbOfElements(Dynamixel_ComMode_XL430);
+	uint8_t DYN2_TORQUE[13];
+	// HEADER
+	DYN2_TORQUE[0] = HEADER_1;
+	DYN2_TORQUE[1] = HEADER_2;
+	DYN2_TORQUE[2] = HEADER_3;
+	DYN2_TORQUE[3] = HEADER_4;
+	// ID
+	DYN2_TORQUE[4]= id;
+	// LENGTH
+	DYN2_TORQUE[5]= NbOfElements(DYN2_LED_XL430)- 7; // tkt ca marche
+	DYN2_TORQUE[6]= 0x00;
+	// INSTRUCTION
+	DYN2_TORQUE[7]= WRITE;
+	// PARAMETERS
+	// ADDRRESS
+	DYN2_TORQUE[8]= 0x41; //ADDRESS 61 en dec
+	DYN2_TORQUE[9]= 0x00;
+	// LED VALUE
+	if(status==0){
+		DYN2_TORQUE[10]=TORQUE_ON;
+	}
+	else{
+		DYN2_TORQUE[10]=TORQUE_OFF;
+	}
+	// SENDING
+	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_XL430);
+	uint8_t* DYN2_TORQUE_CRC = dyn2_append_crc(DYN2_TORQUE,size);
 
-	if(mode == 1){
-		dyn2_send(Dynamixel_RotateMode_XL430,size);
-	}
-	if(mode == 0){
-		dyn2_send(Dynamixel_ComMode_XL430,size);
-	}
+	dyn2_send(DYN2_TORQUE_CRC,size);
+
 }
 /*value :
 1 = velocity control,This mode controls velocity and ideal for wheel operation.,This mode is identical to the Wheel Mode(endless) from existing DYNAMIXEL.

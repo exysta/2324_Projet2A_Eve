@@ -52,6 +52,17 @@ typedef enum{
 } HEADER;
 
 ///////////////////////////////////////
+const uint8_t BROADCAST_ID = 0xFE;
+
+const uint8_t TORQUE_ON,LED_ON;
+TORQUE_ON = LED_ON = 0x01;
+
+const uint8_t TORQUE_OFF,LED_OFF;
+TORQUE_OFF = LED_OFF= 0x00;
+
+
+///////////////////////////////////////
+
 
 int dyn2_send(uint8_t* buffer,uint16_t size);
 uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize);

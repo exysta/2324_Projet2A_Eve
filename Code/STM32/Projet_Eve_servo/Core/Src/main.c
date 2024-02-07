@@ -105,7 +105,7 @@ int main(void)
 
   uint8_t* Dynamixel_LED_ON_CRC = dyn2_append_crc(Dynamixel_LED_XL430_ON,size);
   uint8_t* Dynamixel_LED_OFF_CRC = dyn2_append_crc(Dynamixel_LED_XL430_OFF,size);
-
+  uint8_t ID = 0x01;
 
 
 
@@ -121,10 +121,10 @@ int main(void)
 	  //huart4.Instance->CR1 &= ~USART_CR1_RE;
 
 	  //dyn2_debug_sendArrayAsString(Dynamixel_LED_CRC, size);
-	  dyn2_led(1, 1);
-	  //HAL_UART_Transmit(&huart4,Dynamixel_LED_ON_CRC,size,100);
+	  dyn2_led(LED_ON,ID);
+	  dyn2_torque(TORQUE_ON,ID);
 	  HAL_Delay(1000);
-	  dyn2_led(0, 1);
+	  dyn2_led(LED_OFF,ID);
 
 	  //HAL_UART_Transmit(&huart4,Dynamixel_LED_OFF_CRC,size,100);
 
