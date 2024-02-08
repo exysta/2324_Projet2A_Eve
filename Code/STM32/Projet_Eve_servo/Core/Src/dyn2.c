@@ -89,24 +89,30 @@ int dyn2_send(uint8_t* buffer,uint16_t size){
 	}
 	*/
 	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
-	huart4.Instance->CR1 |= USART_CR1_TE;
-	huart4.Instance->CR1 &= ~USART_CR1_RE;
+	//huart4.Instance->CR1 |= USART_CR1_TE;
+	//huart4.Instance->CR1 &= ~USART_CR1_RE;
+	HAL_HalfDuplex_EnableTransmitter(&huart4);
 
 	HAL_UART_Transmit(&huart4, buffer, size, TIMEOUT);
 	// Wait until UART transmission is complete
 	while (HAL_UART_GetState(&huart4) != HAL_UART_STATE_READY);
+	HAL_HalfDuplex_EnableReceiver(&huart4);
 
-	huart4.Instance->CR1 &= ~USART_CR1_TE;
-	huart4.Instance->CR1 |= USART_CR1_RE;
+	//huart4.Instance->CR1 &= ~USART_CR1_TE;
+	//huart4.Instance->CR1 |= USART_CR1_RE;
 
 	//free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
 
-void dyn2_ping(uint8_t id){
+uint8_t* dyn2_read(uint8_t ID){
+
+}
+
+void dyn2_ping(uint8_t ID){
 	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
-	Dynamixel_PING[4]= id;
+	Dynamixel_PING[4]= ID;
 	uint16_t size = (uint16_t) NbOfElements(Dynamixel_PING);
 
 	dyn2_send(Dynamixel_PING,size);
