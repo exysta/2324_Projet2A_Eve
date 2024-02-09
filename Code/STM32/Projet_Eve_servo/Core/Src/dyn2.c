@@ -6,6 +6,7 @@
  */
 
 #include "dyn2.h"
+#include "constants.h"
 
 
 
@@ -78,19 +79,29 @@ uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize){
 	return instruction;
 }
 
+void dyn2_debug_sendArrayAsString(uint8_t* array, int size)
+{
+	// Convert array to a string
+	char arrayString[100];  // Adjust the size according to your needs
+	int index = 0;
+
+	for (int i = 0; i < size; i++) {
+		// Convert each element to a string and append to arrayString
+		index += sprintf(&arrayString[index], "%d\t", array[i]);
+	}
+
+	// Add a newline character at the end
+	index += sprintf(&arrayString[index], "\n");
+
+	// Send the string through UART
+	HAL_UART_Transmit(&huart3, (uint8_t*)arrayString, strlen(arrayString), HAL_MAX_DELAY);
+}
+
 // int dyn2_send(..., uint8_t * buffer, uint16_t size)
 int dyn2_send(uint8_t* buffer,uint16_t size){
-	//uint8_t* buffer_crc = dyn2_append_crc(buffer,size);
-	/*
-	if (buffer_crc == NULL) {
-		// Handle memory allocation failure
-		free(buffer_crc); // Free the dynamically allocated memory
-		return -1;
-	}
-	*/
+
 	//dyn2_debug_sendArrayAsString(buffer_crc, size); // for debuging purposes
-	//huart4.Instance->CR1 |= USART_CR1_TE;
-	//huart4.Instance->CR1 &= ~USART_CR1_RE;
+
 	HAL_HalfDuplex_EnableTransmitter(&huart4);
 
 	HAL_UART_Transmit(&huart4, buffer, size, TIMEOUT);
@@ -98,76 +109,73 @@ int dyn2_send(uint8_t* buffer,uint16_t size){
 	while (HAL_UART_GetState(&huart4) != HAL_UART_STATE_READY);
 	HAL_HalfDuplex_EnableReceiver(&huart4);
 
-	//huart4.Instance->CR1 &= ~USART_CR1_TE;
-	//huart4.Instance->CR1 |= USART_CR1_RE;
-
-	//free(buffer_crc); // Free the dynamically allocated memory
 	return 0;
 }
 
-uint8_t* dyn2_read(uint8_t ID){
-
+uint8_t* dyn2_read(uint8_t ID,uint16_t size){
+	uint8_t buffer[size];
+	HAL_HalfDuplex_EnableReceiver(&huart4);
+	HAL_UART_Receive(&huart4, buffer, size, TIMEOUT);
+	return buffer;
 }
+
+
+/////////////////////////////////////////////////////////////////// for RAM area, reset when rebooted
+
 
 void dyn2_ping(uint8_t ID){
 	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
 	Dynamixel_PING[4]= ID;
+
+
 	uint16_t size = (uint16_t) NbOfElements(Dynamixel_PING);
 
 	dyn2_send(Dynamixel_PING,size);
 }
-
 // Status 1 : Led ON, status 0 : Led OFF
-void dyn2_led(int status,uint8_t id){
+void dyn2_led(uint8_t id,int status){
 //	uint8_t Dynamixel_LED_XL430[13] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 //			/*débutparam, address 65:*/ ,0x41,0x00
 //			/*value in the address*/,0x01
 //			/*on calcule le CRC après */,0x00,0x00};
-	uint8_t DYN2_LED_XL430[13];
+	uint8_t DYN2_LED[13];
 	// HEADER
-	DYN2_LED_XL430[0] = HEADER_1;
-	DYN2_LED_XL430[1] = HEADER_2;
-	DYN2_LED_XL430[2] = HEADER_3;
-	DYN2_LED_XL430[3] = HEADER_4;
+	DYN2_LED[0] = HEADER_1;
+	DYN2_LED[1] = HEADER_2;
+	DYN2_LED[2] = HEADER_3;
+	DYN2_LED[3] = HEADER_4;
 	// ID
-	DYN2_LED_XL430[4]= id;
+	DYN2_LED[4]= id;
 	// LENGTH
-	DYN2_LED_XL430[5]= NbOfElements(DYN2_LED_XL430)- 7; // tkt ca marche
-	DYN2_LED_XL430[6]= 0x00;
+	DYN2_LED[5]= NbOfElements(DYN2_LED)- 7; // tkt ca marche
+	DYN2_LED[6]= 0x00;
 	// INSTRUCTION
-	DYN2_LED_XL430[7]= WRITE;
+	DYN2_LED[7]= WRITE;
 	// PARAMETERS
 	// ADDRRESS
-	DYN2_LED_XL430[8]= 0x41; //ADDRESS 61 en dec
-	DYN2_LED_XL430[9]= 0x00;
-	// LED VALUE
-	if(status==0){
-		DYN2_LED_XL430[10]=0x00;
-	}
-	else{
-		DYN2_LED_XL430[10]=0x01;
+	DYN2_LED[8]= ADDRESS_LED;
+	DYN2_LED[9]= 0x00;
+	// VALUE
+	switch(status){
+	case 0:
+		DYN2_LED[10]=LED_OFF;
+		break;
+	case 1:
+		DYN2_LED[10]=LED_ON;
+		break;
+	default :
+		return ERROR_LED_VALUE;
 	}
 	// SENDING
-	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_XL430);
-	uint8_t* DYN2_LED_XL430_CRC = dyn2_append_crc(DYN2_LED_XL430,size);
+	uint16_t size = (uint16_t) NbOfElements(DYN2_LED);
+	uint8_t* DYN2_LED_CRC = dyn2_append_crc(DYN2_LED,size);
 
-	dyn2_send(Dynamixel_LED_XL430_CRC,size);
+	dyn2_send(DYN2_LED_CRC,size);
 }
 
-void dyn2_torque(int mode,uint8_t ID){
-//	/*autorise le moteur a tourner ( pas de transimission/récpetion possible dans ce mode*/
-//	uint8_t Dynamixel_RotateMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-//			/*débutparam, address 64:*/ ,0x40,0x00
-//			/*value in the address : 1*/,0x01
-//			/*CRC*/				,0x00,0x00};
-//
-//	uint8_t Dynamixel_ComMode_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
-//			/*débutparam, address 64:*/ ,0x40,0x00
-//			/*value in the address : 1*/,0x00
-//			/*CRC*/				,0x00,0x00};
-
-	uint16_t size = (uint16_t) NbOfElements(Dynamixel_ComMode_XL430);
+// TORQUE_ON => writing in EEPROM is IMPOSSIBLE and the motor can rotate, TORQUE_OFF =>
+int dyn2_torque(uint8_t ID,int mode){
 	uint8_t DYN2_TORQUE[13];
 	// HEADER
 	DYN2_TORQUE[0] = HEADER_1;
@@ -175,30 +183,80 @@ void dyn2_torque(int mode,uint8_t ID){
 	DYN2_TORQUE[2] = HEADER_3;
 	DYN2_TORQUE[3] = HEADER_4;
 	// ID
-	DYN2_TORQUE[4]= id;
+	DYN2_TORQUE[4]= ID;
 	// LENGTH
-	DYN2_TORQUE[5]= NbOfElements(DYN2_LED_XL430)- 7; // tkt ca marche
+	DYN2_TORQUE[5]= NbOfElements(DYN2_TORQUE)- 7; // tkt ca marche
 	DYN2_TORQUE[6]= 0x00;
 	// INSTRUCTION
 	DYN2_TORQUE[7]= WRITE;
 	// PARAMETERS
 	// ADDRRESS
-	DYN2_TORQUE[8]= 0x41; //ADDRESS 61 en dec
+	DYN2_TORQUE[8]= ADDRESS_TORQUE;
 	DYN2_TORQUE[9]= 0x00;
-	// LED VALUE
-	if(status==0){
-		DYN2_TORQUE[10]=TORQUE_ON;
-	}
-	else{
+	// VALUE
+	switch(mode){
+	case 0:
 		DYN2_TORQUE[10]=TORQUE_OFF;
+		break;
+	case 1:
+		DYN2_TORQUE[10]=TORQUE_ON;
+		break;
+	default :
+		return ERROR_TORQUE_VALUE;
 	}
+
 	// SENDING
-	uint16_t size = (uint16_t) NbOfElements(Dynamixel_LED_XL430);
+	uint16_t size = (uint16_t) NbOfElements(DYN2_TORQUE);
 	uint8_t* DYN2_TORQUE_CRC = dyn2_append_crc(DYN2_TORQUE,size);
 
 	dyn2_send(DYN2_TORQUE_CRC,size);
+	return 0;
 
 }
+
+void dyn2_position(uint8_t ID,float angleInDeg) {
+	// Value range: 0 to 4095
+	uint8_t DYN2_POSITION[16];
+	// HEADER
+	DYN2_POSITION[0] = HEADER_1;
+	DYN2_POSITION[1] = HEADER_2;
+	DYN2_POSITION[2] = HEADER_3;
+	DYN2_POSITION[3] = HEADER_4;
+	// ID
+	DYN2_POSITION[4]= ID;
+	// LENGTH
+	DYN2_POSITION[5]= NbOfElements(DYN2_POSITION)- 7; // tkt ca marche
+	DYN2_POSITION[6]= 0x00;
+	// INSTRUCTION
+	DYN2_POSITION[7]= WRITE;
+	// PARAMETERS
+	// ADDRRESS
+	DYN2_POSITION[8]= ADDRESS_POSITION;
+	DYN2_POSITION[9]= 0x00;
+	// VALUE
+	if(angleInDeg>360){
+		angleInDeg = 360;
+	}
+	int Angle_Value =(int) (angleInDeg/0.088);
+
+	DYN2_POSITION[10]=TORQUE_OFF;
+
+
+	// SENDING
+	uint16_t size = (uint16_t) NbOfElements(DYN2_POSITION);
+	uint8_t* DYN2_POSITION_CRC = dyn2_append_crc(DYN2_POSITION,size);
+
+	dyn2_send(DYN2_POSITION_CRC,size);
+
+
+	// Now HexAngle contains the 12-bit representation of the angle //change position to 90,
+
+//	uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
+//			/*débutparam, address 116:*/ ,0x74,0x00
+//			/*value in the address :2048*/,0x00,0x08,0x00,0x00
+//			/*CRC*/				,0xCA,0x89};
+}
+
 /*value :
 1 = velocity control,This mode controls velocity and ideal for wheel operation.,This mode is identical to the Wheel Mode(endless) from existing DYNAMIXEL.
 
@@ -220,53 +278,7 @@ void dyn2_rotation_mod(int mode){
 	dyn2_send(Dynamixel_ChangePosition_XL430, size);
 
 }
-void dyn2_rotate_position(float angleInDeg) {
-	// Value range: 0 to 4095
-	const int maxValue = 4095;
 
-	// Adding security
-	if (angleInDeg < 0) {
-		angleInDeg = 0;
-	} else if (angleInDeg > 360) {
-		angleInDeg = 360;
-	}
-
-	// Convert degrees to the range [0, 360)
-	while (angleInDeg >= 360.0) {
-		angleInDeg -= 360.0;
-	}
-
-	// Convert degrees to the range [0, maxValue]
-	int angleInInt = (int)round((angleInDeg / 360.0) * maxValue);
-
-	// Convert to uint8_t array
-	uint8_t HexAngle[2];
-	HexAngle[0] = (uint8_t)((angleInInt >> 0) & 0xFF);
-	HexAngle[1] = (uint8_t)((angleInInt >> 8) & 0xFF);
+/////////////////////////////////////////////////////////////////// for EEPROM area, do NOT reset when rebooted, Torque need to be OFF to access it !!
 
 
-	// Now HexAngle contains the 12-bit representation of the angle //change position to 90,
-
-	uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
-			/*débutparam, address 116:*/ ,0x74,0x00
-			/*value in the address :2048*/,0x00,0x08,0x00,0x00
-			/*CRC*/				,0xCA,0x89};
-}
-
-void dyn2_debug_sendArrayAsString(uint8_t* array, int size)
-{
-	// Convert array to a string
-	char arrayString[100];  // Adjust the size according to your needs
-	int index = 0;
-
-	for (int i = 0; i < size; i++) {
-		// Convert each element to a string and append to arrayString
-		index += sprintf(&arrayString[index], "%d\t", array[i]);
-	}
-
-	// Add a newline character at the end
-	index += sprintf(&arrayString[index], "\n");
-
-	// Send the string through UART
-	HAL_UART_Transmit(&huart3, (uint8_t*)arrayString, strlen(arrayString), HAL_MAX_DELAY);
-}

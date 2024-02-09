@@ -18,56 +18,15 @@
 #include <stdlib.h>
 #include "usart.h"
 #include <stdint.h>
-///////////////////////////////////////
-#define NbOfElements(x) (sizeof(x)/sizeof(x[0]))
-#define TIMEOUT 100
-#define BUFFER_SIZE 32
-/////////////////////////////////////// INSTRUCTION
+#include <math.h>
 
-typedef enum {
-    PING = 0x01,
-    READ = 0x02,
-    WRITE = 0x03,
-    REG_WRITE = 0x04,
-    ACTION = 0x05,
-    FACTORY_RESET = 0x06,
-    REBOOT = 0x08,
-    CLEAR = 0x10,
-    CONTROL_TABLE_BACKUP = 0x20,
-    STATUS_RETURN = 0x55,
-    SYNC_READ = 0x82,
-    SYNC_WRITE = 0x83,
-    FAST_SYNC_READ = 0x8A,
-    BULK_READ = 0x92,
-    BULK_WRITE = 0x93,
-    FAST_BULK_READ = 0x9A
-} INSTRUCTION;
-
-/////////////////////////////////////// HEADER
-typedef enum{
-	HEADER_1 = 0xFF,
-	HEADER_2 = 0xFF,
-	HEADER_3 = 0xFD,
-	HEADER_4 = 0x00
-} HEADER;
-
-///////////////////////////////////////
-const uint8_t BROADCAST_ID = 0xFE;
-
-const uint8_t TORQUE_ON,LED_ON;
-TORQUE_ON = LED_ON = 0x01;
-
-const uint8_t TORQUE_OFF,LED_OFF;
-TORQUE_OFF = LED_OFF= 0x00;
-
-
-///////////////////////////////////////
 
 
 int dyn2_send(uint8_t* buffer,uint16_t size);
 uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize);
-void dyn2_led(int status,uint8_t id);
-void dyn2_rotate_positionPosition(float angleInDeg);
+void dyn2_led(uint8_t ID,int status);
+int dyn2_torque(uint8_t ID,int mode);
+void dyn2_position(uint8_t ID,float angleInDeg);
 void dyn2_debug_sendArrayAsString(uint8_t* array, int size);
 
 

@@ -28,6 +28,8 @@
 #include <stdint.h>
 #include "stm32h7xx.h"
 #include "dyn2.h"
+#include "constants.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,34 +118,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1){
 
-	  //Acitvate Transmit and disiable Receive, the message transmited need to be between the 2 blocks
-	  //huart4.Instance->CR1 |= USART_CR1_TE;
-	  //huart4.Instance->CR1 &= ~USART_CR1_RE;
-
-	  //dyn2_debug_sendArrayAsString(Dynamixel_LED_CRC, size);
-	  dyn2_led(LED_ON,ID);
-	  dyn2_torque(TORQUE_ON,ID);
+	  dyn2_led(ID,LED_ON);
+	  dyn2_torque(ID,TORQUE_ON);
+	  dyn2_position(ID,180);
 	  HAL_Delay(1000);
-	  dyn2_led(LED_OFF,ID);
-
-	  //HAL_UART_Transmit(&huart4,Dynamixel_LED_OFF_CRC,size,100);
-
-	  //huart4.Instance->CR1 &= ~USART_CR1_TE;
-	  //huart4.Instance->CR1 |= USART_CR1_RE;
-
-
+	  dyn2_led(ID,LED_OFF);
+	  dyn2_position(ID,0);
 
 	  HAL_Delay(1000);
 
-	  //HAL_UART_Transmit(&huart3, (uint8_t*)"NEW PING\n", sizeof("NEW PING\n") - 1, 100);
 
-	  /*
-	  HAL_Delay(100);
-
-	  dyn2_led(0);
-	  HAL_Delay(100);
-
-	*/
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
