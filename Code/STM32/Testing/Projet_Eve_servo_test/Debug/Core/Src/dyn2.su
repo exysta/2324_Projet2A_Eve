@@ -1,0 +1,10 @@
+../Core/Src/dyn2.c:16:16:dyn2_crc	544	static
+../Core/Src/dyn2.c:61:10:dyn2_append_crc	24	static
+../Core/Src/dyn2.c:82:6:dyn2_debug_sendArrayAsString	128	static
+../Core/Src/dyn2.c:101:5:dyn2_send	16	static
+../Core/Src/dyn2.c:115:10:dyn2_read	24	static
+../Core/Src/dyn2.c:132:6:dyn2_ping	32	static
+../Core/Src/dyn2.c:143:5:dyn2_led	40	static
+../Core/Src/dyn2.c:186:5:dyn2_torque	40	static
+../Core/Src/dyn2.c:225:6:dyn2_position	48	static
+../Core/Src/dyn2.c:279:6:dyn2_rotation_mod	48	static
