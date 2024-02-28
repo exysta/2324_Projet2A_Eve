@@ -38,7 +38,19 @@ Vous vous situez sur le Github d'Eve (anciennement Robourt). C'est un projet de 
 
 ### Contrôle des servos moteurs avec Dynamixel 2.0
 
-Dans le cadre du projet, les servos moteurs servent à actionner la pince et gérer certains axes de roations du robot ne nécéssiatn pas beaucoup de couple. Il y a un total de 4 servos moteurs, tous utilisent le protocole Dynamixel 2.0 et sont connéctés en série. On utiliser une connexion UART Half-duplex avec notre microprocesseur.
+Dans le cadre du projet, les servos moteurs servent à actionner la pince et gérer certains axes de roations du robot ne nécéssiatn pas beaucoup de couple. Il y a un total de 4 servos moteurs, tous utilisent le protocole Dynamixel 2.0 et sont connéctés en série. On utilise une connexion UART Half-duplex avec notre microprocesseur.
+
+#### Connexion UART Half-Duplex
+
+Il est nécéssaire de configurer le gpio utiliser pour l'uart en open drain avec une réssistance de pull up pour que la half-duplex puisse fonctionné. 
+
+<div align="center">
+<br>
+<img src="Documents/Images/Half-Duplex.png" width="400"> </br>
+Exrtait du reference manual </br>
+</br> 
+</div>
+
 
 ### Contrôle des steppers par la TMC2590
 
