@@ -247,7 +247,10 @@ void dyn2_position(uint8_t ID,float angleInDeg) {
 	}
 	int Angle_Value =(int) (angleInDeg/0.088);
 
-	DYN2_POSITION[10]=TORQUE_OFF;
+	DYN2_POSITION[10] = (Angle_Value >> 24) & 0xFF; // Extract the most significant byte
+	DYN2_POSITION[11] = (Angle_Value >> 16) & 0xFF; // Extract the second most significant byte
+	DYN2_POSITION[12] = (Angle_Value >> 8) & 0xFF;  // Extract the third most significant byte
+	DYN2_POSITION[13] = Angle_Value & 0xFF;          // Extract the least significant byte
 
 
 	// SENDING
@@ -256,13 +259,6 @@ void dyn2_position(uint8_t ID,float angleInDeg) {
 
 	dyn2_send(DYN2_POSITION_CRC,size);
 
-
-	// Now HexAngle contains the 12-bit representation of the angle //change position to 90,
-
-//	uint8_t Dynamixel_ChangePosition_XL430[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x09, 0x00,/*type instruction, ici write*/0x03
-//			/*débutparam, address 116:*/ ,0x74,0x00
-//			/*value in the address :2048*/,0x00,0x08,0x00,0x00
-//			/*CRC*/				,0xCA,0x89};
 }
 
 /*value :
