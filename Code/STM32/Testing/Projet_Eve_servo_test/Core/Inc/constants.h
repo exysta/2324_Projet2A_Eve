@@ -44,10 +44,24 @@ extern const uint8_t HEADER_2;
 extern const uint8_t HEADER_3;
 extern const uint8_t HEADER_4;
 
-/////////////////////////////////////// ADDRESSES
-extern const uint8_t ADDRESS_TORQUE;
-extern const uint8_t ADDRESS_LED;
-extern const uint8_t ADDRESS_POSITION;
+/////////////////////////////////////// ADDRESSES XL430
+extern const uint8_t XL430_ADDRESS_ID;
+extern const uint8_t XL430_ADDRESS_BAUDRATE;
+extern const uint8_t XL430_ADDRESS_OPERATING_MODE;
+
+extern const uint8_t XL430_ADDRESS_TORQUE;
+extern const uint8_t XL430_ADDRESS_LED;
+extern const uint8_t XL430_ADDRESS_POSITION;
+/////////////////////////////////////// ADDRESSES XL320
+extern const uint8_t XL320_ADDRESS_ID;
+extern const uint8_t XL320_ADDRESS_BAUDRATE;
+
+extern const uint8_t XL320_ADDRESS_TORQUE;
+extern const uint8_t XL320_ADDRESS_LED;
+extern const uint8_t XL320_ADDRESS_POSITION;
+extern const uint8_t XL320_ADDRESS_MOVING_SPEED;
+
+
 /////////////////////////////////////// ERRORS
 
 
