@@ -18,15 +18,17 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usart.h"
 #include "spi.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "tmc2590.h"
 #include "stepper.h"
+
+#define ADC_CHANNEL_ADC1_IN10   ADC_CHANNEL_10
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -79,8 +81,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   Stepper stepper1;
-  Stepper stepper2;
-  Stepper stepper3;
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -92,34 +93,26 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_LPUART1_UART_Init();
   MX_TIM1_Init();
   MX_SPI3_Init();
   MX_TIM2_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
-//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
-//	HAL_UART_Transmit(&hlpuart1, (uint8_t *)"*********************\r\n", 23, 100);
-
+	/*HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
+	HAL_UART_Transmit(&huart3, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
+	HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
+*/
 
   	uint16_t order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
-	// Code for position captor
-	float receivedData = readAnalogValue();
-	if (receivedData > 500)
-	  {
-		HAL_UART_Transmit(&huart3, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100); // if captor is pushed
-	  }
-	else
-	  {
-		HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100); // else
-	  }
-	  HAL_Delay(1000);
 
-	  sendOrderStepper(0, &stepper1);
-	  stepper_Init(&stepper1);
-	  HAL_Delay(1000);
+	//HAL_UART_Transmit(&huart3,"debut\r\n", strlen("debut\r\n"), HAL_MAX_DELAY);
+
+	//fonction d'init
+
+	stepper_Init(&stepper1);
+	HAL_Delay(1000);
 
 
 
@@ -128,24 +121,19 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+
 	while (1)
 	{
 
 		// Add code to choose nCS
 
-		// On va définir moteur 1/2/3 pour les steppers
-		// Moteur 4/5/6 pour les autres
+		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
+
+		 //code for stepper that advances 90 degrees (works)
 
 		sendOrderStepper(order,&stepper1);
 
 		HAL_Delay(1000);
-		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
-
-//		sendOrderStepper(-order,stepper1);
-//
-//		HAL_Delay(1000);
-
-
 
 
 

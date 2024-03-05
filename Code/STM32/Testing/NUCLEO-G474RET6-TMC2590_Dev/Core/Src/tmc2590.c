@@ -114,13 +114,13 @@ void tmc2590_SetTxBufferInt32(TMC2590_HandleTypeDef *phtmc2590, uint32_t data){
 void tmc2590_PrintReport(TMC2590_HandleTypeDef *phtmc2590){
 	char string[64];
 	int stringLength, i;
-	HAL_UART_Transmit(&hlpuart1, stringReportHeader, sizeof(stringReportHeader), 100);
+	HAL_UART_Transmit(&huart3, stringReportHeader, sizeof(stringReportHeader), 100);
 	stringLength = snprintf(string, 64, "      Tx  |  Rx \r\n");
-	HAL_UART_Transmit(&hlpuart1, string, stringLength, 100);
+	HAL_UART_Transmit(&huart3, string, stringLength, 100);
 
 	for(i = 0; i < SPI_BUFFER_SIZE; i++){
 		stringLength = snprintf(string, 64, "%2d : 0x%2x | 0x%2x\r\n", i, phtmc2590->spiTxBuffer[i], phtmc2590->spiRxBuffer[i]);
-		HAL_UART_Transmit(&hlpuart1, string, stringLength, 100);
+		HAL_UART_Transmit(&huart3, string, stringLength, 100);
 	}
 }
 
@@ -162,7 +162,7 @@ int sendOrderStepper(int inputOrder, Stepper * stepper){
 	/*
 	 * We need to put in input how much we want to turn in degrees and what stepper we want to move
 	 * For the moment, we have only one stepper but witch nCS signal, we will be able to change with
-	 * stepper we wwant to communicate
+	 * stepper we want to communicate
 	 */
 	int polarity = (inputOrder>0);
 	int order = (int) abs(inputOrder)*142.2;

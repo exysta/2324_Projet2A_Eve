@@ -1,1 +1,2 @@
-../Core/Src/stepper.c:17:6:stepper_Init	16	static
+../Core/Src/stepper.c:17:6:stepper_Init	32	static
+../Core/Src/stepper.c:36:6:stopStepper	16	static
