@@ -16,6 +16,8 @@
 
 void stepper_Init(Stepper * stepper){
 
+	char message[20]; 		// we create a tab to stock caracters
+
 	int inputOrder = 10; // 10 degrees for each iteration
 	int polarity = (inputOrder > 0);
 
@@ -27,6 +29,12 @@ void stepper_Init(Stepper * stepper){
 	stepper->angularPosition = position_init;
 
 	HAL_Delay(3000);
+
+	sprintf(message, "%d \r\n", position_init);
+	HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , 1000);
+	HAL_Delay(1000);
+
+	HAL_UART_Transmit(&huart2, (uint8_t *)"test 1\r\n", strlen("test 1\r\n"), HAL_MAX_DELAY);
 
 	//il faut faire en sorte de changer la polarité
 

@@ -96,6 +96,7 @@ int main(void)
   MX_TIM1_Init();
   MX_SPI3_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	/*HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
@@ -114,7 +115,10 @@ int main(void)
 	stepper_Init(&stepper1);
 	HAL_Delay(1000);
 
-
+	//def
+	int position_angular_1;
+	char message;
+	stepper1.angularPosition = position_angular_1;
 
   /* USER CODE END 2 */
 
@@ -132,9 +136,11 @@ int main(void)
 		 //code for stepper that advances 90 degrees (works)
 
 		sendOrderStepper(order,&stepper1);
-
+		sprintf(message, "%d \r\n", position_angular_1);
+		HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , HAL_MAX_DELAY);
 		HAL_Delay(1000);
 
+		HAL_UART_Transmit(&huart2, (uint8_t *)"test 2\r\n", strlen("test 2\r\n"), HAL_MAX_DELAY);
 
 
 
