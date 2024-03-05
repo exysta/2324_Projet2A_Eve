@@ -60,8 +60,8 @@ all: main-build
 main-build: Projet_Eve_servo_test.elf secondary-outputs
 
 # Tool invocations
-Projet_Eve_servo_test.elf Projet_Eve_servo_test.map: $(OBJS) $(USER_OBJS) C:\Users\Lucas\Desktop\ENSEA\2324_Projet2A_Eve\Code\STM32\Projet_Eve_servo_test\STM32H7A3ZITXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Projet_Eve_servo_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\Lucas\Desktop\ENSEA\2324_Projet2A_Eve\Code\STM32\Projet_Eve_servo_test\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="Projet_Eve_servo_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Projet_Eve_servo_test.elf Projet_Eve_servo_test.map: $(OBJS) $(USER_OBJS) C:\Users\lucas\Desktop\ENSEA\2324_Projet2A_Eve\Code\STM32\Testing\Projet_Eve_servo_test\STM32H7A3ZITXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Projet_Eve_servo_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\lucas\Desktop\ENSEA\2324_Projet2A_Eve\Code\STM32\Testing\Projet_Eve_servo_test\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="Projet_Eve_servo_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
