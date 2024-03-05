@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := NUCLEO-G474RET6-TMC2590_Dev
+BUILD_ARTIFACT_NAME := NUCLEO-G474RET6-Stepper
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-NUCLEO-G474RET6-TMC2590_Dev.elf \
+NUCLEO-G474RET6-Stepper.elf \
 
 MAP_FILES += \
-NUCLEO-G474RET6-TMC2590_Dev.map \
+NUCLEO-G474RET6-Stepper.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-NUCLEO-G474RET6-TMC2590_Dev.list \
+NUCLEO-G474RET6-Stepper.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: NUCLEO-G474RET6-TMC2590_Dev.elf secondary-outputs
+main-build: NUCLEO-G474RET6-Stepper.elf secondary-outputs
 
 # Tool invocations
-NUCLEO-G474RET6-TMC2590_Dev.elf NUCLEO-G474RET6-TMC2590_Dev.map: $(OBJS) $(USER_OBJS) /Users/mariecaronello/Documents/2324_Projet2A_Eve/Code/STM32/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO-G474RET6-TMC2590_Dev.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/mariecaronello/Documents/2324_Projet2A_Eve/Code/STM32/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G474RET6-TMC2590_Dev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NUCLEO-G474RET6-Stepper.elf NUCLEO-G474RET6-Stepper.map: $(OBJS) $(USER_OBJS) /Users/mariecaronello/Documents/2324_Projet2A_Eve/Code/STM32/Testing/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NUCLEO-G474RET6-Stepper.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/mariecaronello/Documents/2324_Projet2A_Eve/Code/STM32/Testing/NUCLEO-G474RET6-TMC2590_Dev/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G474RET6-Stepper.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-NUCLEO-G474RET6-TMC2590_Dev.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "NUCLEO-G474RET6-TMC2590_Dev.list"
+NUCLEO-G474RET6-Stepper.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "NUCLEO-G474RET6-Stepper.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) NUCLEO-G474RET6-TMC2590_Dev.elf NUCLEO-G474RET6-TMC2590_Dev.list NUCLEO-G474RET6-TMC2590_Dev.map default.size.stdout
+	-$(RM) NUCLEO-G474RET6-Stepper.elf NUCLEO-G474RET6-Stepper.list NUCLEO-G474RET6-Stepper.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
