@@ -30,6 +30,7 @@
 #include "dyn2.h"
 #include "constants.h"
 
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,26 +97,26 @@ int main(void)
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t ID = 0x01;
-
-
-
-
+  MOTOR XL320_1 = {
+      .model = XL320,
+      .baudrate = 1000000,
+      .uart = huart4, // Assuming huart4 is already defined elsewhere
+      .id = 1
+  };
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
 
-	  dyn2_torque(ID,TORQUE_ON);
-
-	  dyn2_led(ID,LED_ON);
-	  dyn2_position(ID,180);
-	  HAL_Delay(1000);
-	  dyn2_led(ID,LED_OFF);
-	  dyn2_position(ID,0);
-
-	  HAL_Delay(1000);
+//	  dyn2_torque(ID,TORQUE_ON);
+	  dyn2_led(XL320_1,LED_ON);
+//	  dyn2_position(ID,180);
+//	  HAL_Delay(1000);
+//	  dyn2_led(ID,LED_OFF);
+//	  dyn2_position(ID,0);
+//
+//	  HAL_Delay(1000);
 
 
     /* USER CODE END WHILE */

@@ -19,14 +19,15 @@
 #include "usart.h"
 #include <stdint.h>
 #include <math.h>
+#include "constants.h"
 
 
 
 int dyn2_send(uint8_t* buffer,uint16_t size);
 uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize);
-int dyn2_led(uint8_t ID,int status);
+int dyn2_led(MOTOR motor,int status);
 int dyn2_torque(uint8_t ID,int mode);
-void dyn2_position(uint8_t ID,float angleInDeg);
+void dyn2_position(MOTOR motor,float angleInDeg);
 void dyn2_debug_sendArrayAsString(uint8_t* array, int size);
 
 

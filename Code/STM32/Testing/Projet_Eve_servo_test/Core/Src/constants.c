@@ -13,10 +13,30 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <math.h>
+#include "constants.h"
+
 ///////////////////////////////////////
 #define NbOfElements(x) (sizeof(x)/sizeof(x[0]))
 #define TIMEOUT 100
 #define BUFFER_SIZE 32
+
+/////////////////////////////////////// MOTOR
+
+void init_XL430(MOTOR *motor, int baudrate, UART_HandleTypeDef uart, int id) {
+    motor->model = XL430;
+    motor->baudrate = baudrate;
+    motor->uart = uart;
+    motor->id = id;
+}
+
+// Function to initialize XL320 motor
+void init_XL320(MOTOR *motor, int baudrate, UART_HandleTypeDef uart, int id) {
+    motor->model = XL320;
+    motor->baudrate = baudrate;
+    motor->uart = uart;
+    motor->id = id;
+}
+
 /////////////////////////////////////// INSTRUCTION
 
 const uint8_t PING = 0x01;

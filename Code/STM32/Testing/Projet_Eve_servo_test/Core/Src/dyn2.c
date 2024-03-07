@@ -140,7 +140,7 @@ void dyn2_ping(uint8_t ID){
 	dyn2_send(Dynamixel_PING,size);
 }
 // Status 1 : Led ON, status 0 : Led OFF
-int dyn2_led(uint8_t id,int status){
+int dyn2_led(MOTOR motor,int status){
 //	uint8_t Dynamixel_LED_XL430[13] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x06, 0x00,/*type instruction, ici write*/0x03
 //			/*débutparam, address 65:*/ ,0x41,0x00
 //			/*value in the address*/,0x01
@@ -152,7 +152,7 @@ int dyn2_led(uint8_t id,int status){
 	DYN2_LED[2] = HEADER_3;
 	DYN2_LED[3] = HEADER_4;
 	// ID
-	DYN2_LED[4]= id;
+	DYN2_LED[4]= motor.id;
 	// LENGTH
 	DYN2_LED[5]= NbOfElements(DYN2_LED)- 7; // tkt ca marche
 	DYN2_LED[6]= 0x00;
@@ -160,7 +160,13 @@ int dyn2_led(uint8_t id,int status){
 	DYN2_LED[7]= WRITE;
 	// PARAMETERS
 	// ADDRRESS
-	DYN2_LED[8]= ADDRESS_LED;
+
+	if (motor.model==XL320) {
+		DYN2_LED[8]= XL320_ADDRESS_LED;
+	}
+	if (motor.model==XL430) {
+		DYN2_LED[8]= XL430_ADDRESS_LED;
+	}
 	DYN2_LED[9]= 0x00;
 	// VALUE
 	switch(status){
@@ -199,7 +205,7 @@ int dyn2_torque(uint8_t ID,int mode){
 	DYN2_TORQUE[7]= WRITE;
 	// PARAMETERS
 	// ADDRRESS
-	DYN2_TORQUE[8]= ADDRESS_TORQUE;
+	DYN2_TORQUE[8]= XL320_ADDRESS_TORQUE;
 	DYN2_TORQUE[9]= 0x00;
 	// VALUE
 	switch(mode){
@@ -222,42 +228,79 @@ int dyn2_torque(uint8_t ID,int mode){
 
 }
 
-void dyn2_position(uint8_t ID,float angleInDeg) {
-	// Value range: 0 to 4095
-	uint8_t DYN2_POSITION[16];
-	// HEADER
-	DYN2_POSITION[0] = HEADER_1;
-	DYN2_POSITION[1] = HEADER_2;
-	DYN2_POSITION[2] = HEADER_3;
-	DYN2_POSITION[3] = HEADER_4;
-	// ID
-	DYN2_POSITION[4]= ID;
-	// LENGTH
-	DYN2_POSITION[5]= NbOfElements(DYN2_POSITION)- 7; // tkt ca marche
-	DYN2_POSITION[6]= 0x00;
-	// INSTRUCTION
-	DYN2_POSITION[7]= WRITE;
-	// PARAMETERS
-	// ADDRRESS
-	DYN2_POSITION[8]= ADDRESS_POSITION;
-	DYN2_POSITION[9]= 0x00;
-	// VALUE
-	if(angleInDeg>360){
-		angleInDeg = 360;
+void dyn2_position(MOTOR motor,float angleInDeg) {
+	if (motor.model == XL430) {
+		// Value range: 0 to 4095
+		uint8_t DYN2_POSITION[16];
+		// HEADER
+		DYN2_POSITION[0] = HEADER_1;
+		DYN2_POSITION[1] = HEADER_2;
+		DYN2_POSITION[2] = HEADER_3;
+		DYN2_POSITION[3] = HEADER_4;
+		// ID
+		DYN2_POSITION[4]= motor.id;
+		// LENGTH
+		DYN2_POSITION[5]= NbOfElements(DYN2_POSITION)- 7; // tkt ca marche
+		DYN2_POSITION[6]= 0x00;
+		// INSTRUCTION
+		DYN2_POSITION[7]= WRITE;
+		// PARAMETERS
+		// VALUE
+
+		DYN2_POSITION[8]= XL430_ADDRESS_POSITION;
+		DYN2_POSITION[9]= 0x00;
+		if(angleInDeg>360){
+			angleInDeg = 360;
+		}
+		int Angle_Value =(int) (angleInDeg/0.088);
+
+		DYN2_POSITION[10] = (Angle_Value >> 24) & 0xFF; // Extract the most significant byte
+		DYN2_POSITION[11] = (Angle_Value >> 16) & 0xFF; // Extract the second most significant byte
+		DYN2_POSITION[12] = (Angle_Value >> 8) & 0xFF;  // Extract the third most significant byte
+		DYN2_POSITION[13] = Angle_Value & 0xFF;          // Extract the least significant byte
+
+		// SENDING
+		uint16_t size = (uint16_t) NbOfElements(DYN2_POSITION);
+		uint8_t* DYN2_POSITION_CRC = dyn2_append_crc(DYN2_POSITION,size);
+
+		dyn2_send(DYN2_POSITION_CRC,size);
 	}
-	int Angle_Value =(int) (angleInDeg/0.088);
+	if (motor.model == XL320) {
+		// Value range: 0 to 1023
+		uint8_t DYN2_POSITION[14];
+		// HEADER
+		DYN2_POSITION[0] = HEADER_1;
+		DYN2_POSITION[1] = HEADER_2;
+		DYN2_POSITION[2] = HEADER_3;
+		DYN2_POSITION[3] = HEADER_4;
+		// ID
+		DYN2_POSITION[4]= motor.id;
+		// LENGTH
+		DYN2_POSITION[5]= NbOfElements(DYN2_POSITION)- 7; // tkt ca marche
+		DYN2_POSITION[6]= 0x00;
+		// INSTRUCTION
+		DYN2_POSITION[7]= WRITE;
+		// PARAMETERS
+		// ADDRRESS
 
-	DYN2_POSITION[10] = (Angle_Value >> 24) & 0xFF; // Extract the most significant byte
-	DYN2_POSITION[11] = (Angle_Value >> 16) & 0xFF; // Extract the second most significant byte
-	DYN2_POSITION[12] = (Angle_Value >> 8) & 0xFF;  // Extract the third most significant byte
-	DYN2_POSITION[13] = Angle_Value & 0xFF;          // Extract the least significant byte
+		// VALUE
+
+		DYN2_POSITION[8]= XL320_ADDRESS_POSITION;
+		DYN2_POSITION[9]= 0x00;
+		if(angleInDeg>300){
+			angleInDeg = 300;
+		}
+		int Angle_Value =(int) (angleInDeg/0.29);
 
 
-	// SENDING
-	uint16_t size = (uint16_t) NbOfElements(DYN2_POSITION);
-	uint8_t* DYN2_POSITION_CRC = dyn2_append_crc(DYN2_POSITION,size);
+		DYN2_POSITION[10] = (Angle_Value >> 8) & 0xFF;
+		DYN2_POSITION[11] = Angle_Value & 0xFF;
+		// SENDING
+		uint16_t size = (uint16_t) NbOfElements(DYN2_POSITION);
+		uint8_t* DYN2_POSITION_CRC = dyn2_append_crc(DYN2_POSITION,size);
 
-	dyn2_send(DYN2_POSITION_CRC,size);
+		dyn2_send(DYN2_POSITION_CRC,size);
+	}
 
 }
 

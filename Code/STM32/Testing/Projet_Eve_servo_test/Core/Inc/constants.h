@@ -18,6 +18,25 @@
 #define NbOfElements(x) (sizeof(x)/sizeof(x[0]))
 #define TIMEOUT 100
 #define BUFFER_SIZE 32
+/////////////////////////////////////// STRUCTURES
+// Enum defining motor models
+enum MOTOR_MODEL {
+    XL430,
+    XL320
+};
+
+// Struct defining a motor
+typedef struct MOTOR {
+    enum MOTOR_MODEL model; // Type corresponds to the model of the motor (either XL320 or XL430)
+    int baudrate;
+    UART_HandleTypeDef uart;
+    int id;
+} MOTOR; // Typedef the struct to simplify its use
+
+void init_XL430(MOTOR *motor, int baudrate, UART_HandleTypeDef uart, int id);
+void init_XL320(MOTOR *motor, int baudrate, UART_HandleTypeDef uart, int id);
+
+
 /////////////////////////////////////// INSTRUCTION
 
 extern const uint8_t PING;
