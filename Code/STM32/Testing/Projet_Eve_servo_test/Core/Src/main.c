@@ -97,26 +97,33 @@ int main(void)
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 
+  MOTOR XL430_1 = {
+      .model = XL430,
+      .baudrate = 57600,
+      .uart = huart4, // Assuming huart4 is already defined elsewhere
+      .id = 1
+  };
+
   MOTOR XL320_1 = {
       .model = XL320,
       .baudrate = 1000000,
       .uart = huart4, // Assuming huart4 is already defined elsewhere
       .id = 1
   };
+  dyn2_torque(XL430_1,TORQUE_ON);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1){
+	  dyn2_led(XL430_1,LED_ON);
+	  dyn2_position(XL430_1,90);
+	  HAL_Delay(1000);
+	  dyn2_led(XL430_1,LED_OFF);
+	  dyn2_position(XL430_1,0);
 
-//	  dyn2_torque(ID,TORQUE_ON);
-	  dyn2_led(XL320_1,LED_ON);
-//	  dyn2_position(ID,180);
-//	  HAL_Delay(1000);
-//	  dyn2_led(ID,LED_OFF);
-//	  dyn2_position(ID,0);
-//
-//	  HAL_Delay(1000);
+	  HAL_Delay(1000);
 
 
     /* USER CODE END WHILE */

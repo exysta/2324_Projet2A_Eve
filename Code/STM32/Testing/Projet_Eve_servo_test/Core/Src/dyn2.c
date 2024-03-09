@@ -118,10 +118,11 @@ uint8_t* dyn2_read(uint8_t ID, uint16_t size) {
         // Handle memory allocation failure
         return NULL;
     }
+    //uint8_t tx_buffer[] = {0xFF, 0xFF, motor_id, data_length, 0x02, register_address, data_length ^ motor_id ^ 0x02 ^ register_address}; // Construct instruction packet
+    //HAL_UART_Transmit(&huart, tx_buffer, sizeof(tx_buffer), HAL_MAX_DELAY); // Send instruction packet
 
     HAL_HalfDuplex_EnableReceiver(&huart4);
     HAL_UART_Receive(&huart4, buffer, size, TIMEOUT); // Assuming TIMEOUT is defined elsewhere
-
     return buffer;
 }
 
@@ -189,7 +190,7 @@ int dyn2_led(MOTOR motor,int status){
 }
 
 // TORQUE_ON => writing in EEPROM is IMPOSSIBLE and the motor can rotate, TORQUE_OFF =>
-int dyn2_torque(uint8_t ID,int mode){
+int dyn2_torque(MOTOR motor,int mode){
 	uint8_t DYN2_TORQUE[13];
 	// HEADER
 	DYN2_TORQUE[0] = HEADER_1;
@@ -197,15 +198,20 @@ int dyn2_torque(uint8_t ID,int mode){
 	DYN2_TORQUE[2] = HEADER_3;
 	DYN2_TORQUE[3] = HEADER_4;
 	// ID
-	DYN2_TORQUE[4]= ID;
+	DYN2_TORQUE[4]= motor.id;
 	// LENGTH
-	DYN2_TORQUE[5]= NbOfElements(DYN2_TORQUE)- 7; // tkt ca marche
+	DYN2_TORQUE[5]= NbOfElements(DYN2_TORQUE)- 7; // tkt ça marche
 	DYN2_TORQUE[6]= 0x00;
 	// INSTRUCTION
 	DYN2_TORQUE[7]= WRITE;
 	// PARAMETERS
 	// ADDRRESS
-	DYN2_TORQUE[8]= XL320_ADDRESS_TORQUE;
+	if (motor.model == XL430) {
+		DYN2_TORQUE[8]= XL430_ADDRESS_TORQUE;
+	}
+	if (motor.model == XL320) {
+		DYN2_TORQUE[8]= XL320_ADDRESS_TORQUE;
+	}
 	DYN2_TORQUE[9]= 0x00;
 	// VALUE
 	switch(mode){
