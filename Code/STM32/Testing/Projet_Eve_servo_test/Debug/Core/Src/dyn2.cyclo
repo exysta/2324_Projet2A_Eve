@@ -2,9 +2,9 @@
 ../Core/Src/dyn2.c:61:10:dyn2_append_crc	1
 ../Core/Src/dyn2.c:82:6:dyn2_debug_sendArrayAsString	2
 ../Core/Src/dyn2.c:101:5:dyn2_send	2
-../Core/Src/dyn2.c:115:10:dyn2_read	2
-../Core/Src/dyn2.c:133:6:dyn2_ping	1
-../Core/Src/dyn2.c:144:5:dyn2_led	5
-../Core/Src/dyn2.c:193:5:dyn2_torque	5
-../Core/Src/dyn2.c:237:6:dyn2_position	5
-../Core/Src/dyn2.c:324:6:dyn2_rotation_mod	1
+../Core/Src/dyn2.c:115:10:dyn2_read	3
+../Core/Src/dyn2.c:153:6:dyn2_ping	1
+../Core/Src/dyn2.c:167:5:dyn2_led	5
+../Core/Src/dyn2.c:216:5:dyn2_torque	5
+../Core/Src/dyn2.c:260:6:dyn2_position	5
+../Core/Src/dyn2.c:347:6:dyn2_rotation_mod	1

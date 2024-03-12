@@ -24,6 +24,7 @@
 
 
 int dyn2_send(uint8_t* buffer,uint16_t size);
+uint8_t* dyn2_read(uint8_t ID,uint8_t address,int NParam);
 uint8_t* dyn2_append_crc(uint8_t* instruction,uint16_t bufferSize);
 int dyn2_led(MOTOR motor,int status);
 int dyn2_torque(MOTOR motor,int mode);

@@ -112,16 +112,36 @@ int dyn2_send(uint8_t* buffer,uint16_t size){
 	return 0;
 }
 
-uint8_t* dyn2_read(uint8_t ID, uint16_t size) {
-    uint8_t *buffer = (uint8_t *)malloc(size * sizeof(uint8_t)); // Dynamically allocate memory
+uint8_t* dyn2_read(uint8_t ID,uint8_t address,int NParam) {
+
+
+    // Vérification que l'ID n'est pas le Broadcast ID
+    if (ID == 0xFE) {
+        // Gérer le cas du Broadcast ID (ID 254)
+        return 0xFFFFFFFF; // Valeur d'erreur
+    }
+
+    // Préparer l'instruction de lecture
+    uint8_t tx_buffer[12] = {
+        0xFF, 0xFF, 0xFD, 0x00, // Début de trame
+        ID,        				// ID du périphérique Dynamixel
+        0x07, 0x00,    			// Length = number of parameters + 3
+        0x02,        			// Instruction(0x02 pour Read
+		address,0x00, 			// adress of the value to be read
+		NParam,0x00			// data length don't know how it works
+    };
+
+	uint16_t size = (uint16_t) NbOfElements(tx_buffer);
+
+    uint8_t* buffer = (uint8_t *)malloc((size + 1) * sizeof(uint8_t)); // Dynamically allocate memory + 1 because there is the error Byte
     if (buffer == NULL) {
         // Handle memory allocation failure
         return NULL;
     }
-    //uint8_t tx_buffer[] = {0xFF, 0xFF, motor_id, data_length, 0x02, register_address, data_length ^ motor_id ^ 0x02 ^ register_address}; // Construct instruction packet
-    //HAL_UART_Transmit(&huart, tx_buffer, sizeof(tx_buffer), HAL_MAX_DELAY); // Send instruction packet
+	uint8_t* DYN2_read_CRC = dyn2_append_crc(tx_buffer,size);
 
-    HAL_HalfDuplex_EnableReceiver(&huart4);
+	dyn2_send(DYN2_read_CRC,size);
+
     HAL_UART_Receive(&huart4, buffer, size, TIMEOUT); // Assuming TIMEOUT is defined elsewhere
     return buffer;
 }
@@ -131,7 +151,10 @@ uint8_t* dyn2_read(uint8_t ID, uint16_t size) {
 
 
 void dyn2_ping(uint8_t ID){
-	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,/*id*/ 0x01, /*length*/0x01, 0x00,/*type instruction, ici Ping*/0x01
+	uint8_t Dynamixel_PING[] = {0xFF, 0xFF, 0xFD, 0x00,
+			/*id*/ 0x01,
+			/*length*/0x01, 0x00,
+			/*type instruction, ici Ping*/0x01
 			/* calcul of CRC after */,0x19,0x4E};
 	Dynamixel_PING[4]= ID;
 
@@ -263,7 +286,7 @@ void dyn2_position(MOTOR motor,float angleInDeg) {
 		DYN2_POSITION[10] = (Angle_Value >> 24) & 0xFF; // Extract the most significant byte
 		DYN2_POSITION[11] = (Angle_Value >> 16) & 0xFF; // Extract the second most significant byte
 		DYN2_POSITION[12] = (Angle_Value >> 8) & 0xFF;  // Extract the third most significant byte
-		DYN2_POSITION[13] = Angle_Value & 0xFF;          // Extract the least significant byte
+		DYN2_POSITION[13] = Angle_Value & 0xFF;         // Extract the least significant byte
 
 		// SENDING
 		uint16_t size = (uint16_t) NbOfElements(DYN2_POSITION);

@@ -111,6 +111,8 @@ int main(void)
       .id = 1
   };
   dyn2_torque(XL430_1,TORQUE_ON);
+  uint8_t* buffer = dyn2_read(1, XL430_ADDRESS_LED,1);
+  dyn2_debug_sendArrayAsString(buffer, 13);
 
   /* USER CODE END 2 */
 
@@ -118,10 +120,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1){
 	  dyn2_led(XL430_1,LED_ON);
-	  dyn2_position(XL430_1,90);
+	  //dyn2_position(XL430_1,90);
 	  HAL_Delay(1000);
 	  dyn2_led(XL430_1,LED_OFF);
-	  dyn2_position(XL430_1,0);
+	  //dyn2_position(XL430_1,0);
 
 	  HAL_Delay(1000);
 
