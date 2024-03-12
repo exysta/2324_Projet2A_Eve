@@ -2,7 +2,7 @@
  * stepper.h
  *
  *  Created on: Dec 5, 2023
- *      Author: arthu
+ *      Author: arthur,
  */
 
 #ifndef INC_STEPPER_H_
@@ -13,7 +13,7 @@ typedef struct Stepper{
 	int stepperID;
 	int velocity;
 	int angularPosition;
-	int angularPostionMax;
+	int angularPositionMax;
 } Stepper;
 
 

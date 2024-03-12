@@ -168,7 +168,7 @@ int sendOrderStepper(int inputOrder, Stepper * stepper){
 	int order = (int) abs(inputOrder)*142.2;
 	int indice = 0;
 	stepper->angularPosition += inputOrder;
-	if (stepper->angularPosition >= stepper->angularPostionMax){
+	if (stepper->angularPosition >= stepper->angularPositionMax){
 		stepper->angularPosition -= inputOrder;
 		return 0;
 	}

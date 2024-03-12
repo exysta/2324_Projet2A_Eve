@@ -25,13 +25,12 @@ void stepper_Init(Stepper * stepper){
 		sendOrderStepper( inputOrder, stepper);
 		HAL_Delay(1000);
 	    }
-	/*
-	int position_init = 0;
-	stepper->angularPosition = position_init;
 
+	stepper->angularPosition = 0;
 
 	HAL_Delay(3000);
 
+	/*
 	sprintf(message, "%d \r\n", position_init);
 	HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , 1000);
 	HAL_Delay(1000);

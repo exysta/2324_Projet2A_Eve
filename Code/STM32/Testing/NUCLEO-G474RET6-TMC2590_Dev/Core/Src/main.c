@@ -88,9 +88,13 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+
+
   int position_angular_1;
   char message[20];
-  stepper1.angularPosition = position_angular_1;
+
+
+
 
   /* USER CODE END SysInit */
 
@@ -108,46 +112,50 @@ int main(void)
 	HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
 	 */
 
-  	int order = 90;
-	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
+  int order = 20;
+  tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
+
+  	//HAL_UART_Transmit(&huart3,"debut\r\n", strlen("debut\r\n"), HAL_MAX_DELAY);
+
+  	//fonction d'init
 
 
-	//HAL_UART_Transmit(&huart3,"debut\r\n", strlen("debut\r\n"), HAL_MAX_DELAY);
-
-	//fonction d'init
-
-	stepper_Init(&stepper1);
-	HAL_Delay(1000);
+  	stepper_Init(&stepper1);
+  	HAL_Delay(1000);
+  	stepper1.angularPositionMax = 180;
 
 
 
-  /* USER CODE END 2 */
+    /* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
 
 
-	while (1)
-	{
+  	while (1)
+  	{
 
-		// Add code to choose nCS
+  		// Add code to choose nCS
 
-		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
+  		//tmc2590_dumpRegister(&htmc2590);  //Report doesn't work - Fail to turn if ON
 
-		 //code for stepper that advances 90 degrees (works)
+  		 //code for stepper that advances 90 degrees (works)
 
-		sendOrderStepper(order,&stepper1);
+  		sendOrderStepper(order,&stepper1);
+  		HAL_Delay(1000);
+  		stepper1.angularPosition += order;
+
+  		HAL_UART_Transmit(&huart2, (uint8_t *)"test 2\r\n", strlen("test 2\r\n"), HAL_MAX_DELAY);
+
+  		//voir la position
+
+		position_angular_1 = stepper1.angularPosition;
+		sprintf(message, "%d \r\n", position_angular_1);
+		HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , HAL_MAX_DELAY);
 		HAL_Delay(1000);
 
 
-		HAL_UART_Transmit(&huart2, (uint8_t *)"test 2\r\n", strlen("test 2\r\n"), HAL_MAX_DELAY);
 
-		//voir la position
-				/*
-				sprintf(message, "%d \r\n", position_angular_1);
-				HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , HAL_MAX_DELAY);
-				HAL_Delay(1000);
-				*/
 
 
 		//tmc_2590_Select(int number_motor);
