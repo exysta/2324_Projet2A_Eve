@@ -88,6 +88,9 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+  int position_angular_1;
+  char message[20];
+  stepper1.angularPosition = position_angular_1;
 
   /* USER CODE END SysInit */
 
@@ -99,12 +102,13 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
+
 	/*HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
 	HAL_UART_Transmit(&huart3, (uint8_t *)"* TMC2590 Test Code *\r\n", 23, 100);
 	HAL_UART_Transmit(&huart3, (uint8_t *)"*********************\r\n", 23, 100);
-*/
+	 */
 
-  	uint16_t order = 90;
+  	int order = 90;
 	tmc2590_Init(&htmc2590, &hspi3, nCS_GPIO_Port, nCS_Pin, DRV_ENN_GPIO_Port, DRV_ENN_Pin);
 
 
@@ -115,10 +119,7 @@ int main(void)
 	stepper_Init(&stepper1);
 	HAL_Delay(1000);
 
-	//def
-	int position_angular_1;
-	char message;
-	stepper1.angularPosition = position_angular_1;
+
 
   /* USER CODE END 2 */
 
@@ -136,13 +137,17 @@ int main(void)
 		 //code for stepper that advances 90 degrees (works)
 
 		sendOrderStepper(order,&stepper1);
-		sprintf(message, "%d \r\n", position_angular_1);
-		HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , HAL_MAX_DELAY);
 		HAL_Delay(1000);
+
 
 		HAL_UART_Transmit(&huart2, (uint8_t *)"test 2\r\n", strlen("test 2\r\n"), HAL_MAX_DELAY);
 
-
+		//voir la position
+				/*
+				sprintf(message, "%d \r\n", position_angular_1);
+				HAL_UART_Transmit(&huart2, (uint8_t *)message ,strlen(message) , HAL_MAX_DELAY);
+				HAL_Delay(1000);
+				*/
 
 
 		//tmc_2590_Select(int number_motor);
