@@ -288,22 +288,16 @@ Il faut définir le protocole de communication entre les deux appareils en s'ins
 * 23HS8430
 * 23hS2442B Nema 23
 * STM32 L412
-* Quel régulateur ?
+* BU33SD5WG-TR
 
 
 <div align="center">
-<img src="/Présentation/Diag archi.drawio.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
+<img src="/Documents/Présentation/Diag archi.drawio.png"  width=600 legend="Rouge : Supply | Bleu : Données" title="Diagramme d'architecture">
 </div>
-
-WIP
-
-## Guide d'utilisation
-
-WIP
 
 ## Annexes
 
-WIP
+
 Diagramme de Gantt
 
 <div align="center">
