@@ -46,7 +46,7 @@ Il est nécessaire de configurer le GPIO utilisé pour l'UART en mode open drain
 <div align="center">
 <br>
 <img src="Documents/Images/Half-Duplex.png" width="400"> </br>
-Exrtait du reference manual </br>
+Extrait du reference manual </br>
 </br> 
 </div>
 
